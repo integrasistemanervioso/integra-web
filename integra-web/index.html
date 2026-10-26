@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integra Cuerpo &amp; Alma | Noelia Avendaño</title>
+<meta name="description" content="Noelia Avendaño, kinesióloga: acompaño a familias para que su bebé se calme, duerma y crezca bien. Online y presencial en San Rafael, Mendoza.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F4EFE4; --sand:#ECE4D3; --card:#fffdf8;
+    --euca:#7C9585; --euca-deep:#5C7566; --euca-soft:#e3eae4;
+    --ink:#33372f; --muted:#6b6f66; --line:#e2d9c6; --radius:22px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:"Nunito",system-ui,sans-serif;font-size:19px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Baloo 2","Nunito",sans-serif;font-weight:700;line-height:1.12;margin:0;color:var(--euca-deep)}
+  h1{font-size:clamp(34px,8.6vw,56px);font-weight:800}
+  h2{font-size:clamp(29px,7vw,42px);margin-bottom:22px}
+  h3{font-size:24px;margin-bottom:4px}
+  p{margin:0 0 14px}
+  a{color:var(--euca-deep)}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  .wide{max-width:1000px}
+  section{padding:64px 0}
+  .eyebrow{display:inline-block;font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--euca);margin-bottom:14px}
+  .lead{font-size:21px;color:var(--muted)}
+  .btn{display:inline-block;background:var(--euca);color:#fff;text-decoration:none;font-weight:800;font-size:19px;padding:17px 30px;border-radius:999px;box-shadow:0 8px 20px rgba(92,117,102,.28);transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px);background:var(--euca-deep)}
+  .btn-ghost{background:transparent;color:var(--euca-deep);box-shadow:none;border:2px solid var(--euca-deep);padding:15px 26px}
+  .btn-ghost:hover{background:var(--euca-deep);color:#fff}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .card{background:var(--card);border-radius:var(--radius);padding:26px;border:1px solid var(--line)}
+
+  /* Hero */
+  .hero{padding:36px 0 56px;background:linear-gradient(180deg,var(--sand),var(--cream))}
+  .brand{font-family:"Baloo 2",sans-serif;font-weight:700;color:var(--euca-deep);font-size:18px;margin-bottom:30px}
+  .hero-grid{display:grid;gap:30px;align-items:center}
+  .hero .lead{margin-top:16px}
+  .hero-media{justify-self:center;width:min(300px,78vw)}
+  .hero-media video{display:block;width:100%;height:auto;border-radius:28px;box-shadow:0 18px 40px rgba(51,55,47,.18);background:var(--sand)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:15px;font-weight:700;color:var(--euca-deep)}
+
+  /* Te pasa */
+  .pains{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:12px}
+  .pains li{background:var(--card);border-radius:16px;padding:16px 20px;border-left:5px solid var(--euca);font-weight:600}
+  .reframe{background:var(--euca-deep);color:#fff;border-radius:var(--radius);padding:28px}
+  .reframe p{margin:0;font-size:21px}
+  .reframe strong{color:#dfeee3}
+
+  /* Video */
+  .video-sec{background:var(--sand)}
+  .video-grid{display:grid;gap:28px;align-items:center}
+  .video-box{justify-self:center;width:min(340px,86vw)}
+  .video-box video{display:block;width:100%;height:auto;border-radius:24px;background:#000;box-shadow:0 18px 40px rgba(51,55,47,.2)}
+
+  /* Cómo es */
+  .timeline{display:grid;gap:14px;position:relative}
+  .tl{display:flex;gap:18px;align-items:flex-start}
+  .tl-dot{flex:0 0 52px;height:52px;border-radius:50%;background:var(--euca-soft);display:flex;align-items:center;justify-content:center;font-size:24px}
+  .tl .card{flex:1;padding:22px}
+  .tl .when{font-weight:800;color:var(--euca);font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+  .tl p{margin:6px 0 0;color:var(--muted)}
+  .tl.daily .card{background:var(--euca-soft);border-color:#cbd8cd}
+  .tl.daily .when{color:var(--euca-deep)}
+
+  /* Te llevás */
+  .take{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+  .take li{display:flex;gap:12px;align-items:flex-start;font-weight:600}
+  .take li::before{content:"✓";flex:0 0 30px;height:30px;border-radius:50%;background:var(--euca);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;margin-top:1px}
+
+  /* Experiencias */
+  .exp{background:var(--sand)}
+  .exp-track{display:flex;align-items:flex-start;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 18px;margin:0 -20px;-webkit-overflow-scrolling:touch}
+  .exp-card{flex:0 0 min(330px,84vw);scroll-snap-align:start;background:var(--card);border-radius:var(--radius);padding:24px;border:1px solid var(--line);display:flex;flex-direction:column;gap:12px}
+  .exp-card .stars{color:#c9a24a;letter-spacing:2px}
+  .exp-card blockquote{margin:0;font-size:17px}
+  .exp-card .who{font-weight:800;color:var(--euca-deep);margin-top:auto}
+  .exp-card audio{width:100%}
+  .exp-card img{width:100%;height:auto;border-radius:14px}
+  .exp-tag{align-self:flex-start;font-size:13px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
+  .exp-tag.online{background:var(--euca);color:#fff}
+  .exp-tag.pres{background:var(--sand);color:var(--euca-deep)}
+  .exp-card .part{font-size:14px;color:var(--muted);margin-bottom:-6px}
+  .exp-hint{font-size:15px;color:var(--muted);margin-top:4px}
+
+  .feat{background:var(--card);border:3px solid var(--euca);border-radius:var(--radius);padding:28px;margin-bottom:22px;box-shadow:0 16px 36px rgba(92,117,102,.14)}
+  .feat .before{font-family:"Baloo 2",sans-serif;font-size:23px;line-height:1.3;color:var(--euca-deep);margin:14px 0 18px}
+  .feat .parts{display:grid;gap:10px}
+  .feat audio{width:100%}
+  .feat .who{font-weight:800;color:var(--euca-deep);margin-top:16px}
+  .care{display:grid;gap:14px;margin-top:22px}
+  .care .card h3{font-size:22px;margin-bottom:8px}
+  .care .card p{margin:0;color:var(--muted)}
+  .next{display:grid;gap:14px}
+  .next a.card{display:block;text-decoration:none;color:var(--ink);transition:transform .15s}
+  .next a.card:hover{transform:translateY(-2px)}
+  .next h3{font-size:22px}
+  .next p{margin:4px 0 10px;color:var(--muted);font-size:17px}
+  .next .go{font-weight:800;color:var(--euca-deep)}
+  .discount{margin:16px auto 0;max-width:430px;background:#fff;border-radius:16px;padding:12px 16px;font-weight:700;color:var(--euca-deep);font-size:17px}
+  @media (min-width:700px){.care,.next{grid-template-columns:1fr 1fr}}
+
+  /* Quién soy */
+  .me p{color:var(--muted)}
+  .quote{font-family:"Baloo 2",sans-serif;font-size:24px;color:var(--euca-deep);line-height:1.3;border-left:5px solid var(--euca);padding-left:18px;margin-top:18px}
+
+  /* Más información */
+  .more-sec{padding:10px 0 64px}
+  details.more{background:var(--card);border:2px solid var(--euca);border-radius:22px;overflow:hidden}
+  details.more>summary{padding:22px 24px;font-size:20px;font-weight:800;color:var(--euca-deep)}
+  details.more>summary small{display:block;font-weight:600;font-size:16px;color:var(--muted);margin-top:4px}
+  details.more>summary::after{content:"+";font-size:30px;color:var(--euca)}
+  details.more[open]>summary{border-bottom:1px solid var(--line)}
+  .more-body{padding:8px 24px 26px}
+  .more-body h3{font-size:22px;margin:26px 0 10px}
+  .more-body p,.more-body li{font-size:17px}
+  .more-body ul,.more-body ol{padding-left:22px;margin:0 0 8px}
+  .more-body li{margin-bottom:6px}
+  .more-body .twocol{display:grid;gap:12px}
+  .more-body .box{margin:10px 0;font-size:17px;background:var(--euca-soft);border-radius:16px;padding:16px 18px}
+  .more-body .box strong{display:block;color:var(--euca-deep);margin-bottom:6px}
+  @media (min-width:700px){.more-body .twocol{grid-template-columns:1fr 1fr}}
+  /* Precio */
+  .price-sec{background:var(--euca-soft)}
+  .price-card{border:3px solid var(--euca);box-shadow:0 16px 36px rgba(92,117,102,.16);text-align:center;padding:32px 26px}
+  .price{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:58px;color:var(--euca-deep);line-height:1}
+  .price-sub{color:var(--muted);margin-top:6px}
+  .split{display:inline-block;background:#fff;border:1px dashed var(--euca);color:var(--euca-deep);font-weight:800;border-radius:999px;padding:8px 18px;margin:18px 0 6px;font-size:17px}
+  .price-card .take{text-align:left;margin:24px auto 0;max-width:430px}
+
+  /* Pago */
+  .paysteps{counter-reset:s;list-style:none;padding:0;margin:0 0 26px;display:grid;gap:10px}
+  .paysteps li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;font-weight:600}
+  .paysteps li::before{content:counter(s);flex:0 0 36px;height:36px;border-radius:50%;background:var(--euca);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
+  details{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:10px}
+  summary{cursor:pointer;padding:18px 20px;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:26px;color:var(--euca);font-weight:400;line-height:1}
+  details[open] summary::after{content:"–"}
+  .det{padding:0 20px 18px;font-size:17px}
+  .det dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px}
+  .det dt{color:var(--muted)}
+  .det dd{margin:0;font-weight:700;word-break:break-all}
+
+  /* Final */
+  .final{text-align:center;background:var(--euca-deep);color:#fff}
+  .final h2{color:#fff}
+  .final p{color:#e3ece5}
+  .final .btns{justify-content:center}
+  .final .btn{background:#fff;color:var(--euca-deep)}
+  .final .btn-ghost{background:transparent;color:#fff;border-color:#fff}
+  footer{text-align:center;padding:30px 20px 100px;color:var(--muted);font-size:15px}
+
+  .wa{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,.22);z-index:20}
+  .wa svg{width:32px;height:32px;fill:#fff}
+
+  @media (max-width:599px){
+    .hero-media{width:min(230px,62vw)}
+    .tl-dot{display:none}
+  }
+  @media (min-width:800px){
+    .hero-grid{grid-template-columns:1.35fr 1fr}
+    .video-grid{grid-template-columns:1fr 1fr}
+  }
+
+  /* ===== NUEVO: etapas, tablas de opciones ===== */
+  .stages{display:grid;gap:14px}
+  .stage{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:6px}
+  .stage .tag{align-self:flex-start;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 12px;border-radius:999px;background:var(--euca-soft);color:var(--euca-deep)}
+  .stage h3{margin:6px 0 2px}
+  .stage p{margin:0;color:var(--muted);font-size:17px}
+  .stage ul{margin:6px 0 0;padding-left:20px;font-size:17px;color:var(--ink)}
+  .stage ul li{margin-bottom:4px}
+  .free-note{margin-top:16px;background:var(--euca-soft);border-radius:16px;padding:14px 18px;font-weight:700;color:var(--euca-deep);font-size:17px}
+  @media (min-width:700px){.stages{grid-template-columns:1fr 1fr}}
+
+  .plans-sec{background:var(--euca-soft)}
+  .plan-block{margin-bottom:40px}
+  .plan-block:last-of-type{margin-bottom:0}
+  .plan-head{display:flex;flex-direction:column;gap:2px;margin-bottom:14px}
+  .plan-head h3{font-size:28px}
+  .plan-head p{margin:0;color:var(--muted);font-size:17px}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:20px;box-shadow:0 14px 32px rgba(92,117,102,.14)}
+  table.plan{width:100%;min-width:340px;border-collapse:separate;border-spacing:0;background:var(--card);font-size:15px;line-height:1.35;border:2px solid var(--euca);border-radius:20px;overflow:hidden}
+  table.plan th,table.plan td{padding:12px 8px;text-align:center;vertical-align:middle;border-bottom:1px solid var(--line)}
+  table.plan th:first-child,table.plan td:first-child{text-align:left;padding-left:14px;font-weight:700;color:var(--ink);width:34%}
+  table.plan thead th{background:var(--euca);color:#fff;font-family:"Baloo 2",sans-serif;font-size:19px;font-weight:700;border-bottom:0}
+  table.plan thead th small{display:block;font-family:"Nunito",sans-serif;font-size:12px;font-weight:700;opacity:.9;letter-spacing:.02em}
+  table.plan .ok{display:inline-flex;width:26px;height:26px;border-radius:50%;background:var(--euca);color:#fff;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+  table.plan .live{font-weight:800;color:var(--euca-deep)}
+  table.plan tr.price td{background:var(--sand);border-bottom:0;padding-block:16px}
+  table.plan tr.price td:not(:first-child){font-family:"Baloo 2",sans-serif;font-weight:800;font-size:24px;color:var(--euca-deep);line-height:1.05}
+  table.plan tr.price small{display:block;font-family:"Nunito",sans-serif;font-size:13px;font-weight:700;color:var(--muted);margin-top:4px}
+  @media (min-width:600px){table.plan{font-size:17px}table.plan th,table.plan td{padding:14px 12px}table.plan tr.price td:not(:first-child){font-size:30px}}
+
+  .perks{display:grid;gap:10px;margin-top:28px}
+  .perk{background:#fff;border-radius:16px;padding:14px 18px;font-weight:700;color:var(--euca-deep);font-size:17px;display:flex;gap:12px;align-items:flex-start}
+  .perk span{font-size:22px;line-height:1.2}
+  .perk.big{background:var(--euca-deep);color:#fff;font-size:20px}
+  @media (min-width:700px){.perks{grid-template-columns:1fr 1fr}.perk.big{grid-column:1/-1}}
+
+  .follow{display:grid;gap:14px}
+  .follow .card h3{font-size:22px;margin-bottom:6px}
+  .follow .card p{margin:0;color:var(--muted);font-size:17px}
+  @media (min-width:700px){.follow{grid-template-columns:1fr 1fr}}
+
+  /* Preguntas para pensar */
+  .reflect{padding:44px 0;text-align:center}
+  .reflect p{font-family:"Baloo 2",sans-serif;font-weight:600;font-size:clamp(24px,5.6vw,32px);line-height:1.25;color:var(--euca-deep);margin:0 auto;max-width:560px;text-wrap:balance}
+  .reflect small{display:block;margin-top:10px;font-family:"Nunito",sans-serif;font-size:17px;color:var(--muted);font-weight:600}
+  .reflect::before{content:"";display:block;width:44px;height:4px;border-radius:4px;background:var(--euca);margin:0 auto 18px;opacity:.6}
+
+  /* Hub */
+  .needs{display:grid;gap:10px;margin-top:24px}
+  .need{display:flex;align-items:center;gap:14px;background:#fff;border:2px solid var(--line);border-radius:18px;padding:16px 18px;text-decoration:none;color:var(--ink);font-weight:800;font-size:18px;transition:border-color .15s,transform .15s}
+  .need:hover{border-color:var(--euca);transform:translateY(-2px)}
+  .need span.e{font-size:26px}
+  .need span.t small{display:block;font-weight:600;font-size:15px;color:var(--muted)}
+  .need::after{content:"→";margin-left:auto;color:var(--euca);font-size:22px}
+  @media (min-width:700px){.needs{grid-template-columns:1fr 1fr}.need:last-child:nth-child(odd){grid-column:1/-1}}
+  .offer{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:10px;scroll-margin-top:20px}
+  .offer.hl{border:3px solid var(--euca);box-shadow:0 16px 36px rgba(92,117,102,.14)}
+  .offer .step{align-self:flex-start;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 12px;border-radius:999px;background:var(--euca-soft);color:var(--euca-deep)}
+  .offer h3{font-size:26px;margin:0}
+  .offer p{margin:0;color:var(--muted);font-size:17px}
+  .offer ul{margin:0;padding-left:20px;font-size:17px}
+  .offer .pr{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:22px;color:var(--euca-deep)}
+  .offer .btns{margin-top:6px}
+  .offers{display:grid;gap:16px}
+  .free{display:grid;gap:14px}
+  @media (min-width:700px){.free{grid-template-columns:1fr 1fr}}
+
+  .offer img.ph{width:100%;max-width:100%;height:auto;border-radius:16px;display:block}
+  .hero-media img{display:block;width:100%;height:auto;border-radius:28px;box-shadow:0 18px 40px rgba(51,55,47,.18)}
+  .me-grid{display:grid;gap:24px;align-items:center}
+  .me-grid img{width:100%;max-width:320px;height:auto;border-radius:24px;justify-self:center}
+  @media (min-width:700px){.me-grid{grid-template-columns:1fr 1.4fr}}
+  .resp audio{width:100%}
+</style>
+</head>
+<body>
+
+<!-- INICIO -->
+<header class="hero">
+  <div class="wrap wide">
+    <div class="brand">Integra Cuerpo &amp; Alma</div>
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Noelia Avendaño · Kinesióloga</span>
+        <h1>Tu bebé puede estar mejor. Y vos también.</h1>
+        <p class="lead">Acompaño a familias para que su bebé se calme, duerma y crezca bien. Online desde cualquier país, o en persona en San Rafael, Mendoza.</p>
+      </div>
+      <div class="hero-media">
+        <img src="assets/fotos/foto1.jpg" alt="Noelia sonriendo con un bebé en brazos">
+      </div>
+    </div>
+    <h2 style="margin:40px 0 0;font-size:clamp(26px,6vw,34px)">¿Qué necesitás hoy?</h2>
+    <div class="needs">
+      <a class="need" href="#calma"><span class="e">🌙</span><span class="t">Que mi bebé se calme y duerma<small>Llora mucho, se despierta, está incómodo</small></span></a>
+      <a class="need" href="#neuro"><span class="e">🌱</span><span class="t">Saber si se está desarrollando bien<small>Qué tiene que ir haciendo según su edad</small></span></a>
+      <a class="need" href="#criar"><span class="e">🌿</span><span class="t">Tener con quién compartirlo<small>Un espacio con otras familias, por $25.000 al mes</small></span></a>
+      <a class="need" href="#empezar"><span class="e">🤍</span><span class="t">Empezar por algo simple<small>Recursos gratis y la masterclass</small></span></a>
+      <a class="need" href="#experiencias"><span class="e">💬</span><span class="t">Escuchar cómo les fue a otras familias<small>Audios y mensajes de familias que ya hicieron la consulta</small></span></a>
+    </div>
+  </div>
+</header>
+
+<section class="reflect"><div class="wrap"><p>¿Qué es lo que más te pesa hoy?<small>Empezá por ahí. Lo demás puede esperar.</small></p></div></section>
+
+
+
+<!-- EMPEZÁ ACÁ -->
+<section id="empezar" style="padding-top:0">
+  <div class="wrap wide">
+    <span class="eyebrow">Para empezar</span>
+    <h2>Un primer paso simple</h2>
+    <div class="free">
+      <div class="offer">
+        <span class="step">Gratis</span>
+        <h3>🤍 Guía Calma</h3>
+        <p>Por qué llora tu bebé y qué revisar primero.</p>
+        <div class="btns"><a class="btn btn-ghost" href="assets/guia-calma.pdf" target="_blank" rel="noopener">Descargar la guía</a></div>
+      </div>
+      <div class="offer">
+        <span class="step">Gratis</span>
+        <h3>🎧 Respirá (7 min)</h3>
+        <p>Un audio para vos, para bajar un cambio cuando no das más. Ponete los auriculares y dale play.</p>
+        <div class="resp"><audio controls preload="none" src="assets/respiracion-mapadres.mp3"></audio></div>
+      </div>
+    </div>
+    <div class="offer hl" style="margin-top:16px">
+      <span class="step">Masterclass grabada · 29 min</span>
+      <h3>🎬 Por qué tu bebé llora tanto (y no siempre es cólico)</h3>
+      <p>Qué le pasa a un bebé que no logra calmarse, cómo darte cuenta y qué podés hacer en casa desde hoy. La ves cuando quieras, las veces que quieras.</p>
+      <div class="pr">USD 50 · $75.000</div>
+      <div class="btns"><a class="btn" href="https://noescolicoessistemanervioso.netlify.app/">Ver la masterclass</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTAS 1:1 -->
+<section>
+  <div class="wrap wide">
+    <span class="eyebrow">Consultas 1:1 online</span>
+    <h2>Un plan hecho para tu bebé</h2>
+    <p class="lead" style="margin-bottom:22px">Miro su historia y sus videos, te digo qué le pasa y qué hacer. Vos elegís cuánto acompañamiento querés: Esencial, Pro o VIP.</p>
+    <div class="offers">
+      <div class="offer hl" id="calma">
+        <img class="ph" src="assets/fotos/foto8.jpg" alt="Noelia acompaña a una mamá mientras su bebé toma el pecho" loading="lazy">
+        <span class="step">Etapa 1</span>
+        <h3>🌙 Calma</h3>
+        <p>Para que tu bebé logre calmarse y dormir.</p>
+        <ul><li>Llora mucho y cuesta calmarlo</li><li>Se despierta enseguida</li><li>Está tenso, se arquea o tiene gases</li></ul>
+        <div class="pr">Desde USD 240</div>
+        <div class="btns"><a class="btn" href="calma/">Conocé Calma</a></div>
+      </div>
+      <div class="offer hl" id="neuro">
+        <img class="ph" src="assets/fotos/foto5.jpg" alt="Noelia sostiene a un bebé boca abajo" loading="lazy">
+        <span class="step">Etapa 2</span>
+        <h3>🌱 Neurodesarrollo</h3>
+        <p>Para acompañar su desarrollo con juegos y movimientos simples, según su edad.</p>
+        <ul><li>No sabés qué tiene que ir haciendo en cada etapa</li><li>Se mueve poco o lo sentís "blandito"</li><li>Ya está tranquilo y querés saber qué sigue</li></ul>
+        <div class="pr">Desde USD 240</div>
+        <div class="btns"><a class="btn" href="neurodesarrollo/">Conocé Neurodesarrollo</a></div>
+      </div>
+    </div>
+    <div class="perks"><div class="perk big"><span>🎁</span>Llevando las dos etapas, 10% off.</div></div>
+  </div>
+</section>
+
+<section class="reflect"><div class="wrap"><p>¿Hace cuánto que te dicen “ya se le va a pasar”?<small>Si seguís buscando respuestas, es porque algo te dice que se puede estar mejor.</small></p></div></section>
+
+
+
+<!-- CRIAR LIVIANO + PRESENCIAL -->
+<section style="padding-top:0">
+  <div class="wrap wide">
+    <div class="offers" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
+      <div class="offer" id="criar">
+        <img class="ph" src="assets/fotos/foto2.jpg" alt="Noelia sonríe junto a una mamá con su bebé" loading="lazy">
+        <span class="step">Grupal · online</span>
+        <h3>🌿 Criar Liviano</h3>
+        <p>Dos encuentros en vivo por mes, de 30 minutos, junto a otras familias: practicamos con tu bebé y un ratito para vos. Quedan grabados, y tenés un grupo de Telegram con horarios para preguntarme.</p>
+        <div class="pr">$25.000 por mes · USD 22 desde otros países</div>
+        <div class="btns"><a class="btn btn-ghost" href="https://criarliviano.netlify.app/">Conocé Criar Liviano</a></div>
+      </div>
+      <div class="offer" id="presencial">
+        <img class="ph" src="assets/fotos/foto7.jpg" alt="Noelia trabajando con un bebé en el consultorio" loading="lazy">
+        <span class="step">En persona</span>
+        <h3>🤲 Consulta presencial</h3>
+        <p>En mi consultorio de San Rafael, Mendoza. Evalúo a tu bebé y lo trato con las manos, dentro de un proceso de acompañamiento.</p>
+        <div class="btns"><a class="btn btn-ghost" href="https://consultapresencial.netlify.app/">Conocé la consulta presencial</a></div>
+      </div>
+    </div>
+    <div class="reframe" style="margin-top:22px">
+      <p><strong>¿No sabés por dónde empezar?</strong> Escribime, contame qué le pasa a tu bebé y te digo qué te conviene. Sin compromiso.</p>
+      <div class="btns" style="margin-top:16px"><a class="btn" style="background:#fff;color:var(--euca-deep)" href="https://wa.me/5492604419242?text=Hola%20Noe%2C%20no%20s%C3%A9%20por%20d%C3%B3nde%20empezar%20con%20mi%20beb%C3%A9">Escribime por WhatsApp</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. EXPERIENCIAS -->
+<section class="exp" id="experiencias" style="scroll-margin-top:10px">
+  <div class="wrap wide">
+    <span class="eyebrow">Experiencias</span>
+    <h2>Lo que cuentan las familias</h2>
+    <p class="lead" style="margin-bottom:22px">Contado por ellas y ellos, con sus propias palabras.</p>
+    <div class="feat">
+      <span class="exp-tag online">Online · en su voz</span>
+      <p class="before">Lunita pasaba la noche entera despierta, muchas veces llorando, y recién se dormía a las 7 de la mañana.</p>
+      <p style="margin:0 0 12px;color:var(--muted);font-size:16px">🎧 Escuchá a Belu contar cómo cambió todo</p>
+      <div class="parts">
+        <div class="part">Parte 1</div><audio controls preload="none" src="assets/audio/testimonio-belu-lunita-1.mp3"></audio>
+        <div class="part">Parte 2</div><audio controls preload="none" src="assets/audio/testimonio-belu-lunita-2.mp3"></audio>
+        <div class="part">Parte 3</div><audio controls preload="none" src="assets/audio/testimonio-belu-lunita-3.mp3"></audio>
+      </div>
+      <div class="who">— Belu, sobre su proceso con Lunita</div>
+    </div>
+    <div class="exp-track" id="exp-track">
+      <div class="exp-card"><span class="exp-tag online">Online · en su voz</span><p style="margin:0;color:var(--muted);font-size:16px">🎧 Escuchala contar su experiencia</p><audio controls preload="none" src="assets/audio/testimonio-marina-ambar.mp3"></audio><div class="who">— Marina, sobre su proceso con Ámbar</div></div>
+      <div class="exp-card"><span class="exp-tag online">Online · en su voz</span><p style="margin:0;color:var(--muted);font-size:16px">🎧 Escuchala contar su experiencia</p><audio controls preload="none" src="assets/audio/testimonio-chiara-lolo.mp3"></audio><div class="who">— Chiara, sobre su proceso con Lolo</div></div>
+      <div class="exp-card"><span class="exp-tag pres">Consulta presencial</span><div class="stars">★★★★★</div><blockquote>"Mi bebé hacía tres días que no paraba de llorar, día y noche. Los médicos no encontraban nada y estábamos desesperados. Llevamos a nuestra bebé con Noelia y en 10 minutos dejó de llorar — esa sesión nos cambió la vida. Tenía tensión en su pancita y en su espaldita, no sabía cómo ponerse para estar cómoda. Seguimos yendo hasta el año de forma continuada, y ahora que tiene 3 años llevamos a nuestra niña cada vez que sentimos que está tensa, que se irrita fácil, o que le cuesta dormir."</blockquote><div class="who">— Juan Pablo, papá de Mía</div></div><div class="exp-card"><span class="exp-tag pres">Consulta presencial</span><div class="stars">★★★★★</div><blockquote>"Mi hija nació con craneosinostosis, fue operada a los dos meses y tenía tortícolis congénita que terminó en una plagiocefalia muy notoria. Veníamos con kinesiología desde que nació y no mejoraba. Decidimos viajar 240 km cada semana para llegar a la consulta. La movilidad del cuello mejoró muchísimo desde la primera sesión, también el brazo y la pierna izquierdos que casi no movía — durmió y comió como nunca, y la simetría craneal mejoró. Lo que más me sorprendió fue la encuesta inicial por escrito: cuando llegamos ya sabías lo que venía, no hubo improvisación, y esa mirada holística que atraviesa toda la experiencia. Me sentí súper acompañada. Vale cada centavo — la inversión en la salud de un hijo no tiene precio."</blockquote><div class="who">— Mariana, mamá de Paz</div></div><div class="exp-card"><span class="exp-tag pres">Consulta presencial</span><div class="stars">★★★★★</div><blockquote>"Acudimos a vos porque conozco y confío en tu trabajo: entregás el máximo de dedicación y amor a lo que hacés. Mi bebé tenía muchos cólicos, no dormía, no se alimentaba bien y estábamos en total desesperación. Después del tratamiento llegó mucha paz: empezó a aumentar de peso, dormía y estaba mucho más activo en la vigilia, no hubo más cólicos y tomaba bien la teta. Me sorprendió tu amor y cómo lográs hacer posible lo imposible. Me sentí muy tranquilo, con mucha paz y confort. Si alguien está pasando por algo parecido le digo siempre lo mismo: sos una crack, lejos la mejor de lo mejor."</blockquote><div class="who">— Juanpi, papá de Lucio</div></div><div class="exp-card"><span class="exp-tag pres">Consulta presencial · con foto</span><div class="stars">★★★★★</div><img src="assets/fotos/foto10.jpg" alt="Foto de la familia con el antes y el después" loading="lazy"><blockquote>"Decidí consultar con vos porque nunca antes había escuchado sobre la TMPI y la regulación del sistema nervioso en bebés a través de los masajes. Mi bebé estaba pasando por una internación de larga duración. Lo que más me sorprendió de tu forma de trabajar fue la sutilidad del contacto y la escucha profunda del cuerpo. La verdad que yo también sentí un gran alivio durante las sesiones, y me ayudaste a enraizarme. Altamente recomendada: la labor y la vocación de Noe es sublime. Fue para nosotros como familia una gran guía y sostén."</blockquote><div class="who">— Jose, mamá de Zdenko</div></div><div class="exp-card"><span class="exp-tag pres">Consulta presencial</span><div class="stars">★★★★★</div><blockquote>"Llegamos con nuestra bebé completamente desregulada: lloraba día y noche y ya no sabíamos qué más hacer. Noelia no solo trabajó con ella, también nos enseñó a entenderla. En una sola sesión ya vimos cambios enormes: se durmió en la consulta y se despertó recién a las 3 horas. Ahora sabemos cómo acompañarla. Se nota que no hace algo mecánico, está ahí de verdad."</blockquote><div class="who">— Cecilia, mamá de Malena</div></div><div class="exp-card"><span class="exp-tag pres">Consulta presencial</span><div class="stars">★★★★★</div><blockquote>"Mi bebé estaba muy irritable, no lo podía dejar dos minutos lejos de mí. Probamos de todo antes. Con Noelia fue distinto desde el primer momento: nos hizo muchas preguntas para comprender qué sucedía. Su forma de hablar, de explicar, de tocar, de mirar, de estar, lo calmó en un ratito, y a nosotros también. Nuestro bebé duerme mejor, llora mucho menos, no se irrita tanto. Todos dormimos."</blockquote><div class="who">— Sofía, mamá de Mateo</div></div>
+    </div>
+    <p class="exp-hint">Más experiencias · deslizá →</p>
+  </div>
+</section>
+
+<!-- QUIÉN SOY -->
+<section>
+  <div class="wrap">
+    <div class="me me-grid"><img src="assets/fotos/foto3.jpg" alt="Noelia sosteniendo a un bebé que la mira" loading="lazy"><div>
+      <span class="eyebrow">Quién te acompaña</span>
+      <h2>Soy Noelia Avendaño</h2>
+      <p>Licenciada en Kinesiología, con más de 14 años en terapia manual y 8 en Terapia Manual Pediátrica Integrativa. Miro al bebé y también a su familia. Mi objetivo es que entiendas a tu bebé y sepas cómo acompañarlo, sin depender de mí.</p>
+      <p class="quote">Un bebé no se calma solo. Se calma en brazos de quienes lo cuidan.</p>
+    </div></div>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="final">
+  <div class="wrap">
+    <h2>Criar no tiene que ser tan pesado.</h2>
+    <p>Empecemos por lo que más necesitás hoy.</p>
+    <div class="btns">
+      <a class="btn" href="#calma">Ver las consultas</a>
+      <a class="btn btn-ghost" href="https://wa.me/5492604419242?text=Hola%20Noe%2C%20no%20s%C3%A9%20por%20d%C3%B3nde%20empezar%20con%20mi%20beb%C3%A9">Escribime por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Integra Cuerpo &amp; Alma · <a href="https://instagram.com/integra_cuerpo.alma">@integra_cuerpo.alma</a>
+</footer>
+
+<a class="wa" href="https://wa.me/5492604419242?text=Hola%20Noe%2C%20quiero%20saber%20m%C3%A1s%20sobre%20la%20c%C3%B3mo%20pod%C3%A9s%20acompa%C3%B1arme" aria-label="Escribime por WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.3.6 4.5 1.8 6.5L3 29l6.9-1.8c1.9 1 4 1.6 6.1 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.5c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6C5.3 9.9 10.1 5.2 16 5.2s10.7 4.7 10.7 10.6S21.9 26.5 16 26.5zm5.9-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+</body>
+</html>
+</body>
+</html>

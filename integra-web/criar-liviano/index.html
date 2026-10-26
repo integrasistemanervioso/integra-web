@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criar Liviano — Comunidad para criar con calma | Integra Cuerpo & Alma</title>
+<meta name="description" content="Aprendé a calmar a tu bebé y ayudarlo a relajarse para dormir. 2 encuentros de 30 minutos por mes y acompañamiento por Telegram.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --beige:#F5EEE3; --beige-2:#EBE0CF; --arena:#D9C8AE;
+  --euca:#6E8F80; --euca-osc:#4A6B5D; --euca-claro:#DCE6DF;
+  --tinta:#3B3A36; --suave:#6B6760; --blanco:#FFFCF7;
+  --radio:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',sans-serif;background:var(--beige);color:var(--tinta);line-height:1.65;font-size:17px;overflow-x:hidden}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;line-height:1.2;color:var(--euca-osc)}
+h1{font-size:clamp(2.3rem,7vw,3.8rem)}
+h2{font-size:clamp(1.7rem,5vw,2.5rem);margin-bottom:.6em}
+h3{font-size:1.25rem;margin-bottom:.35em}
+em{font-family:'Fraunces',serif;font-style:italic;font-weight:400}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:76px 0}
+.eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--euca);margin-bottom:14px}
+.centro{text-align:center}
+.lead{font-size:1.12rem;color:var(--suave);max-width:640px}
+.centro .lead{margin:0 auto}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--euca-osc);color:#fff;text-decoration:none;font-weight:700;padding:16px 30px;border-radius:999px;transition:transform .25s,box-shadow .25s,background .25s;box-shadow:0 8px 22px rgba(74,107,93,.28)}
+.btn:hover{transform:translateY(-2px);background:var(--euca);box-shadow:0 12px 28px rgba(74,107,93,.35)}
+.btn svg{width:20px;height:20px;fill:currentColor}
+.btn-sec{background:transparent;color:var(--euca-osc);box-shadow:none;border:2px solid var(--euca)}
+.btn-sec:hover{background:var(--euca-claro);color:var(--euca-osc)}
+
+/* HERO */
+.hero{position:relative;padding:40px 0 90px;overflow:hidden}
+.marca{font-family:'Fraunces',serif;font-size:1rem;color:var(--euca-osc);letter-spacing:.04em;margin-bottom:56px;display:flex;align-items:center;gap:10px}
+.marca span{width:30px;height:1px;background:var(--euca)}
+.hero h1 em{color:var(--euca)}
+.hero .lead{margin:22px 0 34px;font-size:1.18rem}
+.hero-acciones{display:flex;flex-wrap:wrap;gap:14px}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);z-index:-1;animation:flotar 14s ease-in-out infinite}
+.b1{width:420px;height:420px;background:var(--euca-claro);top:-120px;right:-140px}
+.b2{width:260px;height:260px;background:var(--beige-2);bottom:-60px;left:-90px;animation-delay:-5s}
+.b3{width:120px;height:120px;background:var(--arena);opacity:.5;top:46%;right:12%;animation-delay:-9s}
+@keyframes flotar{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(18px,-22px) scale(1.05)}}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.tag{background:var(--blanco);border:1px solid var(--beige-2);padding:8px 16px;border-radius:999px;font-size:.92rem;font-weight:600;color:var(--euca-osc)}
+
+/* TE SUENA */
+.suena{background:var(--blanco)}
+.lista-suena{list-style:none;display:grid;gap:14px;margin-top:30px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.lista-suena li{background:var(--beige);padding:18px 20px 18px 52px;border-radius:16px;position:relative}
+.lista-suena li::before{content:"";position:absolute;left:20px;top:24px;width:14px;height:14px;border-radius:50%;background:var(--euca);box-shadow:0 0 0 5px var(--euca-claro)}
+.alerta{margin-top:50px;background:var(--euca-claro);border-radius:var(--radio);padding:34px 28px;text-align:center}
+.alerta>p{color:var(--suave);max-width:600px;margin:0 auto}
+.alerta-grid{display:grid;gap:14px;margin:26px 0;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.alerta-grid div{background:var(--blanco);border-radius:16px;padding:20px 16px;font-size:.95rem;color:var(--suave)}
+.alerta-grid span{display:block;font-size:1.8rem;margin-bottom:6px}
+.alerta-grid strong{display:block;color:var(--euca-osc);font-size:1.05rem;margin-bottom:4px}
+.alerta-final{font-weight:700;color:var(--euca-osc)!important}
+.cierre-suena{margin-top:36px;font-family:'Fraunces',serif;font-size:1.4rem;color:var(--euca-osc);text-align:center}
+
+/* VOS TAMBIÉN */
+.vos{background:var(--euca-osc);color:#F3F0E8}
+.vos h2{color:#fff}
+.vos .lead{color:#DCE6DF}
+.vos-grid{display:grid;gap:40px;align-items:center;grid-template-columns:1fr}
+.frase-grande{font-family:'Fraunces',serif;font-size:clamp(1.5rem,4.2vw,2.1rem);line-height:1.35;color:#fff}
+.frase-grande em{color:var(--arena)}
+.vos p+p{margin-top:16px}
+@media(min-width:820px){.vos-grid{grid-template-columns:1fr 1fr}}
+
+/* PILARES */
+.pilares-grid{display:grid;gap:18px;margin-top:40px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.pilar{background:var(--blanco);border-radius:var(--radio);padding:30px 26px;position:relative;transition:transform .3s,box-shadow .3s;border:1px solid var(--beige-2)}
+.pilar:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(59,58,54,.08)}
+.pilar .num{font-family:'Fraunces',serif;font-size:2.6rem;color:var(--euca-claro);position:absolute;top:14px;right:22px;font-weight:600}
+.icono{width:52px;height:52px;border-radius:16px;background:var(--euca-claro);display:grid;place-items:center;margin-bottom:18px}
+.icono svg{width:26px;height:26px;stroke:var(--euca-osc);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.pilar p{color:var(--suave);font-size:.98rem}
+
+/* COMO FUNCIONA */
+.como{background:var(--beige-2)}
+.pasos{display:grid;gap:22px;margin-top:44px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.paso{background:var(--blanco);border-radius:var(--radio);padding:30px 26px;position:relative}
+.paso .cuando{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--euca);display:block;margin-bottom:8px}
+.paso .circ{width:46px;height:46px;border-radius:50%;background:var(--euca-osc);color:#fff;display:grid;place-items:center;font-family:'Fraunces',serif;font-size:1.25rem;margin-bottom:18px}
+.paso p{color:var(--suave);font-size:.98rem}
+.paso ul{margin-top:12px;padding-left:18px;color:var(--suave);font-size:.95rem}
+.paso li{margin-bottom:6px}
+
+/* TEMAS */
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:32px}
+.chip{background:var(--blanco);border:1.5px solid var(--euca-claro);color:var(--euca-osc);padding:10px 18px;border-radius:999px;font-weight:600;font-size:.95rem;transition:background .25s,transform .25s}
+.chip:hover{background:var(--euca-claro);transform:scale(1.04)}
+.nota-temas{margin-top:26px;color:var(--suave);text-align:center;font-size:.98rem}
+
+/* NOELIA */
+.noelia{background:var(--blanco)}
+.cita{max-width:760px;margin:0 auto;position:relative;padding:20px 0 0}
+.cita::before{content:"“";font-family:'Fraunces',serif;font-size:7rem;color:var(--euca-claro);position:absolute;top:-50px;left:-6px;line-height:1}
+.cita p{font-family:'Fraunces',serif;font-size:clamp(1.12rem,2.6vw,1.32rem);line-height:1.6;color:var(--tinta);position:relative}
+.firma{margin-top:22px;font-weight:700;color:var(--euca-osc)}
+.firma small{display:block;font-weight:400;color:var(--suave)}
+
+/* PROMESA HONESTA */
+.honesta-grid{display:grid;gap:18px;margin-top:34px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.caja{border-radius:var(--radio);padding:28px 26px}
+.caja.si{background:var(--euca-claro)}
+.caja.no{background:var(--blanco);border:1px dashed var(--arena)}
+.caja ul{list-style:none;margin-top:12px}
+.caja li{padding:7px 0 7px 30px;position:relative;font-size:.98rem}
+.caja.si li::before{content:"✓";position:absolute;left:4px;color:var(--euca-osc);font-weight:700}
+.caja.no li::before{content:"—";position:absolute;left:2px;color:var(--suave)}
+
+/* INVERSION */
+.inversion{background:var(--euca-osc)}
+.inversion h2,.inversion .eyebrow{color:#fff}
+.inversion .lead{color:#DCE6DF}
+.precios{display:grid;gap:20px;margin-top:40px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));max-width:760px;margin-left:auto;margin-right:auto}
+.precio{background:var(--blanco);border-radius:var(--radio);padding:34px 28px;text-align:center;position:relative}
+.precio.destacado{box-shadow:0 0 0 3px var(--arena)}
+.precio .etiqueta{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--arena);color:var(--tinta);font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:999px;white-space:nowrap}
+.precio h3{color:var(--suave);font-family:'Nunito Sans',sans-serif;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
+.monto{font-family:'Fraunces',serif;font-size:3.2rem;color:var(--euca-osc);line-height:1.1;margin:10px 0 2px}
+.monto small{font-size:1rem;font-family:'Nunito Sans',sans-serif;color:var(--suave)}
+.precio p{color:var(--suave);font-size:.95rem;margin-top:10px}
+.incluye{max-width:760px;margin:30px auto 0;background:rgba(255,255,255,.08);border-radius:var(--radio);padding:26px 28px;color:#F3F0E8}
+.incluye ul{list-style:none;display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.incluye li::before{content:"✓  ";color:var(--arena);font-weight:700}
+.pagos{max-width:760px;margin:22px auto 0;text-align:center;color:#DCE6DF;font-size:.95rem}
+.pagos strong{color:#fff}
+.inversion .btn{background:var(--arena);color:var(--tinta);margin-top:34px}
+.inversion .btn:hover{background:#fff}
+
+
+/* PAGAR */
+.pagar{background:var(--blanco)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:34px}
+.tab{font:inherit;font-weight:700;font-size:.92rem;padding:10px 16px;border-radius:999px;border:1.5px solid var(--euca-claro);background:var(--beige);color:var(--euca-osc);cursor:pointer;transition:background .25s}
+.tab.activa{background:var(--euca-osc);color:#fff;border-color:var(--euca-osc)}
+.paneles{max-width:640px;margin:24px auto 0}
+.panel{display:none;background:var(--beige);border-radius:var(--radio);padding:28px 24px}
+.panel.activo{display:block;animation:aparecer .4s ease}
+@keyframes aparecer{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.panel-nota{color:var(--suave);font-size:.95rem;margin-bottom:14px}
+.dato{display:flex;align-items:center;gap:10px;background:var(--blanco);border-radius:14px;padding:12px 14px;margin-bottom:8px;flex-wrap:wrap}
+.dato span{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--suave);width:100%}
+.dato b{flex:1;font-size:1.02rem;word-break:break-all}
+.copiar{font:inherit;font-size:.82rem;font-weight:700;border:none;background:var(--euca-claro);color:var(--euca-osc);padding:7px 12px;border-radius:999px;cursor:pointer}
+.ars{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.ars div{background:var(--euca-claro);border-radius:14px;padding:12px 14px}
+.ars span{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--suave)}
+.ars b{font-family:'Fraunces',serif;font-size:1.25rem;color:var(--euca-osc)}
+.copiar.ok{background:var(--euca-osc);color:#fff}
+.comprobante{max-width:640px;margin:30px auto 0;text-align:center}
+.comprobante p{color:var(--suave);margin-bottom:18px}
+.comprobante .duda{margin:18px 0 0;font-size:.95rem}
+.comprobante .duda a{color:var(--euca-osc);font-weight:700}
+
+.cta-medio{text-align:center;margin-top:40px}
+.vos .cta-medio{grid-column:1/-1;margin-top:0}
+.vos .cta-medio .btn{background:var(--arena);color:var(--tinta)}
+.pasos-pago{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));max-width:760px;margin:30px auto 0}
+.pasos-pago div{background:var(--beige);border-radius:16px;padding:16px;text-align:center;font-size:.95rem;color:var(--suave)}
+.pasos-pago b{display:block;font-family:'Fraunces',serif;font-size:1.6rem;color:var(--euca-osc)}
+.titular{max-width:640px;margin:22px auto 0;background:var(--euca-claro);border-radius:16px;padding:14px 18px;text-align:center;font-size:.95rem;color:var(--euca-osc)}
+.tag-link{text-decoration:none;transition:background .25s}
+.tag-link:hover{background:var(--euca-claro)}
+.link-mc{display:inline-block;margin-top:14px;font-weight:700;color:var(--euca-osc);text-decoration:none;border-bottom:2px solid var(--euca-claro)}
+.link-mc:hover{border-color:var(--euca)}
+.link-mc-claro{color:inherit;text-decoration:underline;text-decoration-color:var(--arena);text-underline-offset:3px}
+
+.monto-pais{font-family:'Fraunces',serif;font-size:2rem;color:var(--euca-osc);margin-top:12px}
+.monto-pais small{font-family:'Nunito Sans',sans-serif;font-size:.9rem;color:var(--suave)}
+.aviso{background:var(--blanco);border-left:4px solid var(--euca);border-radius:var(--radio);padding:30px 28px;max-width:760px;margin:0 auto}
+.aviso p+p{margin-top:12px}
+.aviso p{color:var(--suave)}
+.aviso .firma-corta{color:var(--euca-osc);font-weight:700;margin-top:16px}
+.tele-grid{display:grid;gap:18px;margin-top:40px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.tele{background:var(--blanco);border-radius:var(--radio);padding:28px 24px;border:1px solid var(--beige-2)}
+.tele .ico{font-size:1.8rem;display:block;margin-bottom:10px}
+.tele .quien{display:inline-block;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--euca);margin-bottom:6px}
+.tele p{color:var(--suave);font-size:.97rem}
+.precio-unico{max-width:520px;margin:36px auto 0;background:var(--blanco);border-radius:var(--radio);padding:36px 28px;text-align:center}
+.precio-unico .monto{margin:6px 0}
+.equiv{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:12px}
+.equiv span{background:var(--euca-claro);color:var(--euca-osc);font-weight:700;border-radius:999px;padding:6px 14px;font-size:.92rem}
+.sin-perm{margin-top:14px;color:var(--suave);font-size:.95rem}
+.etiqueta-apertura{display:inline-block;background:var(--arena);color:var(--tinta);font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:999px;margin-bottom:12px;letter-spacing:.04em}
+.mito{display:grid;gap:14px;max-width:760px;margin:34px auto 0;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.mito-col{border-radius:var(--radio);padding:26px 24px}
+.mito-col span{display:block;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+.mito-col p{font-size:1.05rem}
+.mito-dice{background:var(--blanco);border:1px dashed var(--arena)}
+.mito-dice span{color:var(--suave)}
+.mito-dice p{font-family:'Fraunces',serif;font-style:italic;color:var(--suave);text-decoration:line-through;text-decoration-color:var(--arena)}
+.mito-real{background:var(--euca-osc);color:#F3F0E8}
+.mito-real span{color:var(--arena)}
+.reparto{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.reparto span{background:var(--euca-claro);color:var(--euca-osc);border-radius:999px;padding:6px 12px;font-size:.85rem}
+.meses{list-style:none;text-align:left;max-width:560px;margin:14px auto 0}
+.meses li{padding:8px 0 8px 26px;position:relative;color:var(--suave);font-size:.97rem}
+.meses li::before{content:"→";position:absolute;left:0;color:var(--euca)}
+.meses b{color:var(--euca-osc)}
+.mito+.mito{margin-top:14px}
+.monedas{display:grid;gap:12px;grid-template-columns:repeat(3,1fr);max-width:640px;margin:32px auto 0}
+.moneda{display:flex;flex-direction:column;align-items:center;gap:2px;padding:18px 8px;border-radius:18px;background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.25);color:#fff}
+.moneda .flag{font-size:1.5rem}
+.moneda b{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:600}
+.moneda small{font-size:.78rem;opacity:.85}
+.moneda.activa{background:var(--blanco);color:var(--euca-osc);border-color:var(--arena)}
+.inversion .paneles{text-align:left}
+.inversion .panel{background:var(--blanco)}
+.inversion .panel h3{margin-bottom:8px}
+.inversion .dato{background:var(--beige)}
+.btn-pp{background:var(--euca-osc)!important;color:#fff!important;margin-top:4px!important}
+.otras{margin-top:18px;background:var(--beige);border-radius:14px;padding:4px 16px}
+.otras summary{font-size:.92rem;padding:14px 26px 14px 0}
+.otras h4{font-size:.92rem;color:var(--euca-osc);margin:14px 0 8px}
+.otras .dato{background:var(--blanco)}
+.inversion .titular{background:rgba(255,255,255,.1);color:#F3F0E8}
+.inversion .comprobante p{color:#DCE6DF}
+.inversion .comprobante .duda a{color:#fff}
+.inversion .incluye{margin-top:34px}
+@media(max-width:480px){.monedas{gap:8px}.moneda b{font-size:1.3rem}.moneda small{font-size:.7rem}}
+.hero h1{font-size:clamp(2.2rem,7vw,3.6rem)}
+.para-vos{list-style:none;display:grid;gap:10px;margin:28px auto 0;max-width:620px}
+.para-vos li{background:var(--blanco);border-radius:14px;padding:14px 18px 14px 48px;position:relative;font-weight:600}
+.para-vos li::before{content:"✓";position:absolute;left:18px;top:13px;color:var(--euca-osc);font-weight:700}
+.incl{display:grid;gap:14px;margin-top:30px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.incl div{background:var(--blanco);border-radius:var(--radio);padding:24px 22px;border:1px solid var(--beige-2)}
+.incl .ico{font-size:1.7rem;display:block;margin-bottom:8px}
+.incl p{color:var(--suave);font-size:.95rem}
+.mini{margin-top:22px;text-align:center;color:var(--suave);font-size:.95rem}
+.leer-mas{max-width:760px;margin:0 auto;background:var(--blanco);border-radius:var(--radio);border:1.5px solid var(--euca-claro);padding:0 24px}
+.leer-mas>summary{list-style:none;cursor:pointer;padding:20px 34px 20px 0;font-weight:700;color:var(--euca-osc);position:relative;font-size:1.05rem}
+.leer-mas>summary::-webkit-details-marker{display:none}
+.leer-mas>summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.6rem;color:var(--euca);transition:transform .3s}
+.leer-mas[open]>summary::after{transform:translateY(-50%) rotate(45deg)}
+.lm-cuerpo{padding:4px 0 28px}
+.lm-cuerpo h3{margin-top:24px}
+.lm-cuerpo p{color:var(--suave);font-size:.98rem;margin-top:6px}
+.lm-destacado{font-family:'Fraunces',serif;font-style:italic;color:var(--euca-osc)!important;font-size:1.1rem!important;margin-top:12px!important}
+.lm-lista{margin:8px 0 0 18px;color:var(--suave);font-size:.97rem}
+.lm-lista li{margin-bottom:6px}
+.lm-lista b{color:var(--euca-osc)}
+.lm-nota{font-size:.92rem!important}
+.lm-nota a{color:var(--euca-osc);font-weight:700}
+/* FAQ */
+.faq-lista{max-width:760px;margin:34px auto 0}
+details{background:var(--blanco);border-radius:16px;margin-bottom:12px;padding:0 22px;border:1px solid var(--beige-2)}
+summary{list-style:none;cursor:pointer;padding:20px 30px 20px 0;font-weight:700;position:relative;color:var(--euca-osc)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:1.5rem;color:var(--euca);transition:transform .3s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details p{padding:0 0 20px;color:var(--suave)}
+
+/* FINAL */
+.final{text-align:center;padding:90px 0 60px;position:relative;overflow:hidden}
+.final h2{font-size:clamp(2rem,6vw,3rem)}
+.final .lead{margin:0 auto 32px}
+footer{text-align:center;padding:30px 20px 50px;color:var(--suave);font-size:.9rem}
+footer a{color:var(--euca-osc);font-weight:700;text-decoration:none}
+
+/* Botón flotante móvil */
+.flotante{position:fixed;bottom:18px;right:18px;width:58px;height:58px;border-radius:50%;background:var(--euca-osc);display:grid;place-items:center;box-shadow:0 10px 24px rgba(74,107,93,.4);z-index:50;transition:transform .25s}
+.flotante:hover{transform:scale(1.08)}
+.flotante svg{width:28px;height:28px;fill:#fff}
+
+/* Animación de entrada */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.blob{animation:none}}
+@media(max-width:600px){section{padding:60px 0}.hero{padding-bottom:70px}.marca{margin-bottom:40px}.btn{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="wrap">
+    <div class="marca"><span></span>Integra Cuerpo &amp; Alma · Criar Liviano</div>
+    <h1>¿Tu bebé llora mucho<br><em>y cuesta dormirlo?</em></h1>
+    <p class="lead">Aprendé a calmarlo y a ayudarlo a relajarse para dormir. Desde tu casa, acompañada por otras familias.</p>
+    <div class="hero-acciones">
+      <a class="btn" href="#pagar">Quiero sumarme</a>
+    </div>
+    <div class="hero-tags">
+      <span class="tag">💻 2 encuentros de 30 min</span>
+      <span class="tag">💬 Todo por Telegram</span>
+      <span class="tag">💖 $25.000 · USD 20 · 20 €</span>
+    </div>
+  </div>
+</header>
+
+<section class="suena">
+  <div class="wrap centro">
+    <h2 class="reveal">Es para vos si tu bebé…</h2>
+    <ul class="para-vos reveal" style="text-align:left">
+      <li>Llora mucho o se irrita fácil</li>
+      <li>Cuesta dormirlo y lucha contra el sueño</li>
+      <li>Necesita estar en brazos o en contacto todo el tiempo</li>
+      <li>No se quiere perder nada (bebé "FOMO" o "de alta demanda")</li>
+      <li>Tiene gases, reflujo o se lo ve incómodo</li>
+      <li>Es muy sensible a todo lo que pasa a su alrededor</li>
+    </ul>
+    <p class="mini reveal">Para bebés de 0 a 12 meses.</p>
+    <div class="cta-medio reveal"><a class="btn" href="#pagar">Quiero sumarme</a></div>
+  </div>
+</section>
+
+<section class="como" id="como">
+  <div class="wrap">
+    <h2 class="centro reveal">Qué incluye</h2>
+    <div class="incl">
+      <div class="reveal"><span class="ico">🤲</span><h3>Encuentro 1: balanceos</h3><p>30 min en vivo. Practicamos balanceos y formas de sostenerlo para calmarlo.</p></div>
+      <div class="reveal"><span class="ico">👐</span><h3>Encuentro 2: masajes</h3><p>30 min en vivo. Te enseño masajes que lo relajan y lo ayudan a dormir.</p></div>
+      <div class="reveal"><span class="ico">🤍</span><h3>Un momento para vos</h3><p>En cada encuentro, unos minutos para que vos también te relajes. Tu bebé se calma con tu calma.</p></div>
+      <div class="reveal"><span class="ico">💬</span><h3>Telegram</h3><p>Material, grupo de familias y espacio para tus preguntas (lunes y viernes).</p></div>
+    </div>
+    <p class="mini reveal">🎥 Quedan grabados · 📊 El horario lo elegimos juntas · ✨ Cada mes, temas nuevos</p>
+  </div>
+</section>
+
+
+<!-- LEER MÁS -->
+<section style="padding-top:10px">
+  <div class="wrap">
+    <details class="leer-mas reveal">
+      <summary>Quiero leer más sobre Criar Liviano</summary>
+      <div class="lm-cuerpo">
+
+        <h3>Un bebé que llora mucho tiene su sistema nervioso en alerta</h3>
+        <p>Y un sistema nervioso en alerta se nota en todo: le cuesta dormir, alimentarse tranquilo y su digestión tampoco es la mejor. Cuando aprendemos a <strong>regular</strong> su sistema nervioso, es decir, a bajar esa alerta, todo empieza a acomodarse.</p>
+        <p class="lm-destacado">Que sea común no significa que sea normal. Un bebé no llora porque sí: llora porque algo necesita.</p>
+
+        <h3>También es para bebés que…</h3>
+        <ul class="lm-lista">
+          <li>Tienen reflujo, gases o tensión en su espaldita</li>
+          <li>Están muy irritados por un diagnóstico que están abordando, y mientras tanto necesitan regular su sistema nervioso</li>
+          <li>Estuvieron hospitalizados mucho tiempo y quedaron en alerta, o están hospitalizados ahora</li>
+          <li>Son más sensibles a los estímulos y necesitan más estímulos que los regulen</li>
+        </ul>
+        <p class="lm-nota">Si tu bebé tiene bajo tono muscular, es muy quieto, casi no llora y casi no se mueve, este grupo no es para eso. <a href="https://wa.me/5492604419242?text=Hola%20Noe!%20Tengo%20una%20duda%20sobre%20Criar%20Liviano" target="_blank" rel="noopener">Escribime</a> y armamos un grupo para abordarlo.</p>
+
+        <h3>Los encuentros</h3>
+        <p>Cada espacio dura 30 días e incluye dos encuentros en vivo de 30 minutos. No solo te enseño las herramientas: las practicamos juntas con tu bebé.</p>
+        <ul class="lm-lista">
+          <li><b>Balanceos:</b> ~20 min de práctica con tu bebé + ~5-10 min de regulación para vos</li>
+          <li><b>Masajes:</b> ~20 min de masajes para tu bebé + ~5-10 min de regulación para vos</li>
+        </ul>
+        <p>Cuando se sume el grupo, hacemos una encuesta en Telegram y elegimos el día y el horario que le queden bien a la mayoría. Quedan grabados.</p>
+
+        <h3>Tu bebé toma prestada tu calma</h3>
+        <p>Los bebés se regulan con el adulto: se llama <strong>corregulación</strong>. Muchas veces, por querer hacer lo mejor para el bebé, nos olvidamos de nosotros. Por eso en cada encuentro hay un momento para que vos también te regules. Cuando vos estás bien, tu bebé también puede estar bien.</p>
+
+        <h3>Cuatro espacios en Telegram</h3>
+        <ul class="lm-lista">
+          <li><b>Canal de Noe:</b> hablo solo yo. Comparto material, PDFs e información para que entiendas mejor a tu bebé.</li>
+          <li><b>Grupo de familias:</b> para hablar entre ustedes, compartir cómo están y acompañarse.</li>
+          <li><b>Preguntas:</b> abierto los lunes de 16 a 19 h y los viernes de 10 a 12 h. Respondo las que más se repiten; si alguna no se puede responder por ahí, la vemos en vivo.</li>
+          <li><b>Encuentros:</b> los links para conectarte y las grabaciones.</li>
+        </ul>
+
+        <h3>Un espacio dinámico: ningún mes es igual</h3>
+        <p>Cada mes trabajamos temas nuevos, por ejemplo: neurodesarrollo mes a mes, qué estímulos suman y cuáles lo irritan, porteo ergonómico, tiempo boca abajo, ventanas de sueño, piel con piel. Las familias también pueden proponer temas.</p>
+
+        <h3>Derribando mitos</h3>
+        <ul class="lm-lista">
+          <li><b>"Dejalo llorar, le hace bien a los pulmones."</b> No es verdad. No necesita llorar para que sus pulmones estén bien.</li>
+          <li><b>"Ponele medias, que se va a enfermar."</b> Lo que enferma son los virus. Si hace mucho frío, sí; si no, sus pies descalzos sienten un montón, y eso suma a su desarrollo.</li>
+        </ul>
+
+        <h3>Lo que no es</h3>
+        <p>No es una consulta personalizada para tu bebé (para eso está el 1:1) ni un reemplazo del control pediátrico. Es un espacio para aprender, practicar y sentirte acompañada, porque a criar se aprende.</p>
+
+        <div class="centro" style="margin-top:26px"><a class="btn" href="#pagar">Quiero sumarme</a></div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- INVERSIÓN Y PAGO -->
+<section class="inversion" id="pagar">
+  <div class="wrap centro">
+    <span class="eyebrow reveal">Valor de apertura</span>
+    <h2 class="reveal">Sumate a Criar Liviano</h2>
+    <p class="lead reveal">30 días · sin permanencia mínima<br><strong style="color:#fff">Tocá tu moneda para ver cómo pagar 👇</strong></p>
+
+    <div class="monedas reveal" role="tablist">
+      <button class="tab moneda activa" data-tab="ar"><span class="flag">🇦🇷</span><b>$25.000</b><small>pesos argentinos</small></button>
+      <button class="tab moneda" data-tab="usd"><span class="flag">🌎</span><b>$20</b><small>dólares (USD)</small></button>
+      <button class="tab moneda" data-tab="eu"><span class="flag">🇪🇺</span><b>20 €</b><small>euros</small></button>
+    </div>
+
+    <div class="paneles reveal">
+      <div class="panel activo" id="ar">
+        <h3>Mercado Pago · $25.000 ARS</h3>
+        <p class="panel-nota">Transferí desde Mercado Pago o cualquier banco de Argentina a este alias:</p>
+        <div class="dato"><span>Alias</span><b>noe.kine</b><button class="copiar" data-copy="noe.kine">Copiar</button></div>
+        <div class="dato"><span>Titular</span><b>Noelia Soledad Avendaño</b></div>
+      </div>
+
+      <div class="panel" id="usd">
+        <h3>PayPal · $22 USD</h3>
+        <p class="panel-nota">Desde cualquier país, en dólares. Por PayPal el valor es de $22, porque incluye su comisión. Vas a ver mi foto al pagar.</p>
+        <a class="btn btn-pp" href="https://paypal.me/avendanonoe/22USD" target="_blank" rel="noopener">Pagar $22 con PayPal</a>
+        <div class="dato" style="margin-top:14px"><span>Usuario</span><b>@avendanonoe</b><button class="copiar" data-copy="@avendanonoe">Copiar</button></div>
+        <details class="otras">
+          <summary>¿Estás en Estados Unidos, México, Chile, Perú o Uruguay? Otras formas de pago</summary>
+          <h4>🇺🇸 Transferencia desde Estados Unidos (ACH) · $20 USD</h4>
+          <div class="dato"><span>Titular</span><b>Noelia Soledad Avendaño</b><button class="copiar" data-copy="Noelia Soledad Avendaño">Copiar</button></div>
+          <div class="dato"><span>Banco</span><b>Lead Bank</b><button class="copiar" data-copy="Lead Bank">Copiar</button></div>
+          <div class="dato"><span>ABA / N° de ruta</span><b>101019644</b><button class="copiar" data-copy="101019644">Copiar</button></div>
+          <div class="dato"><span>N° de cuenta</span><b>211958554917</b><button class="copiar" data-copy="211958554917">Copiar</button></div>
+          <div class="dato"><span>Tipo de cuenta</span><b>Corriente (Checking)</b></div>
+          <h4>🇲🇽 Transferencia desde México · equivalente a $20 USD en pesos mexicanos</h4>
+          <div class="dato"><span>Banco</span><b>Finco Pay</b><button class="copiar" data-copy="Finco Pay">Copiar</button></div>
+          <div class="dato"><span>CLABE</span><b>734180020025240118</b><button class="copiar" data-copy="734180020025240118">Copiar</button></div>
+          <h4>🇨🇱🇵🇪🇺🇾 Prex a Prex · equivalente a $20 USD</h4>
+          <div class="dato"><span>Titular</span><b>Noelia Soledad Avendaño</b><button class="copiar" data-copy="Noelia Soledad Avendaño">Copiar</button></div>
+          <div class="dato"><span>N° de cuenta</span><b>37288305</b><button class="copiar" data-copy="37288305">Copiar</button></div>
+          <div class="dato"><span>País</span><b>Prex Argentina</b></div>
+        </details>
+      </div>
+
+      <div class="panel" id="eu">
+        <h3>Transferencia en euros · 20 €</h3>
+        <p class="panel-nota">Transferencia SEPA desde cualquier banco de Europa:</p>
+        <div class="dato"><span>Titular</span><b>NOELIA SOLEDAD AVENDANO</b><button class="copiar" data-copy="NOELIA SOLEDAD AVENDANO">Copiar</button></div>
+        <div class="dato"><span>IBAN</span><b>LU33 4080 0000 4977 5957</b><button class="copiar" data-copy="LU334080000049775957">Copiar</button></div>
+        <div class="dato"><span>País</span><b>Luxemburgo</b></div>
+      </div>
+    </div>
+
+    <p class="titular reveal">🔒 Todas las cuentas están a nombre de <strong>Noelia Soledad Avendaño</strong>.</p>
+
+    <div class="comprobante reveal">
+      <p><strong>¿Ya pagaste?</strong> Mandame el comprobante y te sumo a los espacios de Telegram.</p>
+      <a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noe!%20Ya%20pagu%C3%A9%20Criar%20Liviano%20%F0%9F%92%9A%20Te%20mando%20el%20comprobante" target="_blank" rel="noopener">Ya pagué, envío mi comprobante</a>
+      <p class="duda">¿Dudas antes de pagar? <a href="https://wa.me/5492604419242?text=Hola%20Noe!%20Tengo%20una%20duda%20sobre%20Criar%20Liviano" target="_blank" rel="noopener">Escribime por WhatsApp</a></p>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
+    <h2 class="centro reveal">Preguntas</h2>
+    <div class="faq-lista reveal">
+      <details><summary>¿Y si no puedo conectarme?</summary><p>Quedan grabados. Los ves cuando puedas.</p></details>
+      <details><summary>¿Es personalizado para mi bebé?</summary><p>No, es grupal. Si necesitás algo personalizado, está la <a href="../calma/" style="color:var(--euca-osc);font-weight:700">consulta 1:1</a>.</p></details>
+      <details><summary>¿Mi bebé es muy tranquilo, casi no llora ni se mueve?</summary><p>Este grupo no es para eso. <a href="https://wa.me/5492604419242?text=Hola%20Noe!%20Tengo%20una%20duda%20sobre%20Criar%20Liviano" target="_blank" rel="noopener" style="color:var(--euca-osc);font-weight:700">Escribime</a> y lo vemos.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Integra Cuerpo &amp; Alma · Lic. Noelia Avendaño<br>
+  <a href="https://instagram.com/integra_cuerpo.alma" target="_blank" rel="noopener">@integra_cuerpo.alma</a>
+</footer>
+
+<a class="flotante" href="https://wa.me/5492604419242?text=Hola%20Noe!%20Tengo%20una%20duda%20sobre%20Criar%20Liviano" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+</a>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('activa'));
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('activo'));
+  t.classList.add('activa');document.getElementById(t.dataset.tab).classList.add('activo');
+}));
+document.querySelectorAll('.copiar').forEach(b=>b.addEventListener('click',()=>{
+  const v=b.dataset.copy;
+  const listo=()=>{b.textContent='¡Copiado!';b.classList.add('ok');setTimeout(()=>{b.textContent='Copiar';b.classList.remove('ok')},1800)};
+  if(navigator.clipboard){navigator.clipboard.writeText(v).then(listo).catch(()=>fallback())}else fallback();
+  function fallback(){const t=document.createElement('textarea');t.value=v;document.body.appendChild(t);t.select();try{document.execCommand('copy');listo()}catch(e){}t.remove()}
+}));
+</script>
+</body>
+</html>

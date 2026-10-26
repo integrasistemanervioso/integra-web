@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guía Calma · Noelia Avendaño</title>
+<meta name="description" content="Cuando tu bebé llora y no sabés qué hacer. Una primera mirada para comprender su cuerpo y su sistema nervioso.">
+<meta property="og:title" content="Guía Calma · Cuando tu bebé llora y no sabés qué hacer">
+<meta property="og:description" content="Una primera mirada para comprender a tu bebé, su cuerpo y su sistema nervioso. Por Noelia Avendaño.">
+<meta property="og:image" content="https://integraregulacion.vercel.app/guia-calma/compartir.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --beige:#F4EEE5; --arena:#E7DDCE; --crema:#FBF8F3;
+    --euca:#7E9C8D; --euca-d:#4C6B5E; --euca-l:#DCE6DF;
+    --tierra:#B9876A; --tinta:#33332F; --gris:#6B6A63;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--beige);color:var(--tinta);font-family:"Inter",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img,video{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,.serif{font-family:"Lora",Georgia,serif;font-weight:500;letter-spacing:-.01em}
+  h2{font-size:clamp(30px,7vw,40px);line-height:1.12;color:var(--euca-d);margin-bottom:22px}
+  h2 em{font-style:italic;color:var(--tierra)}
+  h3{font-size:22px;color:var(--euca-d);margin-bottom:6px;line-height:1.25}
+  p{margin-bottom:14px}
+  b{font-weight:600}
+  .wrap{max-width:620px;margin:0 auto;padding:0 22px}
+  section{padding:64px 0}
+  .kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--euca);font-weight:600;margin-bottom:12px}
+  .soft{color:var(--gris)}
+  .big{font-family:"Lora",serif;font-size:21px;line-height:1.45}
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+  .noreveal .reveal{opacity:1;transform:none;transition:none}
+  .reveal.on{opacity:1;transform:none}
+
+  /* PORTADA */
+  .hero{position:relative;min-height:100svh;padding:0;display:flex;flex-direction:column;background:var(--beige)}
+  .hero .txt{padding:44px 24px 26px;max-width:620px;width:100%;margin:0 auto}
+  .hero .ph{flex:1;position:relative;display:flex;align-items:center;justify-content:center}
+  .hero img{width:100%;height:auto}
+  .hero h1{font-size:clamp(60px,17vw,96px);line-height:.95;color:var(--euca-d);margin-bottom:12px}
+  .hero h1 span{font-style:italic;color:var(--euca)}
+  .hero .sub{font-family:"Lora",serif;font-size:clamp(22px,5.6vw,28px);line-height:1.3;margin-bottom:20px}
+  .hero .line{width:44px;height:1.5px;background:var(--euca);margin-bottom:12px}
+  .hero .who{font-size:13.5px;line-height:1.6}
+  .hero .who b{display:block;color:var(--euca-d);letter-spacing:.12em;text-transform:uppercase;font-size:13px}
+  @media (min-width:760px){.hero{flex-direction:row}.hero .txt{align-self:center;padding:40px 48px}.hero .ph img{max-height:100svh;width:auto;max-width:100%}}
+  .scroll{position:absolute;z-index:2;bottom:22px;left:50%;transform:translateX(-50%);background:var(--crema);color:var(--euca-d);font-size:13px;font-weight:600;padding:10px 18px;border-radius:40px;box-shadow:0 6px 20px rgba(0,0,0,.12);animation:bob 2.4s ease-in-out infinite;white-space:nowrap}
+  @keyframes bob{50%{transform:translate(-50%,-6px)}}
+
+  /* ESCENA */
+  .scene{font-family:"Lora",serif;font-size:clamp(32px,8vw,44px);line-height:1.16;color:var(--euca-d);margin-bottom:26px}
+  .scene em{color:var(--tierra)}
+  .check{list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:18px;margin:8px 0 26px}
+  .check li{padding:11px 0 11px 30px;position:relative;border-bottom:1px solid var(--arena);font-size:16px;cursor:pointer;user-select:none;transition:color .3s}
+  .check li:before{content:"";position:absolute;left:0;top:14px;width:18px;height:18px;border:1.5px solid var(--euca);border-radius:3px;transition:background .3s}
+  .check li.on:before{background:var(--euca-d);border-color:var(--euca-d)}
+  .check li.on:after{content:"";position:absolute;left:6px;top:16px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+  .check li.on{color:var(--gris)}
+  .callout{background:var(--euca-d);color:var(--crema);border-radius:20px;padding:28px 26px 22px}
+  .callout .serif{font-size:24px;line-height:1.3;color:#fff;margin-bottom:8px}
+  .callout p{margin:0;opacity:.92;font-size:16px}
+
+  /* MITOS */
+  .myths{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:28px}
+  .myths span{font-family:"Lora",serif;font-style:italic;font-size:17px;padding:6px 15px;border-radius:40px;background:var(--arena);color:var(--gris);text-decoration:line-through;text-decoration-color:var(--tierra);text-decoration-thickness:1.6px}
+  .truth{font-family:"Lora",serif;font-size:clamp(24px,6vw,29px);line-height:1.28;color:var(--euca-d);border-left:3px solid var(--tierra);padding-left:20px;margin-bottom:28px}
+  .signs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+  .signs div{background:var(--crema);border:1px solid var(--arena);border-radius:14px;padding:14px 15px;font-size:15px;line-height:1.4}
+  .signs b{display:block;color:var(--euca-d);font-size:12px;letter-spacing:.06em;margin-bottom:3px}
+
+  /* PROFUNDO */
+  .deep div{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid var(--arena)}
+  .deep i{font-style:normal;font-family:"Lora",serif;font-size:19px;color:var(--tierra);flex:0 0 28px}
+  .deep p{margin:0;font-size:16px;line-height:1.5}
+  .question{margin-top:30px}
+  .question b{font-weight:500;color:var(--euca-d)}
+
+  /* PRIMERO VOS */
+  .you{background:var(--euca-l)}
+  .steps{counter-reset:s;margin:18px 0 30px}
+  .steps div{counter-increment:s;display:flex;gap:16px;align-items:center;margin-bottom:14px}
+  .steps div:before{content:counter(s);flex:0 0 38px;height:38px;border-radius:50%;background:var(--euca-d);color:#fff;font-family:"Lora",serif;font-size:19px;display:flex;align-items:center;justify-content:center}
+  .steps p{margin:0;font-size:17px;line-height:1.4}
+  .breathe{display:flex;flex-direction:column;align-items:center;margin:6px 0 34px}
+  .orb{width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#A9C2B5,var(--euca-d));animation:breathe 10s ease-in-out infinite;box-shadow:0 0 0 14px rgba(126,156,141,.18)}
+  .orb-txt{margin-top:22px;font-family:"Lora",serif;font-style:italic;font-size:19px;color:var(--euca-d);height:28px}
+  @keyframes breathe{0%,100%{transform:scale(.72)}40%{transform:scale(1)}50%{transform:scale(1)}}
+  .media-card{background:var(--crema);border:1px solid var(--euca);border-radius:20px;padding:22px}
+  .media-card b.t{display:block;font-family:"Lora",serif;font-weight:500;font-size:21px;color:var(--euca-d)}
+  .media-card small{display:block;color:var(--gris);font-size:14.5px;margin-bottom:14px}
+  audio{width:100%}
+
+  /* ESTA NOCHE */
+  .tcard{background:var(--crema);border:1px solid var(--arena);border-radius:20px;padding:24px 22px;margin-bottom:16px}
+  .tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--tierra);font-weight:600;margin-bottom:6px}
+  .tcard p{font-size:16px}
+  .video{margin-top:16px;border-radius:16px;overflow:hidden;background:#000;max-width:340px;margin-left:auto;margin-right:auto}
+  .video video{width:100%;height:auto}
+  .vcap{font-size:15px;color:var(--gris);text-align:center;margin-top:12px}
+
+  /* QUIÉN SOY */
+  .me{padding-top:0}
+  .me img{width:100%;max-width:620px;height:auto;margin:0 auto}
+  .me .wrap{padding-top:40px}
+  .quote{font-family:"Lora",serif;font-style:italic;font-size:clamp(28px,7vw,36px);line-height:1.2;color:var(--euca-d);margin-bottom:22px}
+
+  /* CAMINOS */
+  .path{border-radius:22px;padding:28px 24px 24px;margin-bottom:18px}
+  .path h3{font-size:27px;margin-bottom:8px}
+  .path p{font-size:16px;line-height:1.5}
+  .path ul{list-style:none;font-size:15.5px;margin:4px 0 20px}
+  .path li{padding-left:20px;position:relative;margin-bottom:6px}
+  .path li:before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%}
+  .btns{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{display:inline-block;font-size:15px;font-weight:600;padding:13px 22px;border-radius:40px;transition:transform .2s}
+  .btn:active{transform:scale(.97)}
+  .btn.o{border:1.5px solid currentColor}
+  .path.mc{background:var(--arena)}
+  .path.mc .tag{color:var(--euca-d)}
+  .path.mc .btn{background:var(--euca-d);color:#fff}
+  .path.mc .btn.o{background:transparent;color:var(--euca-d)}
+  .path.cl{background:var(--euca-d);color:var(--crema)}
+  .path.cl .tag{color:#E9D3BF}
+  .path.cl h3{color:#fff}
+  .path.cl li:before{background:#E9D3BF}
+  .path.cl .btn{background:var(--crema);color:var(--euca-d)}
+  .path.cl .btn.o{background:transparent;color:var(--crema)}
+  .path.uno{background:var(--crema);border:1.5px solid var(--tierra)}
+  .path.uno li:before{background:var(--euca)}
+  .path.uno .btn{background:var(--tierra);color:#fff}
+  .path.uno .btn.o{background:transparent;color:var(--euca-d)}
+
+  footer{padding:34px 0 50px;border-top:1px solid var(--arena)}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14.5px;color:var(--gris);line-height:1.7}
+  footer b{color:var(--euca-d);font-weight:600}
+  .pdf{display:inline-block;margin-top:8px;color:var(--euca-d);font-weight:600;border-bottom:1px solid var(--euca)}
+  .wa{position:fixed;right:16px;bottom:16px;z-index:10;width:56px;height:56px;border-radius:50%;background:var(--euca-d);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.orb,.scroll{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- PORTADA -->
+<header class="hero">
+  <div class="txt">
+    <h1>Guía<br><span>Calma</span></h1>
+    <div class="sub">Cuando tu bebé llora y no sabés qué hacer.</div>
+    <div class="line"></div>
+    <div class="who"><b>Noelia Avendaño</b>Licenciada en Kinesiología / Fisioterapeuta<br>Terapia Manual Pediátrica Integrativa<br>Regulación del sistema nervioso y neurodesarrollo</div>
+  </div>
+  <div class="ph"><img src="foto-portada.jpg" alt="Noelia acompañando a un bebé con un masaje suave"></div>
+
+</header>
+
+<!-- ESCENA -->
+<section id="empezar">
+  <div class="wrap reveal">
+    <div class="kicker">Empecemos por acá</div>
+    <div class="scene">Son las 3 de la mañana.<br>Ya revisaste todo.<br><em>Y sigue llorando.</em></div>
+    <p>Primero lo primero: <b>no estás haciendo nada mal</b>. Tu bebé no es “difícil”, no es “caprichoso” y no te está manipulando. El llanto es su forma de hablar. Su cuerpo está diciendo que algo necesita atención.</p>
+    <p class="soft">Seguro ya pasaste por esta lista mil veces (tocá para tildar):</p>
+    <ul class="check">
+      <li>Hambre</li><li>Cansancio</li><li>Pañal</li><li>Brazos y contacto</li><li>Frío o calor</li><li>Demasiados estímulos</li>
+    </ul>
+    <div class="callout">
+      <div class="serif">¿Y si revisaste todo y sigue incómodo?</div>
+      <p>Ahí es donde hay que dejar de mirar solo el síntoma y empezar a mirar el cuerpo y el sistema nervioso. De eso se trata esta guía.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MITOS -->
+<section style="padding-top:20px">
+  <div class="wrap reveal">
+    <div class="kicker">Lo que te dijeron</div>
+    <h2>Basta de quedarnos con <em>la etiqueta</em>.</h2>
+    <div class="myths"><span>“Son cólicos”</span><span>“Tiene gases”</span><span>“Es reflujo”</span><span>“Ya se le va a pasar”</span><span>“Lo tenés muy a upa”</span></div>
+    <div class="truth">Muchas veces no es la panza. Es un sistema nervioso que todavía no sabe volver solo a la calma.</div>
+    <p>Los primeros meses, tu bebé está aprendiendo a organizar todo lo que recibe: sonidos, luces, movimiento, la teta, el sueño, las sensaciones de su propio cuerpo. Cuando se satura, se queda “en alerta”. Y desde ahí, todo cuesta más.</p>
+    <p class="soft" style="margin-bottom:4px">Algunas señales de que está en alerta:</p>
+    <div class="signs">
+      <div><b>IRRITABILIDAD</b>Se enoja rápido y le cuesta volver.</div>
+      <div><b>CUERPO TENSO</b>Rígido, se arquea hacia atrás.</div>
+      <div><b>SUEÑO</b>Le cuesta dormirse o se despierta enseguida.</div>
+      <div><b>SOLO CON MAMÁ</b>No se calma en otros brazos.</div>
+      <div><b>TETA TODO EL TIEMPO</b>La busca para calmarse, no por hambre.</div>
+      <div><b>“MUY TRANQUI”</b>Un bebé quietito no siempre está regulado.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFUNDO -->
+<section style="padding-top:20px">
+  <div class="wrap reveal">
+    <div class="kicker">Cuando se repite todos los días</div>
+    <h2>A veces hay algo más <em>en el cuerpo</em>.</h2>
+    <p>Cada bebé tiene su historia. Cuando el malestar se repite, vale la pena mirar con más detalle:</p>
+    <div class="deep">
+      <div><i>01</i><p><b>Molestias digestivas.</b> Gases, panza hinchada, incomodidad después de comer o reflujo.</p></div>
+      <div><i>02</i><p><b>Tensiones en el cuerpo.</b> En espalda, cuello o tensión dural, que pueden quedar después del nacimiento o aparecer durante el desarrollo.</p></div>
+      <div><i>03</i><p><b>Dificultad para alimentarse.</b> Le cuesta coordinar succión, tragar y respirar, y se cansa o se frustra.</p></div>
+      <div><i>04</i><p><b>Sensibilidades o alergias.</b> Como la alergia a la proteína de leche de vaca, que necesita una valoración médica.</p></div>
+      <div><i>05</i><p><b>Algún malestar o enfermedad.</b> A veces el llanto es la forma de avisar que algo no está bien.</p></div>
+    </div>
+    <p class="big question">La pregunta no es <i>“¿qué tiene?”</i>.<br>Es <b>“¿qué me está queriendo contar?”</b></p>
+  </div>
+</section>
+
+<!-- PRIMERO VOS -->
+<section class="you">
+  <div class="wrap reveal">
+    <div class="kicker">Antes de calmarlo a él</div>
+    <h2>Primero <em>vos</em>.</h2>
+    <p class="big">Un bebé chiquito no puede calmarse solo. Se calma apoyándose en <b style="font-weight:500;color:var(--euca-d)">tu</b> sistema nervioso. Si vos estás a mil, él lo siente.</p>
+    <p>No es una exigencia más. Es un minuto para vos. Probalo ahora, mientras leés:</p>
+    <div class="steps">
+      <div><p>Cerrá los ojos y apoyá bien los pies en el piso.</p></div>
+      <div><p>Inhalá despacio <b>por la nariz</b>.</p></div>
+      <div><p>Soltá el aire <b>por la boca</b>, largo, como un suspiro.</p></div>
+      <div><p>En cada exhalación aflojá algo: la mandíbula, los hombros, la panza.</p></div>
+      <div><p>Repetí unas cuantas veces. Notá cómo baja tu cuerpo.</p></div>
+    </div>
+    <div class="breathe" aria-hidden="true">
+      <div class="orb"></div>
+      <div class="orb-txt" id="orbTxt">Inhalá por la nariz…</div>
+    </div>
+    <div class="media-card">
+      <b class="t">Respiración para mapadres</b>
+      <small>Un audio de 7 minutos para que bajes tu activación. Ponete cómoda y dale play.</small>
+      <audio controls preload="none" src="../assets/respiracion-mapadres.mp3"></audio>
+    </div>
+  </div>
+</section>
+
+<!-- ESTA NOCHE -->
+<section>
+  <div class="wrap reveal">
+    <div class="kicker">Para probar esta noche</div>
+    <h2>Dos cosas <em>simples</em> para empezar.</h2>
+    <div class="tcard">
+      <div class="tag">Uno</div>
+      <h3>Bajá los estímulos temprano</h3>
+      <p style="margin:0">No esperes a que explote. Desde la tarde: menos luz, menos ruido, menos visitas, menos pantallas cerca. Un bebé saturado a las 20 h es un bebé que no duerme a las 23 h.</p>
+    </div>
+    <div class="tcard">
+      <div class="tag">Dos</div>
+      <h3>Balanceos con “shhh”</h3>
+      <p>El movimiento rítmico y el sonido le ayudan a su sistema nervioso a encontrar el ritmo de la calma. Mirá cómo lo hago yo:</p>
+      <div class="video"><video controls playsinline preload="metadata" poster="balanceo-poster.jpg" src="balanceo.mp4"></video></div>
+      <p class="vcap">Respirá vos primero, sostenelo cerca de tu cuerpo y movete suave, con ritmo, acompañando con un <b>“shhh”</b> largo.</p>
+    </div>
+    <p class="soft" style="font-size:16px">Si un día funciona y al otro no, es normal. Cada bebé es distinto, y armar una rutina que le sirva al <i>tuyo</i> es justamente lo que hacemos juntas.</p>
+  </div>
+</section>
+
+<!-- QUIÉN SOY -->
+<section class="me">
+  <img src="foto-noe.jpg" alt="Noelia acompañando a una mamá con su bebé">
+  <div class="wrap reveal">
+    <div class="kicker">Mi forma de ver la crianza</div>
+    <div class="quote">“Criar no tiene que ser tan pesado.”</div>
+    <p>Soy Noe, licenciada en kinesiología, fisioterapeuta y terapeuta manual pediátrica. Acompaño a bebés y familias a regular su sistema nervioso y a potenciar su neurodesarrollo, online y en San Rafael, Mendoza.</p>
+    <p>Creo que la crianza no puede estar toda en los brazos de mamá. Cuando el bebé aprende a calmarse, a dormir y a quedarse tranquilo también con papá, con la abuela o con quien acompañe, mamá puede descansar. Y ahí aparece algo que nadie te promete: <b>disfrutar</b>.</p>
+  </div>
+</section>
+
+<!-- CAMINOS -->
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">¿Y ahora?</div>
+      <h2>No tenés que hacerlo <em>sola</em>.</h2>
+    </div>
+
+    <div class="path mc reveal">
+      <div class="tag">Para empezar a entender · a tu ritmo</div>
+      <h3 style="color:var(--euca-d)">Masterclass “No es cólico, es sistema nervioso”</h3>
+      <p>Una clase grabada de 29 minutos donde te explico qué le pasa al sistema nervioso de tu bebé y qué estímulos lo ayudan a regularse. La mirás cuando puedas, las veces que quieras.</p>
+      <div class="btns"><a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noe%21%20Le%C3%AD%20la%20Gu%C3%ADa%20Calma%20y%20quiero%20la%20Masterclass%20%F0%9F%8C%B1">Quiero la Masterclass</a><a class="btn o" href="../masterclass/">Ver más</a></div>
+    </div>
+
+    <div class="path cl reveal">
+      <div class="tag">En tribu · grupal</div>
+      <h3>Criar Liviano</h3>
+      <p>Un espacio online para familias con bebés de 0 a 12 meses. Aprendemos a leer a tu bebé y a calmarlo, para que no dependa todo de vos.</p>
+      <ul><li>Dos encuentros en vivo por mes (y grabación)</li><li>Para mamá, papá o quien acompañe, con un solo pago</li><li>Grupo de Telegram con otras familias que te entienden</li><li>$25.000 por mes · USD 20 · 20 €</li></ul>
+      <div class="btns"><a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noe%21%20Le%C3%AD%20la%20Gu%C3%ADa%20Calma%20y%20quiero%20sumarme%20a%20Criar%20Liviano%20%F0%9F%8C%B1">Quiero sumarme</a><a class="btn o" href="../criar-liviano/">Ver más</a></div>
+    </div>
+
+    <div class="path uno reveal">
+      <div class="tag">A medida · 1:1</div>
+      <h3 style="color:var(--euca-d)">Calma · Consulta 1:1 online</h3>
+      <p>Miramos a <i>tu</i> bebé en profundidad: qué le pasa, por qué y qué necesita. Practicamos juntas en vivo y te llevás una rutina pensada para él.</p>
+      <ul>
+        <li>Evaluación con historia clínica y videos de tu bebé</li>
+        <li>Un plan hecho para tu bebé, por escrito y en audios o en videollamada</li>
+        <li>Rutina de 7 días para calmarlo</li>
+        <li>Seguimiento para ajustar sobre la marcha</li>
+        <li><b>Incluye la Masterclass</b> “No es cólico, es sistema nervioso”</li>
+        <li>Tres opciones: Esencial, Pro y VIP, <b>desde USD 240</b></li>
+      </ul>
+      <div class="btns"><a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noe%21%20Le%C3%AD%20la%20Gu%C3%ADa%20Calma%20y%20quiero%20reservar%20la%20Consulta%201%3A1%20%F0%9F%8C%B1">Quiero mi consulta</a><a class="btn o" href="../calma/">Ver más</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Noelia Avendaño</b><br>Integra Cuerpo &amp; Alma<br><a class="pdf" href="guia-calma.pdf" download>Descargar la guía en PDF</a></div>
+    <div><a href="https://wa.me/5492604419242">WhatsApp +54 9 260 441 9242</a><br><a href="https://instagram.com/integra_cuerpo.alma">@integra_cuerpo.alma</a></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5492604419242?text=Hola%20Noe%21%20Le%C3%AD%20la%20Gu%C3%ADa%20Calma%20y%20tengo%20una%20consulta%20%F0%9F%8C%B1" aria-label="Escribime por WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.8-2.1-1.4-.6-.5-1-1.2-1.2-1.6-.1-.2 0-.4.1-.5l.4-.4.3-.5v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg>
+</a>
+
+<script>
+  // aparecer al hacer scroll
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // checklist tildable
+  document.querySelectorAll('.check li').forEach(li => li.addEventListener('click', () => li.classList.toggle('on')));
+  // texto de respiración sincronizado con el círculo (10 s: 4 inhalar, 1 pausa, 5 exhalar)
+  const t = document.getElementById('orbTxt');
+  const cycle = () => { t.textContent = 'Inhalá por la nariz…'; setTimeout(() => t.textContent = 'Soltá por la boca…', 5000); };
+  cycle(); setInterval(cycle, 10000);
+</script>
+</body>
+</html>

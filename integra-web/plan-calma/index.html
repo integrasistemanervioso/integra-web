@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan Calma · Integra Cuerpo & Alma</title>
+<meta name="description" content="3 días de trabajo presencial con tu bebé para que vuelva a la calma. En San Rafael o en tu ciudad: Mendoza, Neuquén y Buenos Aires. Solo 4 lugares por viaje.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF7F2; --bg-alt:#F3ECE3; --card:#FFFFFF;
+    --ink:#3B332D; --muted:#7A6E64;
+    --sage:#7E9A86; --sage-dark:#5E7A67; --clay:#C98F6E; --line:#E6DCD0;
+    --radius:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Nunito Sans',system-ui,sans-serif;font-size:17px;line-height:1.65}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.2}
+  h1{font-size:clamp(2rem,6vw,3.2rem)}
+  h2{font-size:clamp(1.6rem,4.5vw,2.3rem);margin-bottom:.8rem}
+  h3{font-size:1.25rem;margin-bottom:.4rem}
+  em{font-family:'Fraunces',serif;font-style:italic;color:var(--sage-dark)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+  section{padding:64px 0}
+  .alt{background:var(--bg-alt)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:700;color:var(--clay);margin-bottom:.8rem}
+  .lead{font-size:1.15rem;color:var(--muted);margin-top:1rem}
+  .btn{display:inline-block;background:var(--sage-dark);color:#fff;text-decoration:none;font-weight:700;padding:16px 30px;border-radius:999px;margin-top:1.6rem;transition:transform .15s, background .15s}
+  .btn:hover{background:var(--sage);transform:translateY(-2px)}
+  .btn.light{background:transparent;color:var(--sage-dark);border:2px solid var(--sage-dark)}
+
+  /* HERO */
+  .hero{padding:72px 0 56px;text-align:center}
+  .hero .brand{font-family:'Fraunces',serif;color:var(--muted);margin-bottom:2rem}
+  /* Foto: se muestra completa, sin recortar */
+  .photo{margin:2.2rem auto 0;max-width:560px}
+  .photo img{width:100%;height:auto;display:block;border-radius:var(--radius)}
+  .photo.placeholder{border:2px dashed var(--line);border-radius:var(--radius);padding:48px 20px;color:var(--muted);font-size:.95rem}
+
+  /* LISTA DE DOLORES */
+  .pains{list-style:none;margin-top:1.4rem;display:grid;gap:12px}
+  .pains li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px 14px 48px;position:relative}
+  .pains li::before{content:"";position:absolute;left:18px;top:21px;width:12px;height:12px;border-radius:50%;background:var(--clay);opacity:.7}
+
+  /* ANTES / DESPUÉS */
+  .shift{display:grid;grid-template-columns:1fr;gap:16px;margin-top:1.6rem}
+  @media(min-width:640px){.shift{grid-template-columns:1fr 1fr}}
+  .shift div{border-radius:var(--radius);padding:24px}
+  .day1{background:#F1E3D8}
+  .day3{background:#DFE8E1}
+  .shift h3{font-size:1.1rem}
+
+  /* DOS CAMINOS */
+  .two{display:grid;gap:18px;margin-top:1.6rem}
+  @media(min-width:640px){.two{grid-template-columns:1fr 1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .card .num{font-family:'Fraunces',serif;font-size:2rem;color:var(--clay);line-height:1}
+  .circle{margin-top:1.8rem;text-align:center;font-family:'Fraunces',serif;font-size:1.15rem;color:var(--sage-dark)}
+
+  /* HISTORIA */
+  blockquote{font-family:'Fraunces',serif;font-style:italic;font-size:1.3rem;line-height:1.5;border-left:4px solid var(--sage);padding:6px 0 6px 22px;margin:1.4rem 0}
+
+  /* INCLUYE */
+  .steps{display:grid;gap:16px;margin-top:1.6rem}
+  .step{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .step .tag{flex:0 0 auto;background:var(--sage-dark);color:#fff;font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:6px 12px;margin-top:2px}
+  .gift{color:var(--clay);font-weight:700}
+
+  /* PRECIOS */
+  .prices{display:grid;gap:18px;margin-top:1.6rem}
+  @media(min-width:640px){.prices{grid-template-columns:1fr 1fr}}
+  .price{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;text-align:center;position:relative}
+  .price.featured{border:2px solid var(--sage-dark)}
+  .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--sage-dark);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:5px 14px;white-space:nowrap}
+  .price .was{color:var(--muted);text-decoration:line-through;font-size:.95rem;margin-top:.6rem}
+  .price .now{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:600;color:var(--ink)}
+  .price .for{color:var(--muted);font-size:.92rem}
+  .price ul{list-style:none;text-align:left;margin-top:1.2rem;display:grid;gap:8px;font-size:.96rem}
+  .price li::before{content:"✓  ";color:var(--sage-dark);font-weight:700}
+  .price .btn{margin-top:1.4rem;width:100%}
+  .mod{font-size:1.15rem;margin-top:2.4rem;color:var(--sage-dark)}
+  @media(min-width:640px){.prices.single{grid-template-columns:1fr;max-width:380px;margin-left:auto;margin-right:auto}}
+
+  /* LUGARES */
+  .places{display:grid;gap:12px;margin-top:1.4rem}
+  @media(min-width:640px){.places{grid-template-columns:1fr 1fr}}
+  .place{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .place strong{font-family:'Fraunces',serif;font-size:1.1rem;display:block}
+  .place span{color:var(--muted);font-size:.93rem}
+
+  /* FAQ */
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:12px}
+  summary{font-weight:700;cursor:pointer;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";float:right;color:var(--sage-dark);font-size:1.3rem;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{margin-top:.6rem;color:var(--muted)}
+
+  .pill{display:inline-block;background:#F1E3D8;color:var(--ink);font-weight:700;font-size:.85rem;border-radius:999px;padding:6px 16px;margin-top:1.2rem}
+  .pay{margin-top:2rem;text-align:left}
+  .pay ol{margin:1rem 0 0 1.2rem;display:grid;gap:10px}
+  .pay .alias{display:inline-block;margin-top:4px;background:var(--bg-alt);border-radius:10px;padding:6px 12px;font-size:1rem}
+  .intl{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+  .usd{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.93rem}
+  .usd th,.usd td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:right}
+  .usd th:first-child,.usd td:first-child{text-align:left}
+  .usd td:not(:first-child){white-space:nowrap;font-weight:700}
+  .intl .methods{background:var(--bg-alt);border-radius:10px;padding:10px 14px}
+  .testis{display:grid;gap:16px;margin-top:1.6rem}
+  .testi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .testi blockquote{font-size:1.05rem;border-left:3px solid var(--sage);margin:0 0 .8rem}
+  .testi .who{color:var(--muted);font-size:.92rem;font-weight:700}
+  .brand a{color:inherit;text-decoration:none}
+  .note{font-size:.92rem;color:var(--muted);margin-top:1.6rem}
+  .final{text-align:center}
+  footer{text-align:center;padding:36px 20px;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <p class="brand"><a href="/">Integra Cuerpo &amp; Alma</a> · Lic. Noelia Avendaño</p>
+    <p class="eyebrow">Plan Calma · presencial</p>
+    <h1>3 días que van a cambiar <em>a tu bebé y a vos</em></h1>
+    <p class="lead">Con mis manos y mi presencia saco a tu bebé y a tu familia de la urgencia, de ese modo supervivencia en el que están viviendo. Te vas a casa con otro bebé y con las herramientas para sostener la calma.</p>
+    <a class="btn" href="#precios">Quiero que veas a mi bebé</a>
+    <br><span class="pill">Solo 4 bebés por viaje</span>
+
+    <div class="photo"><img loading="lazy" src="../assets/fotos/presencial-hero.jpg" alt="Noelia sonriendo mientras trabaja con un bebé en brazos de su mamá"></div>
+  </div>
+</header>
+
+<!-- DOLORES -->
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">¿Te pasa esto?</p>
+    <h2>Lo ves llorar y no hay nada que lo calme</h2>
+    <ul class="pains">
+      <li>Llora todo el tiempo y ya probaste de todo para calmarlo</li>
+      <li>Lo ves incómodo en su cuerpito y no hay forma de que esté tranquilo</li>
+      <li>Duerme siestas de minutos y se despierta sobresaltado</li>
+      <li>No duermen ni de día ni de noche, y todo en casa está desorganizado</li>
+      <li>No lo podés apoyar: solo se calma a upa o en movimiento</li>
+      <li>Se arquea, tiene la espaldita tensa o le cuesta comer tranquilo</li>
+      <li>Gira la cabeza siempre para el mismo lado o tiene la cabecita aplanada</li>
+    </ul>
+    <div class="card" style="margin-top:1.6rem">
+      <h3>Y por dentro, la culpa</h3>
+      <p>Esa sensación de no poder ayudarlo. De preguntarte qué estás haciendo mal. La desesperación de escucharlo llorar y no saber qué más hacer.</p>
+      <p style="margin-top:.8rem"><strong>No es tu culpa.</strong> Tu bebé está atrapado en un estado de alerta del que no puede salir solo. Y para eso estoy yo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORMACIÓN -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">La transformación</p>
+    <h2>Tu bebé necesita calma. <em>Yo se la doy.</em></h2>
+    <p class="lead" style="margin:-.2rem 0 1rem">Y a vos también.</p>
+    <p>Es difícil de explicar hasta que lo ves: tu bebé llega a la consulta de una manera y se va de otra, ese mismo día. Se calma.</p>
+    <div class="photo"><img loading="lazy" src="../assets/fotos/presencial-calma.jpg" alt="Bebé tranquilo con las manos de Noelia sosteniendo su cabecita"></div>
+    <p style="margin-top:1.6rem">Y en el Plan Calma son 3 días seguidos. Sin que pase una semana entre sesión y sesión, esa calma se afianza y tu bebé la mantiene cuando vuelven a casa.</p>
+    <div class="shift">
+      <div class="day1">
+        <h3>Día 1</h3>
+        <p>Un bebé en alerta, con el cuerpo tenso, y una familia agotada que llega con muchas preguntas.</p>
+      </div>
+      <div class="day3">
+        <h3>Último día</h3>
+        <p>Un bebé más aflojado, que se deja sostener, y una familia que sabe cómo seguir acompañándolo en casa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LO QUE VIVEN LAS FAMILIAS -->
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Lo que viven las familias</p>
+    <h2>Volver a dormir. Volver a disfrutar.</h2>
+    <ul class="pains">
+      <li>Empiezan a dormir: el bebé y también ustedes</li>
+      <li>Todo se vuelve más liviano en casa</li>
+      <li>Dejan de vivir en urgencia y pueden disfrutar de su bebé</li>
+    </ul>
+    <div class="photo" style="max-width:460px"><img loading="lazy" src="../assets/fotos/presencial-familia.jpg" alt="Noelia trabajando en el piso con un bebé mientras mamá y papá miran sonriendo"></div>
+    <p class="note">Hace años que familias de Neuquén, Río Negro, San Luis y Mendoza capital viajan a San Rafael para hacer este trabajo. Esto es lo que me cuentan cuando vuelven a casa.</p>
+    <div class="card" style="margin-top:1.6rem">
+      <h3>También voy donde está el bebé</h3>
+      <p>Viajé a Mendoza capital a atender a un bebé que estaba internado. Quien pasó por una internación con su bebé sabe lo que significan esos días largos, muchas veces de dos semanas o más. Ayudar a ese bebé a encontrar la calma en medio de todo eso es justamente lo que hago. Y es lo que me llevo a cada ciudad.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Lo que cuentan las familias</p>
+    <h2>"Todos dormimos"</h2>
+    <div class="testis">
+      <div class="testi"><blockquote>"Llegamos con nuestra bebé completamente desregulada: lloraba día y noche y ya no sabíamos qué más hacer. En una sola sesión ya vimos cambios enormes: se durmió en la consulta y se despertó recién a las 3 horas. Ahora sabemos cómo acompañarla."</blockquote><div class="who">— Cecilia, mamá de Malena</div></div>
+      <div class="testi"><blockquote>"Mi bebé estaba muy irritable, no lo podía dejar dos minutos lejos de mí. Su forma de hablar, de explicar, de tocar, de mirar, de estar, lo calmó en un ratito, y a nosotros también. Nuestro bebé duerme mejor, llora mucho menos. Todos dormimos."</blockquote><div class="who">— Sofía, mamá de Mateo</div></div>
+      <div class="testi"><blockquote>"Mi bebé hacía tres días que no paraba de llorar, día y noche. Estábamos desesperados. La llevamos con Noelia y en 10 minutos dejó de llorar: esa sesión nos cambió la vida."</blockquote><div class="who">— Juan Pablo, papá de Mía</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO -->
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Por qué en persona es distinto</p>
+    <h2>Dos cosas que solo pasan cuando estamos juntos</h2>
+    <div class="two">
+      <div class="card">
+        <div class="num">1</div>
+        <h3>Mis manos</h3>
+        <p>Trabajo directamente sobre el cuerpo de tu bebé: su espaldita, su cuello, su cabecita. Con mis manos lo ayudo a bajar la tensión y salir del estado de alerta.</p>
+      </div>
+      <div class="card">
+        <div class="num">2</div>
+        <h3>La calma compartida</h3>
+        <p>En la sesión se genera un clima de calma. Tu bebé lo siente, se afloja, y vos también. Y cuando vos te calmás, él se calma todavía más.</p>
+      </div>
+    </div>
+    <div class="photo" style="max-width:420px"><img loading="lazy" src="../assets/fotos/presencial-manos.jpg" alt="Manos de Noelia sosteniendo la cabecita de un bebé mientras toma el pecho"></div>
+    <p class="circle">Bebé se calma → mamá y papá se calman → bebé se calma aún más</p>
+  </div>
+</section>
+
+<!-- HISTORIA ABUELAS -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Algo que pasa en mi consultorio</p>
+    <h2>A veces la que se duerme es la abuela</h2>
+    <p>Muchas veces vienen las abuelas a acompañar a la mamá. Se sientan, y a los pocos minutos se les empiezan a cerrar los ojos.</p>
+    <blockquote>El bebé se relaja, la mamá respira… y la abuela se queda dormida. La calma se contagia.</blockquote>
+    <p>No es casualidad. En mi consultorio los bebés se calman, y esa calma llega a toda la familia. Por eso, en persona, todo va mucho más rápido.</p>
+  </div>
+</section>
+
+<!-- IMAGINATE -->
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Imaginate</p>
+    <h2>Volver a casa con otro bebé</h2>
+    <ul class="pains">
+      <li>Apoyarlo en la cuna y que se quede tranquilo</li>
+      <li>Verlo cómodo en su cuerpito, mirándote, disfrutando</li>
+      <li>Dormir vos también, de día y de noche</li>
+      <li>Sentir que sabés cómo ayudarlo, sin culpa y sin desesperación</li>
+    </ul>
+    <a class="btn" href="#precios">Quiero mi lugar</a>
+  </div>
+</section>
+
+<!-- QUÉ INCLUYE -->
+<section style="background:#DFE8E1">
+  <div class="wrap">
+    <p class="eyebrow">Qué incluye</p>
+    <h2>Te acompaño antes, durante y después</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="tag">Antes</span>
+        <div><h3>Conozco a tu bebé antes de verlo</h3><p>Te envío una historia clínica según su edad y te pido unos videos cortitos. Así llego a la primera sesión con todo visto y aprovechamos cada minuto.</p></div>
+      </div>
+      <div class="step">
+        <span class="tag">Durante</span>
+        <div><h3>Sesiones presenciales en días seguidos</h3><p>Evaluación completa, trabajo con mis manos y una rutina para casa pensada para tu bebé.</p></div>
+      </div>
+      <div class="step">
+        <span class="tag">Después</span>
+        <div><h3>No te quedás sola al volver</h3><p>Un seguimiento online de 30 minutos cuando ya estén en casa, para ajustar la rutina. <span class="gift">Y de regalo, mi masterclass para calmar a tu bebé (valor $75.000).</span></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRECIOS -->
+<section id="precios" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Elegí tu Plan Calma</p>
+    <h2>Vení a San Rafael, o voy a tu ciudad</h2>
+
+    <h3 class="mod">Opción 1 · Vienen a San Rafael</h3>
+    <div class="prices">
+      <div class="price">
+        <h3>Plan Calma · 3 sesiones</h3>
+        <p class="was">Valor real $1.260.000</p>
+        <p class="now">$960.000</p>
+        <p class="for">3 días seguidos en mi consultorio</p>
+        <ul>
+          <li>Historia clínica y videos antes del viaje</li>
+          <li>3 sesiones presenciales con evaluación completa</li>
+          <li>Rutina para casa</li>
+          <li>Seguimiento online de 30 min</li>
+          <li>Masterclass de regalo</li>
+        </ul>
+        <a class="btn light" href="https://wa.me/5492604419242?text=Hola%20Noelia%2C%20quiero%20el%20Plan%20Calma%20de%203%20sesiones%20en%20San%20Rafael">Quiero este</a>
+      </div>
+      <div class="price featured">
+        <span class="badge">Recomendado</span>
+        <h3>Plan Calma · 4 sesiones</h3>
+        <p class="was">Valor real $1.580.000</p>
+        <p class="now">$1.180.000</p>
+        <p class="for">Ideal si hay tortícolis o cabecita aplanada marcada</p>
+        <ul>
+          <li>Historia clínica y videos antes del viaje</li>
+          <li>4 sesiones presenciales con evaluación completa</li>
+          <li>Rutina para casa</li>
+          <li>Seguimiento online de 30 min</li>
+          <li>Masterclass de regalo</li>
+        </ul>
+        <a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noelia%2C%20quiero%20el%20Plan%20Calma%20de%204%20sesiones%20en%20San%20Rafael">Quiero este</a>
+      </div>
+    </div>
+
+    <h3 class="mod">Opción 2 · Voy a tu ciudad</h3>
+    <div class="prices single">
+      <div class="price featured">
+        <span class="badge">Solo 4 lugares por viaje</span>
+        <h3>Plan Calma · 3 días en tu ciudad</h3>
+        <p class="was">Valor real $1.800.000</p>
+        <p class="now">$1.500.000</p>
+        <p class="for">Sin pasajes ni alojamiento para tu familia</p>
+        <ul>
+          <li>Historia clínica y videos antes de mi llegada</li>
+          <li>3 sesiones presenciales en 3 días seguidos</li>
+          <li>Rutina para casa</li>
+          <li>Seguimiento online de 30 min</li>
+          <li>Masterclass de regalo</li>
+        </ul>
+        <a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noelia%2C%20quiero%20anotarme%20en%20el%20Plan%20Calma%20de%20tu%20pr%C3%B3ximo%20viaje">Quiero mi lugar</a>
+      </div>
+    </div>
+    <p class="note">Viajo una vez por mes, con solo 4 familias por viaje para poder dedicarle a cada bebé el tiempo que necesita.</p>
+    <div class="places">
+      <div class="place"><strong>Mendoza capital</strong><span>Próxima fecha: a confirmar</span></div>
+      <div class="place"><strong>Neuquén</strong><span>Próxima fecha: a confirmar</span></div>
+      <div class="place"><strong>Buenos Aires</strong><span>Próxima fecha: a confirmar</span></div>
+    </div>
+
+    <div class="card pay">
+      <h3>Cómo reservar tu lugar</h3>
+      <ol>
+        <li>Transferí el total por Mercado Pago 🇦🇷<br><span class="alias">Alias: <strong>Noe.kine</strong><br>Titular: Noelia Soledad Avendaño</span></li>
+        <li>Enviame el comprobante por WhatsApp.</li>
+        <li>Listo: tu lugar queda guardado y te mando la historia clínica, el pedido de videos y la masterclass para que empieces a calmar a tu bebé desde hoy.</li>
+      </ol>
+      <div class="intl">
+        <h3>¿No sos de Argentina?</h3>
+        <p>Si venís desde otro país para que vea a tu bebé, podés pagar en dólares:</p>
+        <table class="usd">
+          <tr><th></th><th>Prex</th><th>PayPal</th></tr>
+          <tr><td>Plan Calma · 3 sesiones en San Rafael</td><td>USD 640</td><td>USD 700</td></tr>
+          <tr><td>Plan Calma · 4 sesiones en San Rafael</td><td>USD 780</td><td>USD 860</td></tr>
+          <tr><td>Plan Calma · 3 días en tu ciudad</td><td>USD 1.000</td><td>USD 1.100</td></tr>
+        </table>
+        <p class="methods">🌎 PayPal (todo el mundo) · 🇨🇱🇵🇪🇺🇾 Prex (Chile, Perú, Uruguay)<br>Escribime por WhatsApp y te paso los datos para pagar.</p>
+        <p class="note" style="margin-top:.6rem">El valor por PayPal incluye las comisiones de la plataforma.</p>
+      </div>
+      <a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noelia%2C%20te%20env%C3%ADo%20el%20comprobante%20para%20reservar%20mi%20lugar%20en%20el%20Plan%20Calma">Enviar comprobante</a>
+    </div>
+    <p class="note">Las inscripciones para cada viaje cierran 5 días antes, así tengo tiempo de recibir y analizar con calma la historia clínica y los videos de cada bebé. Si tu bebé se enferma, reprogramamos.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Preguntas frecuentes</p>
+    <h2>Lo que más me preguntan</h2>
+    <details><summary>¿Mi bebé se va a calmar?</summary><p>Lo que veo en cada consulta presencial es que los bebés se calman: llegan de una manera y se van de otra, y después mantienen esa calma. Si además tu bebé tiene tensiones en el cuerpo, gases u otras cosas para trabajar, eso puede necesitar más tiempo y te voy a decir qué seguir haciendo. Pero la calma es lo primero que aparece.</p></details>
+    <details><summary>¿Es mejor presencial u online?</summary><p>El acompañamiento online ayuda un montón: te ayuda a entender a tu bebé y a crear calma en tu casa. Pero muchas veces lleva más tiempo regularlo, según cómo llega: cuántos días lleva llorando, si tiene tensiones en el cuerpo o gases. En persona trabajo con mis manos y la calma aparece en la misma sesión. Si querés rapidez y constancia, el Plan Calma es tu plan.</p></details>
+    <details><summary>¿Desde qué edad?</summary><p>Atiendo bebés desde los primeros días de vida. Contame la edad de tu bebé y te digo si el Plan Calma es para ustedes.</p></details>
+    <details><summary>¿Reemplaza a la pediatra?</summary><p>No. Mi trabajo acompaña al de su pediatra, que siempre tiene que estar al tanto de cómo está tu bebé.</p></details>
+    <details><summary>¿Hay sesiones sueltas cuando viajás?</summary><p>No. Cuando viajo a tu ciudad trabajo solo en formato Plan Calma de 3 días, porque la regulación necesita días seguidos para que el cambio se sostenga.</p></details>
+    <details><summary>¿Puedo reservar para esta misma semana?</summary><p>Sí, si todavía hay lugar. Las inscripciones cierran 5 días antes del viaje: necesito ese tiempo para recibir la historia clínica y los videos, y evaluar bien a tu bebé. Mientras tanto, apenas reservás te mando la masterclass para que empieces a calmarlo desde casa.</p></details>
+    <details><summary>¿Qué pasa si mi bebé se enferma antes del viaje?</summary><p>Reprogramamos las fechas. El pago no se devuelve, pero tu lugar queda guardado.</p></details>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="final">
+  <div class="wrap">
+    <div class="photo" style="max-width:420px;margin-top:0;margin-bottom:2rem"><img loading="lazy" src="../assets/fotos/presencial-noelia.jpg" alt="Noelia sentada en el piso de su consultorio con un bebé en brazos"></div>
+    <h2>Si querés rapidez y constancia, <em>este es tu plan</em></h2>
+    <p class="lead">El acompañamiento online ayuda un montón a entender a tu bebé y crear calma en casa, pero muchas veces lleva más tiempo. En persona, tu bebé se calma en la misma sesión. Imaginate en 3 días seguidos.</p>
+    <a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noelia%2C%20quiero%20mi%20lugar%20en%20el%20Plan%20Calma">Quiero mi lugar</a>
+    <p class="note">Solo 4 bebés por viaje. Cuando se completan, pasás a la lista del próximo.</p>
+  </div>
+</section>
+
+<footer>Integra Cuerpo &amp; Alma · Lic. Noelia Avendaño · Terapia Manual Pediátrica Integrativa</footer>
+
+</body>
+</html>

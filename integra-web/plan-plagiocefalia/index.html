@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan Plagiocefalia / Tortícolis · Integra Cuerpo & Alma</title>
+<meta name="description" content="Plagiocefalia, tortícolis congénita y dificultades de succión: una semana de trabajo presencial con tu bebé. San Rafael, Mendoza, Neuquén y Buenos Aires.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF7F2; --bg-alt:#F3ECE3; --card:#FFFFFF;
+    --ink:#3B332D; --muted:#7A6E64;
+    --sage:#7E9A86; --sage-dark:#5E7A67; --clay:#C98F6E; --line:#E6DCD0;
+    --radius:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Nunito Sans',system-ui,sans-serif;font-size:17px;line-height:1.65}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.2}
+  h1{font-size:clamp(2rem,6vw,3.2rem)}
+  h2{font-size:clamp(1.6rem,4.5vw,2.3rem);margin-bottom:.8rem}
+  h3{font-size:1.25rem;margin-bottom:.4rem}
+  em{font-family:'Fraunces',serif;font-style:italic;color:var(--sage-dark)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+  section{padding:64px 0}
+  .alt{background:var(--bg-alt)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:700;color:var(--clay);margin-bottom:.8rem}
+  .lead{font-size:1.15rem;color:var(--muted);margin-top:1rem}
+  .btn{display:inline-block;background:var(--sage-dark);color:#fff;text-decoration:none;font-weight:700;padding:16px 30px;border-radius:999px;margin-top:1.6rem;transition:transform .15s, background .15s}
+  .btn:hover{background:var(--sage);transform:translateY(-2px)}
+  .btn.light{background:transparent;color:var(--sage-dark);border:2px solid var(--sage-dark)}
+
+  /* HERO */
+  .hero{padding:72px 0 56px;text-align:center}
+  .hero .brand{font-family:'Fraunces',serif;color:var(--muted);margin-bottom:2rem}
+  /* Foto: se muestra completa, sin recortar */
+  .photo{margin:2.2rem auto 0;max-width:560px}
+  .photo img{width:100%;height:auto;display:block;border-radius:var(--radius)}
+  .photo.placeholder{border:2px dashed var(--line);border-radius:var(--radius);padding:48px 20px;color:var(--muted);font-size:.95rem}
+
+  /* LISTA DE DOLORES */
+  .pains{list-style:none;margin-top:1.4rem;display:grid;gap:12px}
+  .pains li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px 14px 48px;position:relative}
+  .pains li::before{content:"";position:absolute;left:18px;top:21px;width:12px;height:12px;border-radius:50%;background:var(--clay);opacity:.7}
+
+  /* ANTES / DESPUÉS */
+  .shift{display:grid;grid-template-columns:1fr;gap:16px;margin-top:1.6rem}
+  @media(min-width:640px){.shift{grid-template-columns:1fr 1fr}}
+  .shift div{border-radius:var(--radius);padding:24px}
+  .day1{background:#F1E3D8}
+  .day3{background:#DFE8E1}
+  .shift h3{font-size:1.1rem}
+
+  /* DOS CAMINOS */
+  .two{display:grid;gap:18px;margin-top:1.6rem}
+  @media(min-width:640px){.two{grid-template-columns:1fr 1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .card .num{font-family:'Fraunces',serif;font-size:2rem;color:var(--clay);line-height:1}
+  .circle{margin-top:1.8rem;text-align:center;font-family:'Fraunces',serif;font-size:1.15rem;color:var(--sage-dark)}
+
+  /* HISTORIA */
+  blockquote{font-family:'Fraunces',serif;font-style:italic;font-size:1.3rem;line-height:1.5;border-left:4px solid var(--sage);padding:6px 0 6px 22px;margin:1.4rem 0}
+
+  /* INCLUYE */
+  .steps{display:grid;gap:16px;margin-top:1.6rem}
+  .step{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .step .tag{flex:0 0 auto;background:var(--sage-dark);color:#fff;font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:6px 12px;margin-top:2px}
+  .gift{color:var(--clay);font-weight:700}
+
+  /* PRECIOS */
+  .prices{display:grid;gap:18px;margin-top:1.6rem}
+  @media(min-width:640px){.prices{grid-template-columns:1fr 1fr}}
+  .price{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;text-align:center;position:relative}
+  .price.featured{border:2px solid var(--sage-dark)}
+  .badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--sage-dark);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:5px 14px;white-space:nowrap}
+  .price .was{color:var(--muted);text-decoration:line-through;font-size:.95rem;margin-top:.6rem}
+  .price .now{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:600;color:var(--ink)}
+  .price .for{color:var(--muted);font-size:.92rem}
+  .price ul{list-style:none;text-align:left;margin-top:1.2rem;display:grid;gap:8px;font-size:.96rem}
+  .price li::before{content:"✓  ";color:var(--sage-dark);font-weight:700}
+  .price .btn{margin-top:1.4rem;width:100%}
+  .mod{font-size:1.15rem;margin-top:2.4rem;color:var(--sage-dark)}
+  @media(min-width:640px){.prices.single{grid-template-columns:1fr;max-width:380px;margin-left:auto;margin-right:auto}}
+
+  /* LUGARES */
+  .places{display:grid;gap:12px;margin-top:1.4rem}
+  @media(min-width:640px){.places{grid-template-columns:1fr 1fr}}
+  .place{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .place strong{font-family:'Fraunces',serif;font-size:1.1rem;display:block}
+  .place span{color:var(--muted);font-size:.93rem}
+
+  /* FAQ */
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-top:12px}
+  summary{font-weight:700;cursor:pointer;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";float:right;color:var(--sage-dark);font-size:1.3rem;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{margin-top:.6rem;color:var(--muted)}
+
+  .pill{display:inline-block;background:#F1E3D8;color:var(--ink);font-weight:700;font-size:.85rem;border-radius:999px;padding:6px 16px;margin-top:1.2rem}
+  .pay{margin-top:2rem;text-align:left}
+  .pay ol{margin:1rem 0 0 1.2rem;display:grid;gap:10px}
+  .pay .alias{display:inline-block;margin-top:4px;background:var(--bg-alt);border-radius:10px;padding:6px 12px;font-size:1rem}
+  .intl{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+  .usd{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.93rem}
+  .usd th,.usd td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:right}
+  .usd th:first-child,.usd td:first-child{text-align:left}
+  .usd td:not(:first-child){white-space:nowrap;font-weight:700}
+  .intl .methods{background:var(--bg-alt);border-radius:10px;padding:10px 14px}
+  .testis{display:grid;gap:16px;margin-top:1.6rem}
+  .testi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .testi blockquote{font-size:1.05rem;border-left:3px solid var(--sage);margin:0 0 .8rem}
+  .testi .who{color:var(--muted);font-size:.92rem;font-weight:700}
+  .brand a{color:inherit;text-decoration:none}
+  .note{font-size:.92rem;color:var(--muted);margin-top:1.6rem}
+  .final{text-align:center}
+  footer{text-align:center;padding:36px 20px;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="brand"><a href="/">Integra Cuerpo &amp; Alma</a> · Lic. Noelia Avendaño</p>
+    <p class="eyebrow">Plan Plagiocefalia / Tortícolis · presencial</p>
+    <h1>Una semana para liberar su <em>cabecita, su cuello y su boca</em></h1>
+    <p class="lead">Plagiocefalia, tortícolis congénita y dificultades para tomar la teta. 4 a 5 días seguidos de trabajo con mis manos para que tu bebé pegue el salto que necesita.</p>
+    <a class="btn" href="#precios">Quiero que veas a mi bebé</a>
+    <br><span class="pill">Pocos lugares por viaje</span>
+    <div class="photo"><img loading="lazy" src="../assets/fotos/presencial-calma.jpg" alt="Manos de Noelia sosteniendo la cabecita de un bebé"></div>
+  </div>
+</header>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">¿Te pasa esto?</p>
+    <h2>Lo ves todos los días y te preocupa</h2>
+    <ul class="pains">
+      <li>Su cabecita está aplanada de un lado o atrás</li>
+      <li>Gira la cabeza siempre para el mismo lado</li>
+      <li>Le cuesta tomar la teta: se cansa, no tiene fuerza</li>
+      <li>Se le escapa la leche por la comisura de los labios</li>
+      <li>Hace ruido al tomar o traga aire</li>
+      <li>Notás su carita o su cuello distinto de un lado que del otro</li>
+      <li>No mueve igual los dos brazos y las dos manos</li>
+      <li>Tiene una caderita más tensa que la otra</li>
+    </ul>
+    <div class="card" style="margin-top:1.6rem">
+      <h3>Y la pregunta que no te deja tranquila</h3>
+      <p>¿Se le va a ir solo? ¿Estoy perdiendo tiempo? ¿Qué más puedo hacer?</p>
+      <p style="margin-top:.8rem"><strong>No es tu culpa, y no estás sola.</strong> Esto se trabaja, y cuanto antes, mejor.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Por qué cuanto antes</p>
+    <h2>Cada semana cuenta</h2>
+    <p>En los primeros meses, la cabecita de tu bebé todavía se está formando y responde muy rápido al trabajo. Si el cuello está tenso, el bebé apoya siempre del mismo lado y la cabecita se sigue aplanando.</p>
+    <p style="margin-top:1rem">La forma de la cabeza y la tensión del cuello también influyen en la boca: en cómo succiona, cómo traga y cómo se desarrolla su mandíbula. Acompañarlo temprano puede evitarle muchas complicaciones más adelante.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Cómo trabajo</p>
+    <h2>Libero el cuello, y la cabecita empieza a cambiar</h2>
+    <div class="steps">
+      <div class="step"><span class="tag">1</span><div><h3>El cuello</h3><p>Libero la tensión del cuello para que tu bebé pueda girar hacia los dos lados y deje de apoyar siempre la misma parte de la cabeza.</p></div></div>
+      <div class="step"><span class="tag">2</span><div><h3>Los huesitos del cráneo</h3><p>Con un trabajo muy suave sobre su cráneo libero la tensión de esos huesitos. Así el cambio en la forma de la cabeza es mucho mayor.</p></div></div>
+      <div class="step"><span class="tag">3</span><div><h3>La boca y la succión</h3><p>Trabajo la boca, la lengua y la mandíbula para que pueda prenderse bien, tomar con fuerza y tragar sin escaparse la leche.</p></div></div>
+      <div class="step"><span class="tag">4</span><div><h3>Todo su cuerpo</h3><p>La tensión del cuello muchas veces sigue hacia abajo: un bracito que se mueve menos, una caderita más tensa. Trabajo el cuerpo completo para que se mueva parejo de los dos lados. Si una cadera necesita más estudios, te lo digo para que lo vea su pediatra.</p></div></div>
+    </div>
+    <div class="photo" style="max-width:420px"><img loading="lazy" src="../assets/fotos/presencial-manos.jpg" alt="Manos de Noelia en la cabecita de un bebé mientras toma el pecho"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Lo que veo en mi consultorio</p>
+    <h2>En pocos días, tu bebé pega un salto</h2>
+    <ul class="pains">
+      <li>Gira el cuello libre, hacia los dos lados</li>
+      <li>Su cabecita empieza a cambiar de forma</li>
+      <li>Toma la teta con más fuerza y más tranquilo</li>
+    </ul>
+    <p style="margin-top:1.4rem">Después, en casa, hay que acompañar ese cambio. Te enseño exactamente qué hacer: cómo ponerlo, cómo cargarlo, qué estímulos darle. Así el cambio sigue y se sostiene.</p>
+    <div class="testis">
+      <div class="testi"><blockquote>"Mi hija tenía tortícolis congénita que terminó en una plagiocefalia muy notoria. Veníamos con kinesiología desde que nació y no mejoraba. Decidimos viajar 240 km cada semana para llegar a la consulta. La movilidad del cuello mejoró muchísimo desde la primera sesión, también el brazo y la pierna izquierdos que casi no movía. Durmió y comió como nunca, y la simetría craneal mejoró."</blockquote><div class="who">— Mariana, mamá de Paz</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Qué incluye</p>
+    <h2>Te acompaño antes, durante y después</h2>
+    <div class="steps">
+      <div class="step"><span class="tag">Antes</span><div><h3>Conozco a tu bebé antes de verlo</h3><p>Historia clínica según su edad, videos cortitos y fotos de su cabecita desde arriba y de costado.</p></div></div>
+      <div class="step"><span class="tag">Durante</span><div><h3>4 a 5 sesiones en días seguidos</h3><p>Una semana de trabajo con mis manos en su cuello, su cráneo y su boca, con evaluación completa.</p></div></div>
+      <div class="step"><span class="tag">Después</span><div><h3>Qué hacer en casa</h3><p>Rutina de cambios posturales y estímulos, mi video explicativo sobre plagiocefalia y un seguimiento online de 30 minutos para ajustar.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="precios">
+  <div class="wrap">
+    <p class="eyebrow">Elegí tu semana</p>
+    <h2>Vení a San Rafael, o voy a tu ciudad</h2>
+
+    <h3 class="mod">Opción 1 · Vienen a San Rafael</h3>
+    <div class="prices">
+      <div class="price">
+        <h3>Semana de 4 sesiones</h3>
+        <p class="was">Valor real $1.505.000</p>
+        <p class="now">$1.180.000</p>
+        <p class="for">4 días seguidos en mi consultorio</p>
+        <ul>
+          <li>Historia clínica, videos y fotos antes</li>
+          <li>4 sesiones con evaluación completa</li>
+          <li>Rutina para casa y video explicativo</li>
+          <li>Seguimiento online de 30 min</li>
+        </ul>
+        <a class="btn light" href="https://wa.me/5492604419242?text=Hola%20Noelia%2C%20quiero%20la%20semana%20de%204%20sesiones%20en%20San%20Rafael">Quiero este</a>
+      </div>
+      <div class="price featured">
+        <span class="badge">Recomendado</span>
+        <h3>Semana de 5 sesiones</h3>
+        <p class="was">Valor real $1.825.000</p>
+        <p class="now">$1.450.000</p>
+        <p class="for">Para plagiocefalia o tortícolis más marcadas</p>
+        <ul>
+          <li>Historia clínica, videos y fotos antes</li>
+          <li>5 sesiones con evaluación completa</li>
+          <li>Rutina para casa y video explicativo</li>
+          <li>Seguimiento online de 30 min</li>
+        </ul>
+        <a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noelia%2C%20quiero%20la%20semana%20de%205%20sesiones%20en%20San%20Rafael">Quiero este</a>
+      </div>
+    </div>
+
+    <h3 class="mod">Opción 2 · Voy a tu ciudad</h3>
+    <div class="prices single">
+      <div class="price featured">
+        <span class="badge">Pocos lugares por viaje</span>
+        <h3>Semana de 5 sesiones en tu ciudad</h3>
+        <p class="was">Valor real $2.725.000</p>
+        <p class="now">$2.300.000</p>
+        <p class="for">Sin pasajes ni alojamiento para tu familia</p>
+        <ul>
+          <li>Historia clínica, videos y fotos antes de mi llegada</li>
+          <li>5 sesiones en días seguidos</li>
+          <li>Rutina para casa y video explicativo</li>
+          <li>Seguimiento online de 30 min</li>
+        </ul>
+        <a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noelia%2C%20quiero%20mi%20lugar%20en%20el%20Plan%20Plagiocefalia%20%2F%20Tort%C3%ADcolis%20de%20tu%20pr%C3%B3ximo%20viaje">Quiero mi lugar</a>
+      </div>
+    </div>
+    <div class="places">
+      <div class="place"><strong>Mendoza capital</strong><span>Próxima fecha: a confirmar</span></div>
+      <div class="place"><strong>Neuquén</strong><span>Próxima fecha: a confirmar</span></div>
+      <div class="place"><strong>Buenos Aires</strong><span>Próxima fecha: a confirmar</span></div>
+    </div>
+
+    <div class="card pay">
+      <h3>Cómo reservar tu lugar</h3>
+      <ol>
+        <li>Transferí el total por Mercado Pago 🇦🇷<br><span class="alias">Alias: <strong>Noe.kine</strong><br>Titular: Noelia Soledad Avendaño</span></li>
+        <li>Enviame el comprobante por WhatsApp.</li>
+        <li>Listo: tu lugar queda guardado y te mando la historia clínica y el pedido de videos y fotos.</li>
+      </ol>
+      <div class="intl">
+        <h3>¿No sos de Argentina?</h3>
+        <p>Vení a San Rafael o a uno de mis viajes, y pagá en dólares:</p>
+        <table class="usd">
+          <tr><th></th><th>Prex</th><th>PayPal</th></tr>
+          <tr><td>4 sesiones en San Rafael</td><td>USD 780</td><td>USD 860</td></tr>
+          <tr><td>5 sesiones en San Rafael</td><td>USD 960</td><td>USD 1.060</td></tr>
+          <tr><td>5 sesiones en tu ciudad</td><td>USD 1.520</td><td>USD 1.670</td></tr>
+        </table>
+        <p class="methods">🌎 PayPal (todo el mundo) · 🇨🇱🇵🇪🇺🇾 Prex (Chile, Perú, Uruguay)<br>Escribime por WhatsApp y te paso los datos para pagar.</p>
+        <p class="note" style="margin-top:.6rem">El valor por PayPal incluye las comisiones de la plataforma.</p>
+      </div>
+      <a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noelia%2C%20te%20env%C3%ADo%20el%20comprobante%20para%20reservar%20mi%20lugar%20en%20el%20Plan%20Plagiocefalia%20%2F%20Tort%C3%ADcolis">Enviar comprobante</a>
+    </div>
+    <p class="note">Las inscripciones para cada viaje cierran 5 días antes, así tengo tiempo de analizar la historia clínica, los videos y las fotos de cada bebé. Si tu bebé se enferma, reprogramamos.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Preguntas frecuentes</p>
+    <h2>Lo que más me preguntan</h2>
+    <details><summary>¿Hasta qué edad conviene hacerlo?</summary><p>Cuanto antes, mejor: en los primeros meses la cabecita cambia mucho más rápido. Escribime con la edad de tu bebé y te digo si el Plan Plagiocefalia / Tortícolis es para ustedes.</p></details>
+    <details><summary>¿Se va a corregir del todo la forma de la cabeza?</summary><p>Cada bebé es distinto y depende de su edad y de cuán marcada esté. Lo que veo en mi consultorio es que, al liberar el cuello y el cráneo en días seguidos, el cambio arranca muy rápido. Después hay que acompañarlo en casa, y te enseño cómo.</p></details>
+    <details><summary>¿Y si necesita casco u otro tratamiento?</summary><p>Si en la evaluación veo que tu bebé necesita otra intervención, te lo digo con claridad. Mi trabajo acompaña al de su pediatra y de otros profesionales, no los reemplaza.</p></details>
+    <details><summary>¿Por qué días seguidos?</summary><p>Porque el cuerpo de tu bebé no tiene tiempo de volver a tensarse entre sesión y sesión. Cada día partimos de donde quedamos, y el cambio es mucho mayor.</p></details>
+    <details><summary>¿Qué pasa si mi bebé se enferma antes?</summary><p>Reprogramamos las fechas. El pago no se devuelve, pero tu lugar queda guardado.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="photo" style="max-width:420px;margin-top:0;margin-bottom:2rem"><img loading="lazy" src="../assets/fotos/presencial-noelia.jpg" alt="Noelia sentada en el piso de su consultorio con un bebé en brazos"></div>
+    <h2>Una semana que <em>le cambia la vida</em> a tu bebé</h2>
+    <p class="lead">Un cuello libre, una cabecita que empieza a cambiar y una boca que toma con fuerza. Y vos, tranquila, sabiendo qué hacer en casa.</p>
+    <a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noelia%2C%20quiero%20saber%20m%C3%A1s%20de%20el%20Plan%20Plagiocefalia%20%2F%20Tort%C3%ADcolis%20para%20mi%20beb%C3%A9">Quiero mi lugar</a>
+  </div>
+</section>
+
+<footer>Integra Cuerpo &amp; Alma · Lic. Noelia Avendaño · Terapia Manual Pediátrica Integrativa</footer>
+</body>
+</html>

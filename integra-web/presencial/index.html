@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Consulta Presencial Integral 1:1 — San Rafael | Integra Cuerpo & Alma</title>
+<meta name="description" content="Consulta presencial 1:1 para bebés en San Rafael, Mendoza: terapia manual pediátrica, regulación del sistema nervioso y neurodesarrollo, con Noelia Avendaño.">
+<meta property="og:title" content="Consulta Presencial 1:1 para bebés — San Rafael">
+<meta property="og:description" content="Comprendé qué le está pasando a tu bebé y acompañá su desarrollo desde el cuerpo, el sistema nervioso y el neurodesarrollo.">
+<meta property="og:image" content="https://integraregulacion.vercel.app/assets/fotos/presencial-hero.jpg">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -38,7 +43,7 @@
   @keyframes breathe { 0%, 100% { transform: scale(0.88); opacity: 0.6; } 50% { transform: scale(1.03); opacity: 1; } }
   @media (prefers-reduced-motion: reduce) { .breathe-wrap svg circle { animation: none; } }
 
-  .hero { padding: 88px 0 56px; text-align: center; }
+  .hero { padding: 40px 0 56px; text-align: center; }
   .eyebrow { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--eucalyptus-dark); font-weight: 600; margin-bottom: 28px; }
   h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(30px, 5vw, 44px); line-height: 1.22; color: var(--ink); max-width: 600px; margin: 28px auto 22px; }
   .hero-sub { max-width: 480px; margin: 0 auto 34px; color: var(--ink-soft); font-size: 17px; }
@@ -119,6 +124,42 @@
   .pack-card .save { display: inline-block; font-size: 12px; font-weight: 600; color: var(--gold-pale); background: rgba(190,149,82,0.3); padding: 3px 10px; border-radius: 999px; margin-bottom: 12px; }
   .pack-card .pay-opts { font-size: 13.5px; color: var(--eucalyptus-light); margin-top: 10px; line-height: 1.6; }
 
+  /* Fotos: siempre encuadre original, sin recortes */
+  .photo { margin: 34px auto 0; max-width: 520px; }
+  .photo img { width: 100%; height: auto; border-radius: 20px; box-shadow: 0 10px 30px rgba(52,54,44,0.12); }
+  .photo.sm { max-width: 400px; }
+  .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; margin-top: 30px; }
+  .photo-pair img { width: 100%; height: auto; border-radius: 16px; }
+  .photo-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; align-items: start; margin-top: 30px; }
+  .photo-trio img { width: 100%; height: auto; border-radius: 14px; }
+  @media (max-width: 620px) { .photo-trio { grid-template-columns: 1fr 1fr; } .photo-trio img:last-child { grid-column: span 2; max-width: 60%; margin: 0 auto; } }
+  .hero-photo { max-width: 430px; margin: 0 auto 30px; }
+
+  .testi { background: var(--cream-light); border: 1px solid var(--cream-deep); border-radius: 18px; padding: 26px 28px; margin-top: 18px; }
+  .testi .stars { color: var(--gold); letter-spacing: 3px; font-size: 15px; margin-bottom: 8px; }
+  .testi blockquote { font-family: var(--font-display); font-style: italic; font-size: 17px; line-height: 1.6; color: var(--ink); }
+  .testi .who { margin-top: 12px; font-size: 14px; font-weight: 600; color: var(--eucalyptus-dark); }
+
+  .packs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; align-items: stretch; }
+  @media (max-width: 760px) { .packs { grid-template-columns: 1fr; } }
+  .pk { background: var(--cream-light); border: 1px solid var(--cream-deep); border-radius: 20px; padding: 26px 24px; display: flex; flex-direction: column; }
+  .pk h3 { font-family: var(--font-display); font-weight: 500; font-size: 19px; color: var(--ink); }
+  .pk .for { font-size: 13.5px; color: var(--ink-soft); margin: 4px 0 10px; }
+  .pk .amount { font-family: var(--font-display); font-weight: 500; font-size: 28px; color: var(--eucalyptus-dark); margin: 4px 0 2px; }
+  .pk .per { font-size: 13px; color: var(--ink-soft); margin-bottom: 10px; }
+  .pk .save { display: inline-block; align-self: flex-start; font-size: 12px; font-weight: 600; color: #5F461B; background: var(--gold-pale); padding: 3px 10px; border-radius: 999px; margin-bottom: 12px; }
+  .pk ul { list-style: none; margin-bottom: 12px; }
+  .pk li { font-size: 14px; color: var(--ink-soft); padding: 4px 0 4px 20px; position: relative; }
+  .pk li::before { content: '✓'; position: absolute; left: 0; color: var(--eucalyptus-dark); font-weight: 700; }
+  .pk .pay-opts { font-size: 13px; color: var(--ink-soft); margin-top: auto; padding-top: 10px; border-top: 1px solid var(--cream-deep); line-height: 1.55; }
+  .pk.best { background: var(--eucalyptus-dark); border-color: var(--eucalyptus-dark); }
+  .pk.best h3, .pk.best .amount { color: var(--cream-light); }
+  .pk.best .for, .pk.best .per, .pk.best li, .pk.best .pay-opts { color: var(--eucalyptus-light); }
+  .pk.best li::before { color: var(--gold-pale); }
+  .pk.best .pay-opts { border-top-color: rgba(255,255,255,0.15); }
+  .pk .badge { align-self: flex-start; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--gold); color: #fff; padding: 4px 10px; border-radius: 999px; margin-bottom: 10px; }
+  .price-note { font-size: 14px; color: var(--ink-soft); text-align: center; margin-top: 18px; }
+
   footer { text-align: center; padding: 70px 0 60px; }
   footer h2 { margin-bottom: 14px; }
   footer .lead { margin: 0 auto 30px; }
@@ -130,13 +171,7 @@
 <body>
 
 <div class="wrap hero">
-  <div class="breathe-wrap" role="img" aria-label="Ilustración de círculos concéntricos que respiran suavemente, simbolizando calma y presencia">
-    <svg width="220" height="220" viewBox="0 0 220 220">
-      <circle cx="110" cy="110" r="96" fill="none" stroke="#A9C0AA" stroke-width="1.5"/>
-      <circle cx="110" cy="110" r="70" fill="none" stroke="#7E9A80" stroke-width="1.5"/>
-      <circle cx="110" cy="110" r="44" fill="#E4EBE1" stroke="#445245" stroke-width="1.5"/>
-    </svg>
-  </div>
+  <div class="hero-photo photo" style="margin-top:0"><img src="../assets/fotos/presencial-hero.jpg" alt="Noelia sonriendo mientras trabaja con un bebé en brazos de su mamá" fetchpriority="high"></div>
 
   <div class="location-tag">📍 San Rafael, Mendoza</div>
   <div class="eyebrow">Integra Cuerpo &amp; Alma</div>
@@ -144,7 +179,7 @@
   <p class="hero-sub">Consulta Presencial Integral 1:1 — terapia manual pediátrica, regulación del sistema nervioso y neurodesarrollo, en San Rafael.</p>
 
   <div class="btn-row">
-    <a class="btn" href="https://wa.me/5492604419242" target="_blank" rel="noopener">Escribime por WhatsApp</a>
+    <a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noe%2C%20vi%20la%20p%C3%A1gina%20de%20la%20consulta%20presencial%20y%20quiero%20reservar%20un%20lugar" target="_blank" rel="noopener">Escribime por WhatsApp</a>
   </div>
 
   <div class="bio">
@@ -157,6 +192,7 @@
       <span>Regulación emocional</span>
       <span>Hábitos que potencian el desarrollo</span>
     </div>
+    <div class="photo" style="max-width:340px;margin:22px auto 4px"><img loading="lazy" src="../assets/fotos/presencial-noelia.jpg" alt="Noelia sentada en el piso de su consultorio con un bebé en brazos"></div>
     <p style="margin-top:16px;">Un bebé no puede entenderse mirando solamente un síntoma. Mi forma de trabajar mira al bebé de manera integral: su cuerpo, su movimiento, su sistema nervioso, su historia desde el embarazo, su nacimiento, su alimentación, su sueño — y también a la familia.</p>
   </div>
 </div>
@@ -192,6 +228,7 @@
       <span class="pill">Sensibilidad excesiva</span>
     </div>
     <p class="closing-note">O simplemente quieren acompañar su desarrollo de la mejor manera posible.</p>
+    <div class="photo"><img loading="lazy" src="../assets/fotos/presencial-calma.jpg" alt="Bebé tranquilo con las manos de Noelia sosteniendo su cabecita"></div>
   </section>
 
   <section>
@@ -207,6 +244,7 @@
         <p>Aprenden a comprender a su bebé — a leer sus señales, entender qué lo regula y qué lo desregula, y sostener eso en el día a día.</p>
       </div>
     </div>
+    <div class="photo sm"><img loading="lazy" src="../assets/fotos/presencial-familia.jpg" alt="Noelia trabajando en el piso con un bebé mientras mamá y papá miran sonriendo"></div>
   </section>
 
   <section>
@@ -229,6 +267,10 @@
       <span class="pill">Restricciones del cuello</span>
       <span class="pill">Tensiones durales</span>
     </div>
+    <div class="photo-pair">
+      <img loading="lazy" src="../assets/fotos/presencial-manos.jpg" alt="Manos de Noelia sosteniendo la cabecita de un bebé mientras toma el pecho">
+      <img loading="lazy" src="../assets/fotos/foto7.jpg" alt="Noelia evaluando a un bebé en la camilla">
+    </div>
     <p class="closing-note">También solicito videos específicos para observar aspectos que muchas veces no pueden verse durante una consulta presencial. En la sesión realizamos pruebas específicas para comprender qué está limitando el bienestar del bebé y cuál es el mejor camino terapéutico.</p>
   </section>
 
@@ -250,6 +292,11 @@
     <div class="step-card">
       <span class="step-tag">Sesiones siguientes</span>
       <p>Continuamos trabajando sobre liberación de tensiones, organización corporal, sistema nervioso, neurodesarrollo, hábitos, movimiento y acompañamiento familiar. Cada sesión se adapta a la evolución de ese bebé.</p>
+    </div>
+    <div class="photo-trio">
+      <img loading="lazy" src="../assets/fotos/foto1.jpg" alt="Noelia acompañando a una mamá con su bebé en brazos">
+      <img loading="lazy" src="../assets/fotos/foto2.jpg" alt="Noelia sosteniendo a un bebé y mirándolo">
+      <img loading="lazy" src="../assets/fotos/foto5.jpg" alt="Noelia con un bebé recién nacido en su regazo">
     </div>
   </section>
 
@@ -279,6 +326,14 @@
       <li>La familia recupera confianza y disfruta mucho más esta etapa</li>
     </ul>
     <p class="closing-note">Mi objetivo no es que dependan de mí. Mi objetivo es que comprendan a su bebé. Esto no es una sesión, es un proceso — los cambios profundos necesitan tiempo. Por eso trabajo mediante procesos terapéuticos y no solamente con sesiones aisladas.</p>
+  </section>
+
+  <section>
+    <h2>Lo que cuentan las <span class="accent">familias</span></h2>
+    <div class="testi"><div class="stars">★★★★★</div><blockquote>"Mi bebé estaba muy irritable, no lo podía dejar dos minutos lejos de mí. Probamos de todo antes. Con Noelia fue distinto desde el primer momento: nos hizo muchas preguntas para comprender qué sucedía. Su forma de hablar, de explicar, de tocar, de mirar, de estar, lo calmó en un ratito, y a nosotros también. Nuestro bebé duerme mejor, llora mucho menos, no se irrita tanto. Todos dormimos."</blockquote><div class="who">— Sofía, mamá de Mateo</div></div>
+    <div class="testi"><div class="stars">★★★★★</div><blockquote>"Llegamos con nuestra bebé completamente desregulada: lloraba día y noche y ya no sabíamos qué más hacer. Noelia no solo trabajó con ella, también nos enseñó a entenderla. En una sola sesión ya vimos cambios enormes: se durmió en la consulta y se despertó recién a las 3 horas. Ahora sabemos cómo acompañarla. Se nota que no hace algo mecánico, está ahí de verdad."</blockquote><div class="who">— Cecilia, mamá de Malena</div></div>
+    <div class="testi"><div class="stars">★★★★★</div><blockquote>"Mi bebé tenía muchos cólicos, no dormía, no se alimentaba bien y estábamos en total desesperación. Después del tratamiento llegó mucha paz: empezó a aumentar de peso, dormía y estaba mucho más activo en la vigilia, no hubo más cólicos y tomaba bien la teta. Me sentí muy tranquilo, con mucha paz y confort."</blockquote><div class="who">— Juanpi, papá de Lucio</div></div>
+    <div class="photo sm"><img loading="lazy" src="../assets/fotos/foto10.jpg" alt="Mensaje de una familia: alivio de tensión dural, mamá más regulada, mejoró su postura, buen dormir, menos arqueo. Gracias Kine Noe"></div>
   </section>
 
   <section>
@@ -319,15 +374,55 @@
       </div>
     </div>
 
-    <div class="price-grid" style="margin-top:20px; grid-template-columns: 1fr; max-width: 420px; margin-left:auto; margin-right:auto;">
-      <div class="pack-card">
+    <h2 style="margin-top:44px;">Packs de <span class="accent">tratamiento</span></h2>
+    <p class="lead">Los cambios profundos necesitan un proceso. Elegí el acompañamiento que necesita tu bebé:</p>
+    <div class="packs">
+      <div class="pk">
+        <h3>Pack Bebé x 3</h3>
+        <div class="for">Para empezar el proceso y ver los primeros cambios</div>
+        <div class="amount">$900.000</div>
+        <div class="per">$300.000 por sesión</div>
+        <span class="save">Ahorro de $60.000</span>
+        <ul>
+          <li>3 sesiones de TMPI</li>
+          <li>Abordaje del sistema nervioso</li>
+          <li>Herramientas para casa</li>
+        </ul>
+        <div class="pay-opts">Un solo pago, antes de comenzar.</div>
+      </div>
+      <div class="pk">
+        <h3>Pack Bebé x 6</h3>
+        <div class="for">Para sostener el proceso y afianzar los cambios</div>
+        <div class="amount">$1.770.000</div>
+        <div class="per">$295.000 por sesión</div>
+        <span class="save">Ahorro de $150.000</span>
+        <ul>
+          <li>6 sesiones de TMPI</li>
+          <li>Abordaje del sistema nervioso</li>
+          <li>Herramientas para casa</li>
+          <li>Acompañamiento durante el proceso</li>
+        </ul>
+        <div class="pay-opts">Un pago, o dos pagos de $885.000 (el primero antes de comenzar, el segundo el día de la 3ª sesión).</div>
+      </div>
+      <div class="pk best">
+        <span class="badge">Mayor ahorro</span>
         <h3>Pack Bebé x 10</h3>
+        <div class="for">El proceso completo</div>
         <div class="amount">$2.900.000</div>
+        <div class="per">$290.000 por sesión</div>
         <span class="save">Ahorro de $300.000</span>
-        <p style="font-size:14px; color:var(--eucalyptus-light); margin-top:8px;">Incluye evaluación completa, 10 sesiones de TMPI, abordaje del sistema nervioso, seguimiento por WhatsApp, herramientas para casa y acompañamiento durante todo el proceso.</p>
-        <div class="pay-opts">Un pago, o dos pagos de $1.450.000 (el primero antes de comenzar, el segundo el día de la 4ª sesión). La consulta inicial se realiza antes de comenzar el pack y no está incluida.</div>
+        <ul>
+          <li>10 sesiones de TMPI</li>
+          <li>Abordaje del sistema nervioso</li>
+          <li>Seguimiento por WhatsApp</li>
+          <li>Herramientas para casa</li>
+          <li>Acompañamiento durante todo el proceso</li>
+        </ul>
+        <div class="pay-opts">Un pago, o dos pagos de $1.450.000 (el primero antes de comenzar, el segundo el día de la 4ª sesión).</div>
       </div>
     </div>
+    <p class="price-note">La consulta inicial se realiza antes de comenzar cualquier pack y no está incluida.</p>
+    <div class="btn-row"><a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noe%2C%20vi%20la%20p%C3%A1gina%20de%20la%20consulta%20presencial%20y%20quiero%20reservar%20un%20lugar" target="_blank" rel="noopener">Quiero reservar mi lugar</a></div>
   </section>
 </div>
 
@@ -336,7 +431,7 @@
     <h2>Hoy puede empezar un cambio</h2>
     <p class="lead" style="margin-left:auto;margin-right:auto;">No importa si tu bebé tiene pocos días de vida o ya comenzó a moverse por toda la casa. Siempre hay algo que podemos comprender mejor.</p>
     <div class="btn-row" style="margin-top:0;">
-      <a class="btn" href="https://wa.me/5492604419242" target="_blank" rel="noopener">Escribime por WhatsApp</a>
+      <a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noe%2C%20vi%20la%20p%C3%A1gina%20de%20la%20consulta%20presencial%20y%20quiero%20reservar%20un%20lugar" target="_blank" rel="noopener">Escribime por WhatsApp</a>
     </div>
     <div class="contact-row" style="margin-top:22px;">
       <a class="contact-secondary" href="https://instagram.com/integra_cuerpo.alma" target="_blank" rel="noopener">@integra_cuerpo.alma</a>

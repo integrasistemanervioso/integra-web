@@ -236,6 +236,33 @@
   .tier .who{font-weight:700;color:var(--ink);font-size:17px}
   .tier p{margin:0;color:var(--muted);font-size:16px}
   @media (min-width:800px){.tiers{grid-template-columns:repeat(3,1fr)}}
+
+  .sum{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:18px;font-weight:700;color:var(--euca-deep);font-size:17px}
+  .sum span::after{content:"·";margin-left:14px;color:var(--euca)}
+  .sum span:last-child::after{content:""}
+  .outs{display:grid;gap:10px;grid-template-columns:1fr 1fr;margin-top:18px}
+  .outs div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;font-size:16px}
+  .outs b{display:block;font-family:"Baloo 2",sans-serif;font-size:20px;color:var(--euca-deep)}
+  .steps4{list-style:none;padding:0;margin:0;display:grid;gap:10px;counter-reset:s}
+  .steps4 li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;font-size:17px}
+  .steps4 li::before{content:counter(s);flex:0 0 32px;height:32px;border-radius:50%;background:var(--euca);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
+  .plans{display:grid;gap:14px}
+  .pl{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:8px;position:relative}
+  .pl.hl{border:3px solid var(--euca)}
+  .pl .badge{position:absolute;top:-13px;left:22px;background:var(--euca);color:#fff;font-size:13px;font-weight:800;padding:4px 12px;border-radius:999px}
+  .pl .nm{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:26px;color:var(--euca-deep);line-height:1}
+  .pl .pz{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:34px;color:var(--ink);line-height:1}
+  .pl .pz small{font-family:"Nunito",sans-serif;font-size:15px;color:var(--muted);font-weight:700;margin-left:6px}
+  .pl ul{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:6px;font-size:16px}
+  .pl li::before{content:"✓ ";color:var(--euca);font-weight:800}
+  .inc{margin-top:16px;background:var(--euca-deep);color:#fff;border-radius:16px;padding:16px 18px;font-weight:700;font-size:17px}
+  @media (min-width:800px){.plans{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:420px){.outs{grid-template-columns:1fr}}
+  .stick{position:fixed;left:0;right:0;bottom:0;z-index:15;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:rgba(244,239,228,.96);border-top:1px solid var(--line);display:flex;gap:10px;align-items:center}
+  .stick a.btn{flex:1;text-align:center;padding:14px 18px;font-size:17px}
+  .stick span{font-weight:800;color:var(--euca-deep);font-size:15px}
+  @media (min-width:800px){.stick{display:none}}
+  @media (max-width:799px){.wa{bottom:84px}footer{padding-bottom:140px}}
 </style>
 </head>
 <body>
@@ -246,17 +273,13 @@
     <div class="brand">Integra Cuerpo &amp; Alma</div>
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">Consulta individual online · de 0 a 3 años</span>
+        <span class="eyebrow">Consulta online 1:1 · de 0 a 3 años</span>
         <h1>Entendé qué le pasa a tu bebé. Y qué necesita para estar mejor.</h1>
-        <p class="lead">No te voy a dar una lista de ejercicios para que pruebes a ver si alguno funciona. Miro su historia, sus videos, su cuerpo, cómo se mueve, cómo come, cómo duerme y cómo se calma. Te digo qué está pasando, por dónde empezar, qué cambiar y cuándo necesita una intervención presencial. Y te enseño a calmarlo a él, y a calmarte a vos.</p>
-        <div class="chips">
-          <span class="chip">🌎 Desde cualquier país</span>
-          <span class="chip">👶 De 0 a 3 años</span>
-          <span class="chip">💛 Desde USD 240</span>
-        </div>
+        <p class="lead">Miro a tu bebé, te digo qué le pasa y qué hacer para que se calme, duerma mejor y ustedes vuelvan a disfrutar.</p>
+        <div class="chips"><span class="chip">💛 Desde USD 240</span><span class="chip">🌎 Desde cualquier país</span><span class="chip">🎬 Incluye masterclass y guía</span></div>
         <div class="btns">
-          <a class="btn" href="#opciones">Ver las opciones</a>
-          <a class="btn btn-ghost" href="https://wa.me/5492604419242?text=Hola%20Noe%2C%20quiero%20saber%20m%C3%A1s%20sobre%20la%20consulta%201%3A1%20online">Escribime por WhatsApp</a>
+          <a class="btn" href="#opciones">Ver opciones y precios</a>
+          <a class="btn btn-ghost" href="https://wa.me/5492604419242?text=Hola%20Noe%2C%20quiero%20saber%20m%C3%A1s%20sobre%20la%20consulta%201%3A1%20online">Escribime</a>
         </div>
       </div>
       <div class="hero-media">
@@ -275,146 +298,55 @@
       <li>Le cuesta dormirse y se despierta enseguida.</li>
       <li>Está tenso, se arquea o tiene muchos gases.</li>
       <li>Sentís que está incómodo y que nada lo ayuda.</li>
-      <li>Consultaste y te dijeron que ya se le va a pasar, que es normal, que todos los bebés lloran, que es una etapa…</li>
+      <li>Te dijeron que es normal, que ya se le va a pasar, que es una etapa…</li>
     </ul>
     <div class="reframe">
-      <p><strong>Sé que si estás leyendo esto es porque no das más.</strong> Que no dormís, que no sabés qué más probar, que a veces ni disfrutás a tu bebé porque estás en modo supervivencia. Mi objetivo es simple: que dejen de sufrir, vos y tu bebé. Que tu bebé logre calmarse y dormir, y que puedan disfrutar de este momento tan esperado.</p>
+      <p><strong>No estás exagerando y no es tu culpa.</strong> Que sea común no significa que sea normal. Tu bebé puede estar mejor. Y vos también.</p>
     </div>
   </div>
 </section>
 
-<section class="reflect"><div class="wrap"><p>¿Cuándo fue la última vez que dormiste tres horas seguidas?<small>Si no te acordás, no te pasa solo a vos. Y tiene solución.</small></p></div></section>
-
-<!-- 2b. VOS TAMBIÉN -->
+<!-- 3. SÉ QUÉ HACER -->
 <section style="padding-top:0">
   <div class="wrap">
-    <h2>Tu bebé importa.<br>Y vos también.</h2>
-    <p class="lead">Pensar en vos no es egoísta. No miro solo a tu bebé: también miro cómo estás vos, cómo dormís, cuánto te está costando.</p>
-    <div class="care">
-      <div class="card"><h3>No es tu culpa</h3><p>Tu bebé no está así por algo que hiciste mal. Cuidarte es parte de acompañarlo.</p></div>
-      <div class="card"><h3>No estás exagerando</h3><p>Que sea común no significa que sea normal. Un bebé no llora "porque sí": algo le pasa, algo necesita. Acá te creo.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 3. MI MIRADA -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <span class="eyebrow">Mi forma de trabajar</span>
-    <h2>No necesitás seguir probando cosas. Necesitás entender qué le pasa.</h2>
-    <p class="lead">Cada bebé tiene una historia, un cuerpo y una manera particular de responder al mundo. Por eso no trabajo con recetas ni protocolos iguales para todos.</p>
-    <p class="lead">Tomo toda la información que me das (su historia, sus videos, cómo es su día, cómo están ustedes) y la miro con mi ojo clínico. Uno los cabos. <strong>Te veo a vos, a tu bebé y a tu familia, y te digo qué está pasando y para dónde tenemos que ir.</strong></p>
-    <ul class="ways" style="margin-top:20px">
-      <li>A veces necesitamos trabajar su regulación y enseñarte cómo acompañarlo.</li>
-      <li>Otras veces encontramos tensiones en su cuerpo (cuello, espalda, cintura) o una cabeza con forma distinta, que necesitan trabajo con las manos, en persona. Eso no se puede hacer online. Te lo digo con claridad y te guío para hacerlo conmigo en San Rafael (<a href="../presencial/">consulta presencial</a>) o con alguien formado en bebés cerca tuyo. Trabajar con bebés es una formación aparte: no cualquier kinesiólogo o fisioterapeuta puede hacerlo, y lo importante es no sumar más tensión donde ya hay.</li>
-      <li>Y otras veces hay que revisar la alimentación, el movimiento, los estímulos, el descanso o algunos hábitos de todos los días.</li>
-    </ul>
-    <p class="lead">A veces la respuesta es más simple de lo que imaginás. Por ejemplo:</p>
-    <ul class="give" style="margin:6px 0 18px">
-      <li>Está durmiendo con la luz prendida: dormimos con la luz apagada.</li>
-      <li>Hay muchos estímulos hasta las 8 de la noche: los bajamos antes.</li>
-      <li>Está necesitando más contacto y más brazos para calmarse.</li>
-      <li>Vos necesitás pedir ayuda y tener aunque sea 10 minutos para vos.</li>
-    </ul>
-    <p class="lead">Mi trabajo es verlo, explicártelo y darte un mapa claro.</p>
-    <p class="key">No te vas a quedar con una lista de cosas para probar. Vas a saber por dónde empezar y qué camino seguir.</p>
-  </div>
-</section>
-
-<!-- 3a. QUÉ CAMBIA -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <span class="eyebrow">Lo que buscamos</span>
     <h2>Sé qué hacer para que esto cambie.</h2>
-    <p class="lead">Cuando regulamos su sistema nervioso, es decir, cuando lo ayudamos a salir del estado de alerta, llega la calma. Y con la calma, todo empieza a acomodarse. Una cosa lleva a la otra:</p>
-    <div class="care" style="margin-top:18px">
-      <div class="card"><h3>😌 Más tranquilo</h3><p>Se calma más fácil, llora menos y deja de estar en alerta todo el tiempo.</p></div>
-      <div class="card"><h3>🌙 Duerme mejor</h3><p>Se duerme más fácil, se despierta menos y su sueño es más profundo.</p></div>
-      <div class="card"><h3>🍼 Come y digiere mejor</h3><p>Toma más tranquilo, traga menos aire y tiene menos gases y menos molestias en la panza.</p></div>
-      <div class="card"><h3>🤍 Ustedes, mejor</h3><p>Dejan de vivir en modo supervivencia, descansan más y vuelven a disfrutar a su bebé.</p></div>
+    <p class="lead">Miro su historia y sus videos, uno los cabos y te digo qué necesita. No es una lista de ejercicios para probar: es un camino claro.</p>
+    <div class="outs">
+      <div><b>😌 Más tranquilo</b>Se calma más fácil y llora menos.</div>
+      <div><b>🌙 Duerme mejor</b>Se duerme más fácil y se despierta menos.</div>
+      <div><b>🍼 Come mejor</b>Toma tranquilo y tiene menos gases.</div>
+      <div><b>🤍 Ustedes, mejor</b>Descansan y vuelven a disfrutar.</div>
     </div>
-    <div class="reframe" style="margin-top:22px">
-      <p><strong>Y algo más: criar más liviano.</strong> En el camino también te mirás a vos: cómo estás viviendo todo esto. Muchas veces, de tanto querer hacerlo bien, todo se vuelve rígido, tenso, apretado, bajo control. Cuando soltás un poco esa estructura, todo se afloja. Tu cuerpo se relaja, tu bebé lo siente, y la crianza se vuelve mucho más liviana.</p>
+    <div class="reframe" style="margin-top:18px">
+      <p><strong>No es una rutina estricta.</strong> Tu bebé necesita sí o sí contacto, movimiento y resolver lo que lo esté molestando. El cómo, para tu bebé, lo vemos en la consulta.</p>
     </div>
+    <p class="lead" style="margin-top:16px">Si además necesita trabajo en persona (tensión en el cuello o la espalda, plagiocefalia), te lo digo y te guío. En San Rafael lo hacemos juntas: <a href="../presencial/">consulta presencial</a>.</p>
   </div>
 </section>
 
-<!-- 3b. QUÉ TE LLEVÁS -->
+<!-- 3b. IMAGINATE -->
 <section style="padding-top:0">
   <div class="wrap">
-    <span class="eyebrow">Qué te llevás</span>
-    <h2>Una mirada sobre tu bebé. Y un camino.</h2>
-    <ul class="give">
-      <li>Qué estoy viendo en tu bebé, en vos y en tu familia, y qué puede estar pasando</li>
-      <li>Un mapa: por dónde empezar y para dónde ir</li>
-      <li>Qué cambiar en su día, en su entorno y en la dinámica de la familia</li>
-      <li>Herramientas para calmarlo, y para que vos también te calmes</li>
-      <li>Cómo tiene que ser su día para que se regule: no una rutina estricta, sino lo que tu bebé necesita sí o sí</li>
-      <li>Si necesita algo más (trabajo presencial u otro profesional), te lo digo</li>
-    </ul>
-    <div class="reframe" style="margin-top:22px">
-      <p><strong>No es una rutina estricta.</strong> No te doy horarios para cumplir a rajatabla. Te digo qué necesita tu bebé en su día para regularse, y lo armamos según cómo viven ustedes. Lo que sí o sí necesita: <strong>contacto</strong>, <strong>movimiento</strong> y <strong>resolver lo que lo esté molestando</strong>. Y cuando ya se reguló, te digo cómo seguir.</p>
-      <p style="margin-top:12px"><strong>El cómo, para tu bebé en particular, es lo que vemos en la consulta.</strong></p>
-    </div>
-    <div class="card" style="margin-top:18px;border:3px solid var(--euca)">
-      <span class="eyebrow" style="margin-bottom:6px">Incluida en las tres opciones</span>
-      <h3>🎬 Masterclass "No es cólico, es sistema nervioso"</h3>
-      <p style="margin:6px 0 0;color:var(--muted)">Una clase grabada de 29 minutos donde te explico por qué un bebé llora tanto y no logra calmarse, cómo darte cuenta de que está en alerta y qué cosas lo ayudan a bajar. La ves antes de tu devolución, a tu ritmo y las veces que quieras, así llegás entendiendo qué le pasa a tu bebé.</p>
-    </div>
-    <div class="card" style="margin-top:14px;border:3px solid var(--euca)">
-      <span class="eyebrow" style="margin-bottom:6px">También incluida en las tres opciones</span>
-      <h3>📘 Guía "Conocer a tu bebé"</h3>
-      <p style="margin:6px 0 0;color:var(--muted)">Todo lo clave para leer y acompañar a tu bebé, para tener a mano en casa y releer cuando lo necesites: señales tempranas de sueño y de hambre, ventanas de sueño, día y noche, rutina de la tarde, balanceos (con fotos y video), porteo, masajitos, y cómo cuidarte vos para poder calmarlo.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 4. VIDEO -->
-<section class="video-sec">
-  <div class="wrap wide">
-    <div class="video-grid">
-      <div>
-        <span class="eyebrow">Así trabajamos</span>
-        <h2>No es una lista de ejercicios.</h2>
-        <p class="lead">Te enseño cómo sostenerlo, cómo moverlo y cómo bajarlo cuando ya está muy irritado.</p>
-        <p class="lead">Y todo se adapta a tu bebé, a tu familia y a quienes lo cuidan todos los días.</p>
-      </div>
-      <div class="video-box">
-        <video src="assets/asi-trabajamos.mp4" poster="assets/poster.jpg" controls playsinline preload="metadata"></video>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 5. CÓMO ES -->
-<section>
-  <div class="wrap">
-    <span class="eyebrow">Paso a paso</span>
-    <h2>Cómo funciona</h2>
-    <div class="timeline">
-      <div class="tl"><div class="tl-dot">💬</div><div class="card"><span class="when">Paso 1</span><h3>Elegís tu opción y reservás</h3><p>Pagás con el medio de tu país (los datos están más abajo) y me mandás el comprobante por WhatsApp.</p></div></div>
-      <div class="tl"><div class="tl-dot">📝</div><div class="card"><span class="when">Paso 2</span><h3>Te conozco a vos y a tu bebé</h3><p>Te mando la historia clínica, la masterclass y qué videos grabar. Me los mandás por WhatsApp.</p></div></div>
-      <div class="tl"><div class="tl-dot">🔎</div><div class="card"><span class="when">Paso 3</span><h3>Analizo todo con tiempo</h3><p>Al menos 5 días, para mirar a tu bebé con la dedicación que merece.</p></div></div>
-      <div class="tl"><div class="tl-dot">🤲</div><div class="card"><span class="when">Paso 4</span><h3>Recibís mi mirada y tu mapa</h3><p>Qué está pasando, para dónde ir, qué cambiar, cómo calmarlo y qué necesita su día. Por escrito y en audios, o en una videollamada por Zoom, según tu opción.</p></div></div>
-      <div class="tl daily"><div class="tl-dot">🌱</div><div class="card"><span class="when">Paso 5 · clave</span><h3>Seguimiento: ajustamos el camino</h3><p>Cuando empezás en casa aparecen dudas y cosas que no salen como esperabas. Es normal. Vemos cómo respondió tu bebé y ajustamos lo que haga falta.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section style="padding-top:20px">
-  <div class="wrap">
-    <span class="eyebrow">Imaginate</span>
     <h2>Volver a disfrutar a tu bebé. Y tu vida.</h2>
     <ul class="give">
-      <li>Tu bebé está relajado y podés jugar con él, hablarle, disfrutarlo.</li>
-      <li>Te relajás con tu bebé en tu pecho.</li>
       <li>Lo dejás en la cuna y te tomás unos mates, un café o un té mirando por la ventana.</li>
-      <li>Te subís al auto y se van al mar, al lago, al bosque o a la plaza. Él va tranquilo en el huevito, disfruta lo nuevo, y a la vuelta no hay un llanto insoportable: la pasó bien, igual que vos.</li>
-      <li>Volvés a hacer las cosas que habías dejado de hacer para que todo siguiera funcionando.</li>
+      <li>Se van al mar, al lago o a la plaza, y él va tranquilo y disfruta.</li>
+      <li>Volvés a hacer lo que habías dejado de hacer.</li>
     </ul>
-    <p class="lead" style="margin-top:22px">Cuando un bebé está irritado, no tolera nada: ni cambios, ni estímulos nuevos, ni el huevito. Y para que no llore, todo se vuelve cada vez más rígido, más estructurado, más chiquito. Cuidás que duerma sí o sí cada 2 horas, estás pendiente del reloj y hacés un montón de fuerza para que todo funcione. ¿Pero a qué costo?</p>
-    <p class="lead">Está bien lo que hiciste: hiciste lo mejor que pudiste, y te funcionó hasta ahora. Pero hay otras formas, más amables con tu bebé y también con vos.</p>
-    <p class="key">Criar no tiene que pesar tanto. La vida con tu bebé puede volver a ser grande, expansiva, divertida y disfrutable.</p>
+    <p class="key">Criar no tiene que pesar tanto.</p>
+  </div>
+</section>
+
+<!-- 4. CÓMO FUNCIONA -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Cómo funciona</h2>
+    <ol class="steps4">
+      <li>Elegís tu opción y pagás.</li>
+      <li>Me mandás la historia clínica y videos cortitos. Mientras, ves la masterclass y la guía.</li>
+      <li>Te digo qué le pasa y qué hacer: por escrito y en audios, o por Zoom.</li>
+      <li>En el seguimiento ajustamos lo que haga falta.</li>
+    </ol>
   </div>
 </section>
 
@@ -446,117 +378,38 @@
   </div>
 </section>
 
+
 <!-- 6. OPCIONES -->
 <section class="plans-sec" id="opciones">
   <div class="wrap wide">
-    <span class="eyebrow">Opciones y precios</span>
-    <h2>Elegí cuánto acompañamiento necesitás</h2>
-    <div class="tiers">
-      <div class="tier"><span class="nm">Esencial</span><span class="pz">USD 240 · $362.400</span><span class="who">Para entender qué está pasando y tener una dirección clara para empezar.</span><p>Miro a tu bebé y a tu familia, y te digo qué está pasando y para dónde ir, por escrito y en audios. Te digo cómo tiene que ser su día. Sin videollamada.</p><p style="font-weight:700;color:var(--euca-deep)">🎬 Incluye la masterclass y 📘 la guía "Conocer a tu bebé"</p></div>
-      <div class="tier hl"><span class="nm">Pro</span><span class="pz">USD 440 · $664.400</span><span class="who">Para llevar todo a la práctica conmigo, en vivo.</span><p>Te cuento lo que veo y el camino a seguir en una videollamada por Zoom. Practicamos con tu bebé, armamos juntas cómo va a ser su día y tenés un seguimiento.</p><p style="font-weight:700;color:var(--euca-deep)">🎬 Incluye la masterclass y 📘 la guía "Conocer a tu bebé"</p></div>
-      <div class="tier"><span class="nm">VIP</span><span class="pz">USD 640 · $966.400</span><span class="who">Para un acompañamiento más cercano durante el proceso.</span><p>Durante tres semanas vemos cómo responde tu bebé, revisamos lo que va pasando y ajustamos el camino, con tres seguimientos por videollamada.</p><p style="font-weight:700;color:var(--euca-deep)">🎬 Incluye la masterclass y 📘 la guía "Conocer a tu bebé"</p></div>
-    </div>
-    <div class="plan-block">
-      <div class="table-wrap">
-        <table class="plan">
-          <thead><tr><th></th><th>Esencial</th><th>Pro</th><th>VIP</th></tr></thead>
-          <tbody>
-            <tr><td>Masterclass</td><td><span class="ok">✓</span></td><td><span class="ok">✓</span></td><td><span class="ok">✓</span></td></tr>
-            <tr><td>Historia clínica y videos</td><td><span class="ok">✓</span></td><td><span class="ok">✓</span></td><td><span class="ok">✓</span></td></tr>
-            <tr><td>Devolución</td><td>Escrita y en audios</td><td class="live">Zoom de 1&nbsp;h</td><td class="live">Zoom de 1&nbsp;h</td></tr>
-            <tr><td>Qué necesita su día para regularse</td><td><span class="ok">✓</span></td><td><span class="ok">✓</span></td><td><span class="ok">✓</span></td></tr>
-            <tr><td>Seguimiento de 30&nbsp;min</td><td>1 chat en vivo</td><td class="live">1 por Zoom</td><td class="live">3 por Zoom</td></tr>
-            <tr class="price"><td>Valor</td><td>USD 240<small>$362.400</small></td><td>USD 440<small>$664.400</small></td><td>USD 640<small>$966.400</small></td></tr>
-          </tbody>
-        </table>
+    <h2>Opciones y precios</h2>
+    <div class="plans">
+      <div class="pl">
+        <span class="nm">Esencial</span>
+        <span class="pz">USD 240<small>$362.400</small></span>
+        <ul><li>Mi devolución por escrito y en audios</li><li>1 seguimiento por chat en vivo</li><li>Sin videollamada</li></ul>
+      </div>
+      <div class="pl hl">
+        <span class="badge">Recomendado</span>
+        <span class="nm">Pro</span>
+        <span class="pz">USD 440<small>$664.400</small></span>
+        <ul><li>Devolución por Zoom (1 h)</li><li>Practicamos juntas con tu bebé</li><li>1 seguimiento por Zoom</li></ul>
+      </div>
+      <div class="pl">
+        <span class="nm">VIP</span>
+        <span class="pz">USD 640<small>$966.400</small></span>
+        <ul><li>Todo lo del Pro</li><li>3 seguimientos por Zoom, uno por semana</li><li>Te acompaño 3 semanas</li></ul>
       </div>
     </div>
-
+    <div class="inc">Las tres incluyen: evaluación con historia clínica y videos · masterclass · guía "Conocer a tu bebé"</div>
     <div class="perks">
-      <div class="perk big"><span>🎁</span>Llevando las dos etapas (Calma y Neurodesarrollo), 10% off.</div>
-      <div class="perk"><span>➕</span>Seguimiento extra de 30 min: USD 150 ($226.500).</div>
-      <div class="perk"><span>⬆️</span>¿Empezaste con Esencial y querés pasar a Pro? Te descuento lo que ya pagaste.</div>
-      <div class="perk"><span>🎬</span>¿Ya hiciste la Masterclass? Te descuento su valor.</div>
-      <div class="perk"><span>🚫</span>Sin WhatsApp todo el día: horarios pactados, para que puedas estar presente.</div>
+      <div class="perk"><span>➕</span>Seguimiento extra: USD 150.</div>
+      <div class="perk"><span>🎁</span>Calma + Neurodesarrollo: 10% off.</div>
     </div>
-
     <div class="btns" style="justify-content:center">
       <a class="btn" href="#pagar">Quiero empezar</a>
       <a class="btn btn-ghost" href="https://wa.me/5492604419242?text=Hola%20Noe%2C%20no%20s%C3%A9%20qu%C3%A9%20opci%C3%B3n%20elegir%20para%20mi%20beb%C3%A9">No sé cuál elegir</a>
     </div>
-  </div>
-</section>
-
-<!-- 7. SEGUIMIENTOS -->
-<section>
-  <div class="wrap">
-    <span class="eyebrow">Seguimientos</span>
-    <h2>Cómo son los seguimientos</h2>
-    <div class="follow">
-      <div class="card">
-        <h3>💬 Chat en vivo · Esencial</h3>
-        <p>A la semana de la devolución pactamos día y horario. A esa hora te escribo y charlamos 30 minutos en vivo por WhatsApp, por audio o por escrito: cómo les fue, qué dudas tenés y qué ajustamos. Reservá ese ratito para estar presente.</p>
-      </div>
-      <div class="card">
-        <h3>🎥 Videollamada por Zoom · Pro y VIP</h3>
-        <p>30 minutos en vivo, con tu bebé. El día antes me mandás tus dudas, así aprovechamos todo el tiempo. En VIP son tres, una por semana.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 9. QUIÉN SOY -->
-<section>
-  <div class="wrap">
-    <div class="me me-grid"><img src="assets/fotos/foto1.jpg" alt="Noelia sonriendo con un bebé en brazos" loading="lazy"><div>
-      <span class="eyebrow">Quién te acompaña</span>
-      <h2>Soy Noelia Avendaño</h2>
-      <p>Licenciada en Kinesiología, con más de 14 años en terapia manual y 8 en Terapia Manual Pediátrica Integrativa. Acompaño a bebés y familias de todo el mundo, de forma presencial y online.</p>
-      <p class="quote">Un bebé aprende a calmarse junto a los adultos que lo cuidan.</p>
-    </div></div>
-  </div>
-</section>
-
-<!-- 10. MÁS INFORMACIÓN -->
-<section class="more-sec">
-  <div class="wrap">
-    <details class="more">
-      <summary><span>¿Querés saber todo en detalle?<small>Tocá acá y te cuento cada paso</small></span></summary>
-      <div class="more-body">
-        <h3>¿Para quién es?</h3>
-        <p><em>Para familias que sienten que algo no está del todo bien, aunque les hayan dicho muchas veces: "ya se le va a pasar solo", "dale más tiempo".</em></p>
-        <ul>
-          <li>Llanto intenso o difícil de consolar</li>
-          <li>Cólicos, gases o molestias en la panza</li>
-          <li>Le cuesta dormir</li>
-          <li>Se altera fácil con ruidos, luces o mucha gente</li>
-          <li>Dificultades para tomar el pecho o la mamadera</li>
-          <li>Rigidez, arqueos o tensión en el cuerpo</li>
-        </ul>
-        <p>No hace falta esperar un diagnóstico para pedir ayuda. Cuanto antes entendemos lo que necesita tu bebé, más herramientas tenemos para acompañarlo.</p>
-
-        <h3>¿Qué hace diferente esta consulta?</h3>
-        <div class="twocol">
-          <div class="box"><strong>No es una lista de ejercicios</strong>Es un espacio para comprender qué está pasando y por qué. Miramos todo: el embarazo, el parto, el movimiento, la alimentación, el sueño, y también cómo está la familia.</div>
-          <div class="box"><strong>Todo es personalizado</strong>El bienestar del bebé está conectado con quienes lo acompañan todos los días. Por eso cada recomendación es a medida: no hay recetas iguales para todos los bebés.</div>
-        </div>
-        <div class="box"><strong>Buscamos el porqué</strong>Primero calmamos lo que le pasa, porque tu bebé y vos necesitan alivio ya. Pero no nos quedamos ahí: buscamos por qué está así y qué necesita para estar mejor. Si veo que además necesita que trabajen su cuerpo con las manos, te lo digo y te guío para encontrar a alguien formado en bebés. La sinceridad, ante todo.</div>
-
-        <h3>Antes de empezar · Historia clínica y videos</h3>
-        <p>Vas a completar una historia clínica online sobre tu bebé y sobre ustedes. También te voy a pedir videos cortitos: boca abajo, boca arriba, mientras toma el pecho o la mamadera, y un par de pruebas simples que te explico con un video. Me los mandás por WhatsApp.</p>
-        <div class="box"><strong>Importante</strong>Necesito un mínimo de 5 días entre que recibo la historia clínica y los videos, y la devolución, para analizar todo con la dedicación que merece.</div>
-
-        <h3>Qué incluye, en detalle</h3>
-        <ul>
-          <li><strong>Masterclass "No es cólico, es sistema nervioso" (29 min):</strong> la ves a tu ritmo, las veces que quieras, y llegás con las bases claras.</li>
-          <li><strong>Devolución:</strong> qué le pasa a tu bebé y qué hacer. En Pro y VIP practicamos en vivo cómo sostenerlo, los balanceos, los masajitos y cómo bajarlo cuando ya está muy irritado.</li>
-          <li><strong>Su día:</strong> no una rutina estricta, sino lo que necesita sí o sí para regularse (contacto, movimiento y resolver lo que lo molesta), armado según tu día a día. Y cuando ya se reguló, cómo seguir.</li>
-          <li>Si hace falta, ejercicios para los gases o para que su boquita trague menos aire.</li>
-        </ul>
-
-        <div class="box"><strong>Política de reprogramación</strong>Una vez realizado el pago, la consulta queda reservada y no se realizan devoluciones. Si no podés asistir a un encuentro o a un chat en vivo, avisame con al menos un día de anticipación y coordinamos una nueva fecha. Si no te conectás en el horario pactado, el encuentro se toma como realizado.</div>
-      </div>
-    </details>
   </div>
 </section>
 
@@ -605,6 +458,7 @@
 <section style="padding-top:0">
   <div class="wrap">
     <h2>Preguntas frecuentes</h2>
+    <details><summary>¿Cómo son los seguimientos?</summary><div class="det">Pactamos día y horario. En el Esencial es un chat en vivo de 30 minutos por WhatsApp, por audio o escrito. En Pro y VIP, una videollamada de 30 minutos por Zoom. El día antes me mandás tus dudas, así aprovechamos todo el tiempo.</div></details>
     <details><summary>¿Qué opción me conviene?</summary><div class="det">Si te sirve leer y escuchar a tu ritmo, Esencial. Si querés que practiquemos juntos en vivo, Pro. Si querés que te acompañe varias semanas, VIP. Si no sabés, escribime y lo vemos.</div></details>
     <details><summary>¿Y cuando mi bebé ya esté tranquilo?</summary><div class="det">Ahí podés seguir con Neurodesarrollo: juegos y movimientos simples para acompañar su desarrollo según su edad. Si sumás las dos, tenés 10% off.</div></details>
     <details><summary>¿Con la consulta online se arregla todo?</summary><div class="det">Depende de tu bebé. Si lo que tiene es que quedó en alerta, sí: aprendés a calmarlo y en general alcanza. Si además tiene tensión en el cuello, la espalda o la cintura, o plagiocefalia, eso se trabaja con las manos, en persona. En la consulta lo descubrimos y te guío para encontrar a alguien formado en bebés. Si estás en San Rafael, lo hacemos conmigo.</div></details>
@@ -613,6 +467,35 @@
     <details><summary>¿Para qué edad es?</summary><div class="det">De 0 a 3 años. Aunque tu hijo ya no sea tan bebé, podemos ver qué está pasando. La historia clínica y lo que necesita su día se arman según la edad de tu bebé.</div></details>
     <details><summary>¿Cuál es la diferencia con Criar Liviano?</summary><div class="det">Acá todo es para tu bebé en particular: evalúo su historia y sus videos, y te digo qué necesita. Criar Liviano es un espacio grupal, con dos encuentros por mes y contenidos para todas las familias.</div></details>
     <details><summary>¿Y si necesito cambiar la fecha?</summary><div class="det">Avisame con al menos un día de anticipación y buscamos otro día. Los avisos de último momento no garantizan una nueva fecha, y no hay devoluciones.</div></details>
+  </div>
+</section>
+
+<!-- 4. VIDEO -->
+<section class="video-sec">
+  <div class="wrap wide">
+    <div class="video-grid">
+      <div>
+        <span class="eyebrow">Así trabajamos</span>
+        <h2>No es una lista de ejercicios.</h2>
+        <p class="lead">Te enseño cómo sostenerlo, cómo moverlo y cómo bajarlo cuando ya está muy irritado.</p>
+        <p class="lead">Y todo se adapta a tu bebé, a tu familia y a quienes lo cuidan todos los días.</p>
+      </div>
+      <div class="video-box">
+        <video src="assets/asi-trabajamos.mp4" poster="assets/poster.jpg" controls playsinline preload="metadata"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. QUIÉN SOY -->
+<section>
+  <div class="wrap">
+    <div class="me me-grid"><img src="assets/fotos/foto1.jpg" alt="Noelia sonriendo con un bebé en brazos" loading="lazy"><div>
+      <span class="eyebrow">Quién te acompaña</span>
+      <h2>Soy Noelia Avendaño</h2>
+      <p>Licenciada en Kinesiología, con más de 14 años en terapia manual y 8 en Terapia Manual Pediátrica Integrativa. Acompaño a bebés y familias de todo el mundo, de forma presencial y online.</p>
+      <p class="quote">Un bebé aprende a calmarse junto a los adultos que lo cuidan.</p>
+    </div></div>
   </div>
 </section>
 
@@ -654,6 +537,8 @@
 <footer>
   <a href="../">Integra Cuerpo &amp; Alma</a> · <a href="https://instagram.com/integra_cuerpo.alma">@integra_cuerpo.alma</a>
 </footer>
+
+<div class="stick"><a class="btn" href="#opciones">Ver opciones · desde USD 240</a></div>
 
 <a class="wa" href="https://wa.me/5492604419242?text=Hola%20Noe%2C%20quiero%20saber%20m%C3%A1s%20sobre%20la%20consulta%201%3A1%20online" aria-label="Escribime por WhatsApp">
   <svg viewBox="0 0 32 32"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.3.6 4.5 1.8 6.5L3 29l6.9-1.8c1.9 1 4 1.6 6.1 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.5c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6C5.3 9.9 10.1 5.2 16 5.2s10.7 4.7 10.7 10.6S21.9 26.5 16 26.5zm5.9-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>

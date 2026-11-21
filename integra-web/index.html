@@ -231,6 +231,14 @@
   .audio-row{display:grid;gap:14px;margin-top:14px}
   .audio-row .exp-card{flex:none}
   @media (min-width:700px){.audio-row{grid-template-columns:1fr 1fr}}
+  .l3{background:var(--euca);color:#fff;border-radius:14px;padding:10px 14px;margin-left:24px}
+  .l3 b{font-size:16px}.ladder-mini .l3 small{display:block;font-size:14px;font-weight:600;color:#eef4ef}
+  .l3links{display:grid;gap:6px;margin-top:8px}
+  .l3links a{display:block;background:#fff;color:var(--euca-deep);border-radius:10px;padding:8px 12px;font-weight:800;font-size:15px;text-decoration:none}
+  .chips2 a{display:block}
+  .chips2{flex-direction:column}
+  details.cmpd{margin-top:12px;background:none;border:0}
+  details.cmpd>summary{padding:10px 0;font-weight:800;color:var(--euca-deep);font-size:17px}
   .map{display:grid;gap:12px;margin-top:20px}
   .mrow{background:#fff;border:2px solid var(--line);border-radius:18px;padding:16px 18px}
   .mrow.hl{border-color:var(--euca)}
@@ -240,9 +248,8 @@
   .chips2{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
   .chips2 a{background:var(--euca-soft);color:var(--euca-deep);font-weight:800;font-size:15px;padding:8px 14px;border-radius:999px;text-decoration:none}
   .ladder-mini{display:grid;gap:8px;margin-top:12px}
-  .ladder-mini a{display:block;background:var(--euca-soft);border-radius:14px;padding:10px 14px;text-decoration:none;color:var(--euca-deep)}
-  .ladder-mini a:nth-child(2){margin-left:12px}.ladder-mini a:nth-child(3){margin-left:24px;background:var(--euca);color:#fff}
-  .ladder-mini a:nth-child(3) small{color:#eef4ef}
+  .ladder-mini > a{display:block;background:var(--euca-soft);border-radius:14px;padding:10px 14px;text-decoration:none;color:var(--euca-deep)}
+  .ladder-mini > a:nth-child(2){margin-left:12px}
   .ladder-mini b{font-size:16px}.ladder-mini small{display:block;font-size:14px;font-weight:600;color:var(--muted)}
   .mnote{margin:10px 0 0;font-size:14px;color:var(--muted);font-weight:600}
   .needs{display:grid;gap:10px;margin-top:24px}
@@ -335,103 +342,21 @@
 <!-- MAPA -->
 <section id="mapa" style="padding-top:20px">
   <div class="wrap wide">
-    <h2 style="margin:0;font-size:clamp(26px,6vw,34px)">Mirá todo lo que hago</h2>
-    <p class="lead" style="margin-top:8px">Buscá lo que más necesitás, o lo que sientas que es para vos.</p>
+    <h2 style="margin:0;font-size:clamp(26px,6vw,34px)">Todo lo que hago, en un mapa</h2>
+    <p class="lead" style="margin-top:8px">Buscá lo que te pasa y tocá la opción que sientas que es para vos.</p>
     <div class="map">
       <div class="mrow hl">
-        <a class="mhead" href="#calma"><span class="e">🌙</span><span>Que mi bebé se calme y duerma<small>Llora mucho, se despierta, está tenso o con gases</small></span></a>
+        <div class="mhead"><span class="e">🌙</span><span>Que mi bebé se calme y duerma<small>Llora mucho, se despierta, está tenso o con gases</small></span></div>
         <div class="ladder-mini">
-          <a href="masterclass/"><b>1 · Masterclass</b><small>Entender qué le pasa · USD 50 · $75.000</small></a>
-          <a href="presencia/"><b>2 · Presencia</b><small>Aprender a calmarlo · USD 110 · $170.000</small></a>
-          <a href="#calma3"><b>3 · Consulta 1:1 online o presencial</b><small>Evalúo a tu bebé · online desde USD 290 · $440.000</small></a>
+          <a href="masterclass/"><b>1 · Masterclass →</b><small>Entender qué le pasa · USD 50 · $75.000</small></a>
+          <a href="presencia/"><b>2 · Presencia →</b><small>Aprender a calmarlo, todo grabado · USD 110 · $170.000</small></a>
+          <div class="l3"><b>3 · Consulta 1:1</b><small>Evalúo a tu bebé</small>
+            <span class="l3links"><a href="calma/">💻 Online · desde USD 290 · $440.000 →</a><a href="plan-calma/">🤲 Presencial · Plan Calma →</a></span>
+          </div>
         </div>
         <p class="mnote">De menos a más acompañamiento. Cada opción incluye la anterior.</p>
-      </div>
-      <div class="mrow">
-        <a class="mhead" href="#neuro"><span class="e">🌱</span><span>Que se desarrolle bien<small>Saber si va bien y potenciar su desarrollo</small></span></a>
-        <div class="chips2"><a href="neurodesarrollo/">Neurodesarrollo 1:1 · desde USD 240 · $362.400</a></div>
-      </div>
-      <div class="mrow">
-        <a class="mhead" href="#presencial"><span class="e">🤲</span><span>Que lo trabajes con tus manos<small>En San Rafael o en tu ciudad cuando viajo</small></span></a>
-        <div class="chips2"><a href="plan-calma/">Plan Calma</a><a href="plan-plagiocefalia/">Plagiocefalia / Tortícolis</a><a href="presencial/">Consulta presencial</a></div>
-      </div>
-      <div class="mrow">
-        <a class="mhead" href="#criar"><span class="e">🌿</span><span>Compartirlo con otras familias<small>Encuentros en vivo todos los meses</small></span></a>
-        <div class="chips2"><a href="criar-liviano/">Criar Liviano · USD 38 · $58.000 por mes</a></div>
-      </div>
-      <div class="mrow">
-        <a class="mhead" href="#empezar"><span class="e">🤍</span><span>Empezar por algo gratis<small>Para hoy, ahora</small></span></a>
-        <div class="chips2"><a href="guia-calma/">Guía Calma</a><a href="#empezar">Audio Respirá</a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EMPEZÁ ACÁ -->
-<section id="empezar" style="padding-top:0">
-  <div class="wrap wide">
-    <span class="eyebrow">Para empezar</span>
-    <h2>Un primer paso simple</h2>
-    <div class="free">
-      <div class="offer">
-        <span class="step">Gratis</span>
-        <h3>🤍 Guía Calma</h3>
-        <p>Por qué llora tu bebé y qué revisar primero.</p>
-        <div class="btns"><a class="btn btn-ghost" href="guia-calma/">Ver la guía</a></div>
-      </div>
-      <div class="offer">
-        <span class="step">Gratis</span>
-        <h3>🎧 Respirá (7 min)</h3>
-        <p>Un audio para vos, para bajar un cambio cuando no das más. Ponete los auriculares y dale play.</p>
-        <div class="resp"><audio controls preload="none" src="assets/respiracion-mapadres.mp3"></audio></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CALMA -->
-<section id="calma" style="scroll-margin-top:10px">
-  <div class="wrap wide">
-    <span class="eyebrow">🌙 Calma</span>
-    <h2>Quiero que mi bebé se calme y duerma</h2>
-    <p class="lead" style="margin-bottom:22px">Llora mucho, se despierta enseguida, está tenso o tiene gases. Tenés tres formas, de menos a más acompañamiento. Cada una incluye la anterior.</p>
-    <div class="offers three">
-      <div class="offer">
-        <span class="step">1 · Para entender</span>
-        <h3>🎬 Masterclass</h3>
-        <p>"No es cólico, es sistema nervioso". Por qué tu bebé está así y las primeras herramientas. Grabada, la ves cuando quieras.</p>
-        <div class="pr">USD 50 · $75.000</div>
-        <div class="btns"><a class="btn btn-ghost" href="masterclass/">Ver la masterclass</a></div>
-      </div>
-      <div class="offer hl">
-        <img class="ph" style="aspect-ratio:4/3;object-fit:cover;object-position:center 45%" src="assets/fotos/presencia-balanceo.jpg" alt="Noelia sostiene a un bebé boca abajo sobre su brazo" loading="lazy">
-        <span class="step">2 · Para aprender a calmarlo · Nuevo</span>
-        <h3>🤲 Presencia</h3>
-        <p>Yo te enseño qué hacer y vos tenés las herramientas: todos los balanceos, masajitos, contacto y cómo regularte vos. Todo grabado, a tu ritmo.</p>
-        <div class="pr">USD 110 · $170.000</div>
-        <div class="btns"><a class="btn" href="presencia/">Conocé Presencia</a></div>
-      </div>
-      <div class="offer hl">
-        <img class="ph" src="assets/fotos/foto8.jpg" alt="Noelia acompaña a una mamá mientras su bebé toma el pecho" loading="lazy">
-        <span class="step" id="calma3">3 · Para saber qué le pasa</span>
-        <h3>🔍 Consulta 1:1</h3>
-        <p>Evalúo a tu bebé y descubrimos qué le pasa. También vemos la regulación del adulto que lo acompaña.</p>
-        <div class="sub1">
-          <b>💻 Online · desde cualquier país</b>
-          <p>Todo lo de Presencia + mi evaluación + práctica en vivo conmigo. Esencial, Pro o VIP.</p>
-          <div class="pr">Desde USD 290 · $440.000</div>
-          <div class="btns"><a class="btn" href="calma/">Consulta 1:1 online</a></div>
-        </div>
-        <div class="sub1">
-          <b>🤲 Presencial · San Rafael o tu ciudad cuando viajo</b>
-          <p>Trabajo con mis manos. Consulta suelta, o Plan Calma: 3 días seguidos para que salga del llanto y vuelva a dormir.</p>
-          <div class="pr">Consulta: $320.000<br>Plan Calma: desde USD 640 · $960.000</div>
-          <div class="btns"><a class="btn btn-ghost" href="plan-calma/">Plan Calma</a> <a class="btn btn-ghost" href="presencial/">Consulta presencial</a></div>
-        </div>
-      </div>
-    </div>
-    <h3 style="margin:30px 0 12px;font-size:24px">¿Qué trae cada una?</h3>
-    <div class="cmp-wrap"><table class="cmp">
+        <details class="cmpd"><summary>¿Qué trae cada una?</summary>
+          <div class="cmp-wrap"><table class="cmp">
       <thead><tr><th></th><th>1<br>Master&shy;class</th><th>2<br>Presen&shy;cia</th><th>3<br>1:1</th></tr></thead>
       <tbody>
         <tr><td>Entender por qué tu bebé está así</td><td>✓</td><td>✓</td><td>✓</td></tr>
@@ -443,53 +368,25 @@
         <tr class="cp"><td>Valor</td><td>USD 50<small>$75.000</small></td><td>USD 110<small>$170.000</small></td><td>desde<br>USD 290<small>$440.000</small></td></tr>
       </tbody>
     </table></div>
-  </div>
-</section>
-
-<!-- NEURODESARROLLO -->
-<section id="neuro" style="padding-top:0;scroll-margin-top:10px">
-  <div class="wrap wide">
-    <div class="offer hl">
-      <img class="ph" style="aspect-ratio:4/3;object-fit:cover;object-position:center 40%" src="assets/fotos/presencia-juego.jpg" alt="Noelia levanta a un bebé y ambos se ríen" loading="lazy">
-      <span class="step">🌱 Cuando ya está tranquilo</span>
-      <h3>Neurodesarrollo · Consulta 1:1</h3>
-      <p>Para acompañar su desarrollo con juegos y movimientos simples, según su edad.</p>
-      <ul><li>No sabés qué tiene que ir haciendo en cada etapa</li><li>Se mueve poco o lo sentís "blandito"</li><li>Ya está tranquilo y querés saber qué sigue</li></ul>
-      <div class="pr">Desde USD 240 · $362.400</div>
-      <div class="btns"><a class="btn" href="neurodesarrollo/">Conocé Neurodesarrollo</a></div>
-    </div>
-    <div class="perks"><div class="perk big"><span>🎁</span>Consulta Calma + Neurodesarrollo: 10% off.</div></div>
-  </div>
-</section>
-
-<section class="reflect"><div class="wrap"><p>¿Hace cuánto que te dicen “ya se le va a pasar”?<small>Si seguís buscando respuestas, es porque algo te dice que se puede estar mejor.</small></p></div></section>
-
-
-
-<!-- CRIAR LIVIANO + PRESENCIAL -->
-<section style="padding-top:0">
-  <div class="wrap wide">
-    <div class="offers" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
-      <div class="offer" id="criar">
-        <img class="ph" src="assets/fotos/foto2.jpg" alt="Noelia sonríe junto a una mamá con su bebé" loading="lazy">
-        <span class="step">Grupal · online</span>
-        <h3>🌿 Criar Liviano</h3>
-        <p>Dos encuentros en vivo por mes, de 30 minutos, junto a otras familias: practicamos con tu bebé y un ratito para vos. Quedan grabados, y tenés un grupo de Telegram con horarios para preguntarme.</p>
-        <div class="btns"><a class="btn btn-ghost" href="criar-liviano/">Conocé Criar Liviano</a></div>
+        </details>
       </div>
-      <div class="offer" id="presencial">
-        <img class="ph" src="assets/fotos/foto7.jpg" alt="Noelia trabajando con un bebé en el consultorio" loading="lazy">
-        <span class="step">En persona</span>
-        <h3>🤲 Consulta presencial</h3>
-        <p>En mi consultorio de San Rafael, Mendoza, o en tu ciudad cuando viajo. Trabajo con mis manos, en días seguidos:</p>
-        <p style="margin-top:8px"><strong>Plan Calma</strong>: 3 días para que tu bebé salga del llanto y vuelva a dormir.<br><strong>Plan Plagiocefalia / Tortícolis</strong>: una semana para su cabecita, su cuello y su boca.</p>
-        <div class="btns"><a class="btn btn-ghost" href="plan-calma/">Plan Calma</a> <a class="btn btn-ghost" href="plan-plagiocefalia/">Plan Plagiocefalia / Tortícolis</a></div>
-        <p style="margin-top:10px;font-size:.9rem"><a href="presencial/">Ver la consulta presencial suelta</a></p>
+      <div class="mrow">
+        <div class="mhead"><span class="e">🌱</span><span>Que se desarrolle bien<small>Saber si va bien y potenciar su desarrollo</small></span></div>
+        <div class="chips2"><a href="neurodesarrollo/">Neurodesarrollo 1:1 · desde USD 240 →</a><a href="acompanamiento/">Acompañamiento de 3, 6 u 8 meses →</a></div>
       </div>
-    </div>
-    <div class="reframe" style="margin-top:22px">
-      <p><strong>¿No sabés por dónde empezar?</strong> Escribime, contame qué le pasa a tu bebé y te digo qué te conviene. Sin compromiso.</p>
-      <div class="btns" style="margin-top:16px"><a class="btn" style="background:#fff;color:var(--euca-deep)" href="https://wa.me/5492604419242?text=Hola%20Noe%2C%20no%20s%C3%A9%20por%20d%C3%B3nde%20empezar%20con%20mi%20beb%C3%A9">Escribime por WhatsApp</a></div>
+      <div class="mrow">
+        <div class="mhead"><span class="e">🤲</span><span>Que lo trabajes con tus manos<small>En San Rafael o en tu ciudad cuando viajo</small></span></div>
+        <div class="chips2"><a href="plan-calma/">Plan Calma →</a><a href="plan-plagiocefalia/">Plagiocefalia / Tortícolis →</a><a href="presencial/">Consulta presencial →</a></div>
+      </div>
+      <div class="mrow">
+        <div class="mhead"><span class="e">🌿</span><span>Compartirlo con otras familias<small>Encuentros en vivo todos los meses</small></span></div>
+        <div class="chips2"><a href="criar-liviano/">Criar Liviano · USD 38 · $58.000 por mes →</a></div>
+      </div>
+      <div class="mrow">
+        <div class="mhead"><span class="e">🤍</span><span>Empezar por algo gratis<small>Para hoy, ahora</small></span></div>
+        <div class="chips2"><a href="guia-calma/">Guía Calma →</a></div>
+        <div class="resp" style="margin-top:10px"><small style="font-weight:700;color:var(--muted)">🎧 Respirá · 7 min para vos, cuando no das más</small><audio controls preload="none" src="assets/respiracion-mapadres.mp3" style="width:100%;margin-top:6px"></audio></div>
+      </div>
     </div>
   </div>
 </section>
@@ -512,7 +409,7 @@
     <h2>Criar no tiene que ser tan pesado.</h2>
     <p>Empecemos por lo que más necesitás hoy.</p>
     <div class="btns">
-      <a class="btn" href="#calma">Ver las consultas</a>
+      <a class="btn" href="#mapa">Ver todas las opciones</a>
       <a class="btn btn-ghost" href="https://wa.me/5492604419242?text=Hola%20Noe%2C%20no%20s%C3%A9%20por%20d%C3%B3nde%20empezar%20con%20mi%20beb%C3%A9">Escribime por WhatsApp</a>
     </div>
   </div>

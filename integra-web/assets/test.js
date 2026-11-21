@@ -55,6 +55,7 @@
     if(r.p) h+='<div class="rp">'+r.p+'</div>';
     h+='<div class="tbtns"><a class="tbtn" href="'+BASE+r.u+'">Ver más</a><a class="tbtn o" href="'+WA+encodeURIComponent(msg)+'" target="_blank" rel="noopener">Hablarlo conmigo</a></div>';
     if(A.cuanto==='simple' && FROM!=='la Guía Calma') h+='<div class="extra">🤍 Y si querés empezar hoy mismo, gratis: <a href="'+BASE+'guia-calma/">la Guía Calma</a>.</div>';
+    h+='<div class="extra">¿Querés ver todas las opciones? <a href="'+BASE+'#mapa">Mirá el mapa de todo lo que hago</a>.</div>';
     h+='</div><button type="button" class="qback" data-reset="1">↺ Hacer el test de nuevo</button>';
     box.innerHTML=h;
   }

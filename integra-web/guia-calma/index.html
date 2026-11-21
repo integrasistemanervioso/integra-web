@@ -143,6 +143,7 @@
   .wa{position:fixed;right:16px;bottom:16px;z-index:10;width:56px;height:56px;border-radius:50%;background:var(--euca-d);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.18)}
   @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.orb,.scroll{animation:none}}
 </style>
+<link rel="stylesheet" href="../assets/test.css">
 </head>
 <body>
 
@@ -278,35 +279,14 @@
       <h2>No tenés que hacerlo <em>sola</em>.</h2>
     </div>
 
-    <div class="path mc reveal">
-      <div class="tag">Para empezar a entender · a tu ritmo</div>
-      <h3 style="color:var(--euca-d)">Masterclass “No es cólico, es sistema nervioso”</h3>
-      <p>Una clase grabada de 29 minutos donde te explico qué le pasa al sistema nervioso de tu bebé y qué estímulos lo ayudan a regularse. La mirás cuando puedas, las veces que quieras.</p>
-      <div class="btns"><a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noe%21%20Le%C3%AD%20la%20Gu%C3%ADa%20Calma%20y%20quiero%20la%20Masterclass%20%F0%9F%8C%B1">Quiero la Masterclass</a><a class="btn o" href="../masterclass/">Ver más</a></div>
+    <p>Hacé este test de 1 minuto y te digo cómo seguir.</p>
+    <div class="quiz">
+      <span class="qtag">Test · 1 minuto</span>
+      <p class="qtitle" style="font-family:Lora,Georgia,serif">¿Cómo sigo?</p>
+      <p class="qsub">Respondé 3 preguntas y te digo qué necesitás.</p>
+      <div id="qbox" data-base="../" data-from="la Guía Calma"></div>
     </div>
-
-    <div class="path cl reveal">
-      <div class="tag">En tribu · grupal</div>
-      <h3>Criar Liviano</h3>
-      <p>Un espacio online para familias con bebés de 0 a 12 meses. Aprendemos a leer a tu bebé y a calmarlo, para que no dependa todo de vos.</p>
-      <ul><li>Dos encuentros en vivo por mes (y grabación)</li><li>Para mamá, papá o quien acompañe, con un solo pago</li><li>Grupo de Telegram con otras familias que te entienden</li><li>$58.000 por mes · USD 38 · 38 €</li></ul>
-      <div class="btns"><a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noe%21%20Le%C3%AD%20la%20Gu%C3%ADa%20Calma%20y%20quiero%20sumarme%20a%20Criar%20Liviano%20%F0%9F%8C%B1">Quiero sumarme</a><a class="btn o" href="../criar-liviano/">Ver más</a></div>
-    </div>
-
-    <div class="path uno reveal">
-      <div class="tag">A medida · 1:1</div>
-      <h3 style="color:var(--euca-d)">Calma · Consulta 1:1 online</h3>
-      <p>Miramos a <i>tu</i> bebé en profundidad: qué le pasa, por qué y qué necesita. Practicamos juntas en vivo y te llevás una rutina pensada para él.</p>
-      <ul>
-        <li>Evaluación con historia clínica y videos de tu bebé</li>
-        <li>Un plan hecho para tu bebé, por escrito y en audios o en videollamada</li>
-        <li>Rutina de 7 días para calmarlo</li>
-        <li>Seguimiento para ajustar sobre la marcha</li>
-        <li><b>Incluye la Masterclass</b> “No es cólico, es sistema nervioso”</li>
-        <li>Tres opciones: Esencial, Pro y VIP, <b>desde USD 290</b></li>
-      </ul>
-      <div class="btns"><a class="btn" href="https://wa.me/5492604419242?text=Hola%20Noe%21%20Le%C3%AD%20la%20Gu%C3%ADa%20Calma%20y%20quiero%20reservar%20la%20Consulta%201%3A1%20%F0%9F%8C%B1">Quiero mi consulta</a><a class="btn o" href="../calma/">Ver más</a></div>
-    </div>
+    <p style="margin-top:22px;text-align:center"><a href="../" style="text-decoration:underline;color:var(--euca-d);font-weight:600">O mirá todo lo que hago →</a></p>
   </div>
 </section>
 
@@ -332,5 +312,6 @@
   const cycle = () => { t.textContent = 'Inhalá por la nariz…'; setTimeout(() => t.textContent = 'Soltá por la boca…', 5000); };
   cycle(); setInterval(cycle, 10000);
 </script>
+<script src="../assets/test.js"></script>
 </body>
 </html>

@@ -216,6 +216,20 @@
   .reflect::before{content:"";display:block;width:44px;height:4px;border-radius:4px;background:var(--euca);margin:0 auto 18px;opacity:.6}
 
   /* Hub */
+  .map{display:grid;gap:12px;margin-top:20px}
+  .mrow{background:#fff;border:2px solid var(--line);border-radius:18px;padding:16px 18px}
+  .mrow.hl{border-color:var(--euca)}
+  .mhead{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink);font-weight:800;font-size:18px}
+  .mhead .e{font-size:26px}
+  .mhead small{display:block;font-weight:600;font-size:15px;color:var(--muted)}
+  .chips2{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .chips2 a{background:var(--euca-soft);color:var(--euca-deep);font-weight:800;font-size:15px;padding:8px 14px;border-radius:999px;text-decoration:none}
+  .ladder-mini{display:grid;gap:8px;margin-top:12px}
+  .ladder-mini a{display:block;background:var(--euca-soft);border-radius:14px;padding:10px 14px;text-decoration:none;color:var(--euca-deep)}
+  .ladder-mini a:nth-child(2){margin-left:12px}.ladder-mini a:nth-child(3){margin-left:24px;background:var(--euca);color:#fff}
+  .ladder-mini a:nth-child(3) small{color:#eef4ef}
+  .ladder-mini b{font-size:16px}.ladder-mini small{display:block;font-size:14px;font-weight:600;color:var(--muted)}
+  .mnote{margin:10px 0 0;font-size:14px;color:var(--muted);font-weight:600}
   .needs{display:grid;gap:10px;margin-top:24px}
   .need{display:flex;align-items:center;gap:14px;background:#fff;border:2px solid var(--line);border-radius:18px;padding:16px 18px;text-decoration:none;color:var(--ink);font-weight:800;font-size:18px;transition:border-color .15s,transform .15s}
   .need:hover{border-color:var(--euca);transform:translateY(-2px)}
@@ -261,13 +275,35 @@
       </div>
     </div>
     <h2 style="margin:40px 0 0;font-size:clamp(26px,6vw,34px)">¿Qué necesitás hoy?</h2>
-    <div class="needs">
-      <a class="need" href="#calma"><span class="e">🌙</span><span class="t">Que mi bebé se calme y duerma<small>Llora mucho, se despierta, está incómodo</small></span></a>
-      <a class="need" href="#neuro"><span class="e">🌱</span><span class="t">Saber si se está desarrollando bien<small>Qué tiene que ir haciendo según su edad</small></span></a>
-      <a class="need" href="#criar"><span class="e">🌿</span><span class="t">Tener con quién compartirlo<small>Un espacio con otras familias, todos los meses</small></span></a>
-      <a class="need" href="#empezar"><span class="e">🤍</span><span class="t">Empezar por algo simple<small>Recursos gratis para hoy</small></span></a>
-      <a class="need" href="#experiencias"><span class="e">💬</span><span class="t">Escuchar cómo les fue a otras familias<small>Audios y mensajes de familias que ya hicieron la consulta</small></span></a>
+    <p class="lead" style="margin-top:8px">Hago varias cosas. Buscá lo que te pasa y ahí tenés tus opciones.</p>
+    <div class="map">
+      <div class="mrow hl">
+        <a class="mhead" href="#calma"><span class="e">🌙</span><span>Que mi bebé se calme y duerma<small>Llora mucho, se despierta, está tenso o con gases</small></span></a>
+        <div class="ladder-mini">
+          <a href="masterclass/"><b>1 · Masterclass</b><small>Entender qué le pasa · $75.000</small></a>
+          <a href="presencia/"><b>2 · Presencia</b><small>Aprender a calmarlo · desde $170.000</small></a>
+          <a href="calma/"><b>3 · Consulta 1:1</b><small>Evalúo a tu bebé · desde $440.000</small></a>
+        </div>
+        <p class="mnote">De menos a más acompañamiento. Cada opción incluye la anterior.</p>
+      </div>
+      <div class="mrow">
+        <a class="mhead" href="#neuro"><span class="e">🌱</span><span>Que se desarrolle bien<small>Qué tiene que ir haciendo según su edad</small></span></a>
+        <div class="chips2"><a href="neurodesarrollo/">Neurodesarrollo 1:1</a></div>
+      </div>
+      <div class="mrow">
+        <a class="mhead" href="#presencial"><span class="e">🤲</span><span>Que lo trabajes con tus manos<small>En San Rafael o en tu ciudad cuando viajo</small></span></a>
+        <div class="chips2"><a href="plan-calma/">Plan Calma</a><a href="plan-plagiocefalia/">Plagiocefalia / Tortícolis</a><a href="presencial/">Consulta presencial</a></div>
+      </div>
+      <div class="mrow">
+        <a class="mhead" href="#criar"><span class="e">🌿</span><span>Compartirlo con otras familias<small>Encuentros en vivo todos los meses</small></span></a>
+        <div class="chips2"><a href="criar-liviano/">Criar Liviano · $58.000/mes</a></div>
+      </div>
+      <div class="mrow">
+        <a class="mhead" href="#empezar"><span class="e">🤍</span><span>Empezar por algo gratis<small>Para hoy, ahora</small></span></a>
+        <div class="chips2"><a href="guia-calma/">Guía Calma</a><a href="#empezar">Audio Respirá</a></div>
+      </div>
     </div>
+  </div>
   </div>
 </header>
 
@@ -302,10 +338,10 @@
   <div class="wrap wide">
     <span class="eyebrow">🌙 Calma</span>
     <h2>Quiero que mi bebé se calme y duerma</h2>
-    <p class="lead" style="margin-bottom:22px">Llora mucho, se despierta enseguida, está tenso o tiene gases. Tenés tres formas de empezar, según cuánto acompañamiento querés.</p>
+    <p class="lead" style="margin-bottom:22px">Llora mucho, se despierta enseguida, está tenso o tiene gases. Tenés tres formas, de menos a más acompañamiento. Cada una incluye la anterior.</p>
     <div class="offers three">
       <div class="offer">
-        <span class="step">Para entender</span>
+        <span class="step">1 · Para entender</span>
         <h3>🎬 Masterclass</h3>
         <p>"No es cólico, es sistema nervioso". Por qué tu bebé está así y las primeras herramientas. Grabada, la ves cuando quieras.</p>
         <div class="pr">USD 50 · $75.000</div>
@@ -313,7 +349,7 @@
       </div>
       <div class="offer hl">
         <img class="ph" style="aspect-ratio:4/3;object-fit:cover;object-position:center 45%" src="assets/fotos/presencia-balanceo.jpg" alt="Noelia sostiene a un bebé boca abajo sobre su brazo" loading="lazy">
-        <span class="step">Nuevo · para aprender a calmarlo</span>
+        <span class="step">2 · Para aprender a calmarlo · Nuevo</span>
         <h3>🤲 Presencia</h3>
         <p>Yo te enseño qué hacer y vos tenés las herramientas: todos los balanceos, masajitos, contacto y cómo regularte vos. Sin evaluación.</p>
         <div class="pr">Desde USD 110 · $170.000</div>
@@ -321,7 +357,7 @@
       </div>
       <div class="offer hl">
         <img class="ph" src="assets/fotos/foto8.jpg" alt="Noelia acompaña a una mamá mientras su bebé toma el pecho" loading="lazy">
-        <span class="step">Para saber qué le pasa</span>
+        <span class="step">3 · Para saber qué le pasa</span>
         <h3>🔍 Consulta 1:1</h3>
         <p>Todo lo de Presencia + evalúo a tu bebé y descubrimos qué le pasa. También vemos la regulación del adulto que lo acompaña. Esencial, Pro o VIP.</p>
         <div class="pr">Desde USD 290 · $440.000</div>

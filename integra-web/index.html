@@ -232,6 +232,7 @@
   .offer .pr{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:22px;color:var(--euca-deep)}
   .offer .btns{margin-top:6px}
   .offers{display:grid;gap:16px}
+  @media (min-width:900px){.offers.three{grid-template-columns:repeat(3,1fr)}}
   .free{display:grid;gap:14px}
   @media (min-width:700px){.free{grid-template-columns:1fr 1fr}}
 
@@ -264,7 +265,7 @@
       <a class="need" href="#calma"><span class="e">🌙</span><span class="t">Que mi bebé se calme y duerma<small>Llora mucho, se despierta, está incómodo</small></span></a>
       <a class="need" href="#neuro"><span class="e">🌱</span><span class="t">Saber si se está desarrollando bien<small>Qué tiene que ir haciendo según su edad</small></span></a>
       <a class="need" href="#criar"><span class="e">🌿</span><span class="t">Tener con quién compartirlo<small>Un espacio con otras familias, todos los meses</small></span></a>
-      <a class="need" href="#empezar"><span class="e">🤍</span><span class="t">Empezar por algo simple<small>Recursos gratis y la masterclass</small></span></a>
+      <a class="need" href="#empezar"><span class="e">🤍</span><span class="t">Empezar por algo simple<small>Recursos gratis para hoy</small></span></a>
       <a class="need" href="#experiencias"><span class="e">💬</span><span class="t">Escuchar cómo les fue a otras familias<small>Audios y mensajes de familias que ya hicieron la consulta</small></span></a>
     </div>
   </div>
@@ -293,50 +294,56 @@
         <div class="resp"><audio controls preload="none" src="assets/respiracion-mapadres.mp3"></audio></div>
       </div>
     </div>
-    <div class="offer hl" style="margin-top:16px">
-      <span class="step">Masterclass grabada · 29 min</span>
-      <h3>🎬 Por qué tu bebé llora tanto (y no siempre es cólico)</h3>
-      <p>Qué le pasa a un bebé que no logra calmarse, cómo darte cuenta y qué podés hacer en casa desde hoy. La ves cuando quieras, las veces que quieras.</p>
-      <div class="pr">USD 50 · $75.000</div>
-      <div class="btns"><a class="btn" href="masterclass/">Ver la masterclass</a></div>
-    </div>
-    <div class="offer hl" style="margin-top:16px">
-      <span class="step">Nuevo · sin evaluación</span>
-      <h3>🤲 Presencia</h3>
-      <p>Yo te enseño qué hacer y vos tenés las herramientas para que tu bebé esté mejor: todos los balanceos, masajitos para que baje un cambio, contacto y cómo regularte vos. Lo que más calma a tu bebé es tu presencia.</p>
-      <div class="pr">Grabado: USD 110 · $170.000<br>Con práctica en vivo conmigo: USD 160 · $245.000</div>
-      <div class="btns"><a class="btn" href="presencia/">Conocé Presencia</a></div>
+  </div>
+</section>
+
+<!-- CALMA -->
+<section id="calma" style="scroll-margin-top:10px">
+  <div class="wrap wide">
+    <span class="eyebrow">🌙 Calma</span>
+    <h2>Quiero que mi bebé se calme y duerma</h2>
+    <p class="lead" style="margin-bottom:22px">Llora mucho, se despierta enseguida, está tenso o tiene gases. Tenés tres formas de empezar, según cuánto acompañamiento querés.</p>
+    <div class="offers three">
+      <div class="offer">
+        <span class="step">Para entender</span>
+        <h3>🎬 Masterclass</h3>
+        <p>"No es cólico, es sistema nervioso". Por qué tu bebé está así y las primeras herramientas. Grabada, la ves cuando quieras.</p>
+        <div class="pr">USD 50 · $75.000</div>
+        <div class="btns"><a class="btn btn-ghost" href="masterclass/">Ver la masterclass</a></div>
+      </div>
+      <div class="offer hl">
+        <img class="ph" style="aspect-ratio:4/3;object-fit:cover;object-position:center 45%" src="assets/fotos/presencia-balanceo.jpg" alt="Noelia sostiene a un bebé boca abajo sobre su brazo" loading="lazy">
+        <span class="step">Nuevo · para aprender a calmarlo</span>
+        <h3>🤲 Presencia</h3>
+        <p>Yo te enseño qué hacer y vos tenés las herramientas: todos los balanceos, masajitos, contacto y cómo regularte vos. Sin evaluación.</p>
+        <div class="pr">Desde USD 110 · $170.000</div>
+        <div class="btns"><a class="btn" href="presencia/">Conocé Presencia</a></div>
+      </div>
+      <div class="offer hl">
+        <img class="ph" src="assets/fotos/foto8.jpg" alt="Noelia acompaña a una mamá mientras su bebé toma el pecho" loading="lazy">
+        <span class="step">Para saber qué le pasa</span>
+        <h3>🔍 Consulta 1:1</h3>
+        <p>Todo lo de Presencia + evalúo a tu bebé y descubrimos qué le pasa. También vemos la regulación del adulto que lo acompaña. Esencial, Pro o VIP.</p>
+        <div class="pr">Desde USD 290 · $440.000</div>
+        <div class="btns"><a class="btn" href="calma/">Conocé la consulta 1:1</a></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CONSULTAS 1:1 -->
-<section>
+<!-- NEURODESARROLLO -->
+<section id="neuro" style="padding-top:0;scroll-margin-top:10px">
   <div class="wrap wide">
-    <span class="eyebrow">Consultas 1:1 online</span>
-    <h2>Un plan hecho para tu bebé</h2>
-    <p class="lead" style="margin-bottom:22px">Miro su historia y sus videos, te digo qué le pasa y qué hacer. Vos elegís cuánto acompañamiento querés: Esencial, Pro o VIP.</p>
-    <div class="offers">
-      <div class="offer hl" id="calma">
-        <img class="ph" src="assets/fotos/foto8.jpg" alt="Noelia acompaña a una mamá mientras su bebé toma el pecho" loading="lazy">
-        <span class="step">Etapa 1</span>
-        <h3>🌙 Calma</h3>
-        <p>Para que tu bebé logre calmarse y dormir.</p>
-        <ul><li>Llora mucho y cuesta calmarlo</li><li>Se despierta enseguida</li><li>Está tenso, se arquea o tiene gases</li></ul>
-        <div class="pr">Desde USD 290</div>
-        <div class="btns"><a class="btn" href="calma/">Conocé Calma</a></div>
-      </div>
-      <div class="offer hl" id="neuro">
-        <img class="ph" src="assets/fotos/foto5.jpg" alt="Noelia sostiene a un bebé boca abajo" loading="lazy">
-        <span class="step">Etapa 2</span>
-        <h3>🌱 Neurodesarrollo</h3>
-        <p>Para acompañar su desarrollo con juegos y movimientos simples, según su edad.</p>
-        <ul><li>No sabés qué tiene que ir haciendo en cada etapa</li><li>Se mueve poco o lo sentís "blandito"</li><li>Ya está tranquilo y querés saber qué sigue</li></ul>
-        <div class="pr">Desde USD 240</div>
-        <div class="btns"><a class="btn" href="neurodesarrollo/">Conocé Neurodesarrollo</a></div>
-      </div>
+    <div class="offer hl">
+      <img class="ph" src="assets/fotos/foto5.jpg" alt="Noelia sostiene a un bebé boca abajo" loading="lazy">
+      <span class="step">🌱 Cuando ya está tranquilo</span>
+      <h3>Neurodesarrollo · Consulta 1:1</h3>
+      <p>Para acompañar su desarrollo con juegos y movimientos simples, según su edad.</p>
+      <ul><li>No sabés qué tiene que ir haciendo en cada etapa</li><li>Se mueve poco o lo sentís "blandito"</li><li>Ya está tranquilo y querés saber qué sigue</li></ul>
+      <div class="pr">Desde USD 240</div>
+      <div class="btns"><a class="btn" href="neurodesarrollo/">Conocé Neurodesarrollo</a></div>
     </div>
-    <div class="perks"><div class="perk big"><span>🎁</span>Llevando las dos etapas, 10% off.</div></div>
+    <div class="perks"><div class="perk big"><span>🎁</span>Consulta Calma + Neurodesarrollo: 10% off.</div></div>
   </div>
 </section>
 

@@ -216,6 +216,22 @@
   .reflect::before{content:"";display:block;width:44px;height:4px;border-radius:4px;background:var(--euca);margin:0 auto 18px;opacity:.6}
 
   /* Hub */
+  .quiz{margin-top:36px;background:var(--euca-deep);color:#fff;border-radius:24px;padding:26px 22px;box-shadow:0 16px 36px rgba(92,117,102,.22)}
+  .qtag{display:inline-block;background:rgba(255,255,255,.16);font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
+  .qtitle{color:#fff;margin:12px 0 4px;font-size:clamp(26px,6vw,34px)}
+  .qsub{color:#e3ece5;margin:0 0 16px}
+  .qstep{font-size:14px;font-weight:800;color:#cfe0d3;margin-bottom:6px}
+  .qq{font-family:"Baloo 2",sans-serif;font-size:22px;font-weight:700;line-height:1.2;margin:0 0 12px}
+  .qopts{display:grid;gap:10px}
+  .qopt{all:unset;box-sizing:border-box;cursor:pointer;background:#fff;color:var(--ink);border-radius:16px;padding:14px 16px;font-weight:700;font-size:17px;line-height:1.3;transition:transform .12s}
+  .qopt:hover,.qopt:focus-visible{transform:translateY(-2px);outline:3px solid #cfe0d3}
+  .qback{all:unset;cursor:pointer;color:#cfe0d3;font-weight:700;font-size:15px;margin-top:14px;display:inline-block}
+  .qres{background:#fff;color:var(--ink);border-radius:18px;padding:20px}
+  .qres .rk{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--euca)}
+  .qres h3{margin:6px 0 6px;font-size:26px}
+  .qres p{margin:0 0 8px;color:var(--muted);font-size:17px}
+  .qres .rp{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:22px;color:var(--euca-deep);margin:4px 0 12px}
+  .qres .extra{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:16px;color:var(--muted)}
   .map{display:grid;gap:12px;margin-top:20px}
   .mrow{background:#fff;border:2px solid var(--line);border-radius:18px;padding:16px 18px}
   .mrow.hl{border-color:var(--euca)}
@@ -274,14 +290,20 @@
         <img src="assets/fotos/foto1.jpg" alt="Noelia sonriendo con un bebé en brazos">
       </div>
     </div>
-    <h2 style="margin:40px 0 0;font-size:clamp(26px,6vw,34px)">¿Qué necesitás hoy?</h2>
-    <p class="lead" style="margin-top:8px">Hago varias cosas. Buscá lo que te pasa y ahí tenés tus opciones.</p>
+    <div class="quiz" id="test">
+      <span class="qtag">Test · 1 minuto</span>
+      <h2 class="qtitle">¿No sabés por dónde empezar?</h2>
+      <p class="qsub">Respondé 3 preguntas y te digo qué necesitás.</p>
+      <div id="qbox"></div>
+    </div>
+    <h2 style="margin:40px 0 0;font-size:clamp(26px,6vw,34px)">O mirá todo lo que hago</h2>
+    <p class="lead" style="margin-top:8px">Buscá lo que te pasa y ahí tenés tus opciones.</p>
     <div class="map">
       <div class="mrow hl">
         <a class="mhead" href="#calma"><span class="e">🌙</span><span>Que mi bebé se calme y duerma<small>Llora mucho, se despierta, está tenso o con gases</small></span></a>
         <div class="ladder-mini">
           <a href="masterclass/"><b>1 · Masterclass</b><small>Entender qué le pasa · $75.000</small></a>
-          <a href="presencia/"><b>2 · Presencia</b><small>Aprender a calmarlo · desde $170.000</small></a>
+          <a href="presencia/"><b>2 · Presencia</b><small>Aprender a calmarlo · $170.000</small></a>
           <a href="calma/"><b>3 · Consulta 1:1</b><small>Evalúo a tu bebé · desde $440.000</small></a>
         </div>
         <p class="mnote">De menos a más acompañamiento. Cada opción incluye la anterior.</p>
@@ -351,8 +373,8 @@
         <img class="ph" style="aspect-ratio:4/3;object-fit:cover;object-position:center 45%" src="assets/fotos/presencia-balanceo.jpg" alt="Noelia sostiene a un bebé boca abajo sobre su brazo" loading="lazy">
         <span class="step">2 · Para aprender a calmarlo · Nuevo</span>
         <h3>🤲 Presencia</h3>
-        <p>Yo te enseño qué hacer y vos tenés las herramientas: todos los balanceos, masajitos, contacto y cómo regularte vos. Sin evaluación.</p>
-        <div class="pr">Desde USD 110 · $170.000</div>
+        <p>Yo te enseño qué hacer y vos tenés las herramientas: todos los balanceos, masajitos, contacto y cómo regularte vos. Todo grabado, a tu ritmo.</p>
+        <div class="pr">USD 110 · $170.000</div>
         <div class="btns"><a class="btn" href="presencia/">Conocé Presencia</a></div>
       </div>
       <div class="offer hl">
@@ -472,7 +494,75 @@
 <a class="wa" href="https://wa.me/5492604419242?text=Hola%20Noe%2C%20quiero%20saber%20m%C3%A1s%20sobre%20la%20c%C3%B3mo%20pod%C3%A9s%20acompa%C3%B1arme" aria-label="Escribime por WhatsApp">
   <svg viewBox="0 0 32 32"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.3.6 4.5 1.8 6.5L3 29l6.9-1.8c1.9 1 4 1.6 6.1 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.5c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4c-1.1-1.7-1.6-3.6-1.6-5.6C5.3 9.9 10.1 5.2 16 5.2s10.7 4.7 10.7 10.6S21.9 26.5 16 26.5zm5.9-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
 </a>
-</body>
-</html>
+
+<script>
+(function(){
+  var WA='https://wa.me/5492604419242?text=';
+  var Q=[
+    {k:'que',q:'¿Qué te pasa con tu bebé?',o:[
+      ['calma','Llora mucho, le cuesta calmarse o dormir'],
+      ['neuro','Quiero saber si se está desarrollando bien'],
+      ['cabeza','Tiene la cabecita con forma distinta o tensión en el cuello'],
+      ['grupo','Quiero compartirlo con otras familias']]},
+    {k:'como',q:'¿Cómo querés que te acompañe?',o:[
+      ['entender','Quiero entender qué le pasa'],
+      ['sola','Quiero herramientas para manejarme sola, a mi ritmo'],
+      ['mirar','Quiero que mires a mi bebé y me digas qué tiene'],
+      ['manos','Quiero que lo trabajes con tus manos, en persona']]},
+    {k:'cuanto',q:'¿Cómo querés empezar?',o:[
+      ['simple','Con algo simple y económico'],
+      ['todo','Con todo lo que necesite']]}
+  ];
+  var R={
+    masterclass:{n:'Masterclass',b:'"No es cólico, es sistema nervioso". Para entender por qué tu bebé está así y empezar a ayudarlo hoy. Grabada, la ves cuando quieras.',p:'USD 50 · $75.000',u:'masterclass/'},
+    presencia:{n:'Presencia',b:'Yo te enseño qué hacer y vos tenés las herramientas: balanceos, masajitos, contacto y cómo regularte vos. Todo grabado, a tu ritmo.',p:'USD 110 · $170.000',u:'presencia/'},
+    esencial:{n:'Consulta 1:1 Esencial',b:'Todo lo de Presencia + evalúo a tu bebé y te digo qué le pasa + practicamos en vivo balanceos y masajitos.',p:'USD 290 · $440.000',u:'calma/#opciones'},
+    pro:{n:'Consulta 1:1 Pro',b:'Evalúo a tu bebé, te cuento todo en una videollamada, practicamos juntas y armamos su rutina. Con seguimiento por Zoom.',p:'USD 440 · $670.000',u:'calma/#opciones'},
+    plancalma:{n:'Plan Calma presencial',b:'3 días seguidos trabajando con mis manos, en San Rafael o en tu ciudad cuando viajo, para que tu bebé salga del llanto y vuelva a dormir.',p:'',u:'plan-calma/'},
+    neuro:{n:'Neurodesarrollo 1:1',b:'Qué tiene que ir haciendo tu bebé según su edad, y juegos y movimientos simples para acompañarlo.',p:'Desde USD 240',u:'neurodesarrollo/'},
+    plagio:{n:'Plan Plagiocefalia / Tortícolis',b:'Una semana trabajando con mis manos su cabecita, su cuello y su boca, en San Rafael o en tu ciudad cuando viajo.',p:'',u:'plan-plagiocefalia/'},
+    criar:{n:'Criar Liviano',b:'Encuentros en vivo con otras familias para aprender a calmar a tu bebé y bajar un cambio vos también.',p:'$58.000 por mes',u:'criar-liviano/'}
+  };
+  var A={}, step=0, box=document.getElementById('qbox');
+  function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
+  function pick(){
+    if(A.que==='neuro') return 'neuro';
+    if(A.que==='cabeza') return 'plagio';
+    if(A.que==='grupo') return 'criar';
+    if(A.como==='manos') return 'plancalma';
+    if(A.como==='mirar') return A.cuanto==='todo'?'pro':'esencial';
+    if(A.como==='sola') return 'presencia';
+    return A.cuanto==='todo'?'presencia':'masterclass';
+  }
+  function label(k,v){for(var i=0;i<Q.length;i++){if(Q[i].k===k){for(var j=0;j<Q[i].o.length;j++){if(Q[i].o[j][0]===v)return Q[i].o[j][1]}}}return ''}
+  function render(){
+    if(step>=Q.length || (step>0 && A.que!=='calma')) return result();
+    var q=Q[step];
+    var h='<div class="qstep">Pregunta '+(step+1)+' de '+Q.length+'</div><p class="qq">'+q.q+'</p><div class="qopts">';
+    q.o.forEach(function(o){h+='<button type="button" class="qopt" data-v="'+o[0]+'">'+esc(o[1])+'</button>'});
+    h+='</div>';
+    if(step>0) h+='<button type="button" class="qback" data-back="1">← Volver</button>';
+    box.innerHTML=h;
+  }
+  function result(){
+    var r=R[pick()];
+    var resumen=[label('que',A.que),label('como',A.como),label('cuanto',A.cuanto)].filter(Boolean).join(' / ');
+    var msg='Hola Noe! Hice el test de tu web. Mis respuestas: '+resumen+'. Me salió: '+r.n+'. ¿Me contás más?';
+    var h='<div class="qres"><div class="rk">Lo que te recomiendo</div><h3>'+esc(r.n)+'</h3><p>'+esc(r.b)+'</p>';
+    if(r.p) h+='<div class="rp">'+r.p+'</div>';
+    h+='<div class="btns"><a class="btn" href="'+r.u+'">Ver más</a><a class="btn btn-ghost" href="'+WA+encodeURIComponent(msg)+'" target="_blank" rel="noopener">Hablarlo conmigo</a></div>';
+    if(A.cuanto==='simple') h+='<div class="extra">🤍 Y si querés empezar hoy mismo, gratis: <a href="guia-calma/">la Guía Calma</a>.</div>';
+    h+='</div><button type="button" class="qback" data-reset="1">↺ Hacer el test de nuevo</button>';
+    box.innerHTML=h;
+  }
+  box.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    if(b.dataset.reset){A={};step=0;return render();}
+    if(b.dataset.back){step--;delete A[Q[step].k];return render();}
+    A[Q[step].k]=b.dataset.v; step++; render();
+  });
+  render();
+})();
+</script>
 </body>
 </html>

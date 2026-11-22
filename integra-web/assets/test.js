@@ -19,7 +19,7 @@
     masterclass:{n:'Masterclass',b:'"No es cólico, es sistema nervioso". Para entender por qué tu bebé está así y empezar a ayudarlo hoy. Grabada, la ves cuando quieras.',p:'USD 50 · $75.000',u:'masterclass/'},
     presencia:{n:'Presencia',b:'Yo te enseño qué hacer y vos tenés las herramientas: balanceos, masajitos, contacto y cómo regularte vos. Todo grabado, a tu ritmo.',p:'USD 110 · $170.000',u:'presencia/'},
     esencial:{n:'Consulta 1:1 Esencial',b:'Todo lo de Presencia + evalúo a tu bebé y te digo qué le pasa + practicamos en vivo balanceos y masajitos.',p:'USD 290 · $440.000',u:'calma/#opciones'},
-    pro:{n:'Consulta 1:1 Pro',b:'Evalúo a tu bebé, te cuento todo en una videollamada, practicamos juntas y armamos su rutina. Con seguimiento por Zoom.',p:'USD 440 · $670.000',u:'calma/#opciones'},
+    pro:{n:'Consulta 1:1 Pro',b:'Evalúo a tu bebé, te cuento todo en una videollamada, practicamos juntas y armamos su rutina flexible. Con seguimiento por Zoom.',p:'USD 440 · $670.000',u:'calma/#opciones'},
     plancalma:{n:'Plan Calma presencial',b:'3 días seguidos trabajando con mis manos, en San Rafael o en tu ciudad cuando viajo, para que tu bebé salga del llanto y vuelva a dormir.',p:'',u:'plan-calma/'},
     neuro:{n:'Neurodesarrollo 1:1',b:'Qué tiene que ir haciendo tu bebé según su edad, y juegos y movimientos simples para acompañarlo.',p:'Desde USD 240 · $362.400',u:'neurodesarrollo/'},
     plagio:{n:'Plan Plagiocefalia / Tortícolis',b:'Una semana trabajando con mis manos su cabecita, su cuello y su boca, en San Rafael o en tu ciudad cuando viajo.',p:'',u:'plan-plagiocefalia/'},

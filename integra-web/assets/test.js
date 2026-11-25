@@ -4,8 +4,7 @@
     {k:'que',q:'¿Qué te pasa con tu bebé?',o:[
       ['calma','Llora mucho, le cuesta calmarse o dormir, lo siento incómodo o tenso'],
       ['neuro','Quiero saber si su desarrollo está bien y potenciarlo'],
-      ['cabeza','Tiene la cabecita con forma rara, no del todo redondita, o mira siempre para el mismo lado'],
-      ['grupo','Quiero estar en un espacio grupal con otras familias']]},
+      ['cabeza','Tiene la cabecita con forma rara, no del todo redondita, o mira siempre para el mismo lado']]},
     {k:'como',q:'¿Cómo querés que te acompañe?',o:[
       ['entender','Quiero entender qué le pasa'],
       ['sola','Quiero herramientas para manejarme sola, a mi ritmo'],
@@ -16,14 +15,14 @@
       ['todo','Con todo lo que necesite']]}
   ];
   var R={
-    masterclass:{n:'Masterclass',b:'"No es cólico, es sistema nervioso". Para entender por qué tu bebé está así y empezar a ayudarlo hoy. Grabada, la ves cuando quieras.',p:'USD 50 · $75.000',u:'masterclass/'},
-    presencia:{n:'Presencia',b:'Yo te enseño qué hacer y vos tenés las herramientas: balanceos, masajitos, contacto y cómo regularte vos. Todo grabado, a tu ritmo.',p:'USD 110 · $170.000',u:'presencia/'},
-    esencial:{n:'Consulta 1:1 Esencial',b:'Todo lo de Presencia + evalúo a tu bebé y te digo qué le pasa + practicamos en vivo balanceos y masajitos.',p:'USD 290 · $440.000',u:'calma/#opciones'},
+    masterclass:{n:'Masterclass',b:'"No es cólico, es sistema nervioso". Para entender por qué tu bebé está así y empezar a ayudarlo hoy. Grabada, la ves cuando quieras.',p:'USD 60 · $90.000',u:'masterclass/'},
+    combo:{n:'Criar Liviano + Masterclass',b:'Entendés por qué tu bebé está así y aprendés qué hacer con tus manos: balanceos, masajitos y un momento para calmarte vos. Todo grabado, a tu ritmo.',p:'USD 100 · $150.000 (te ahorrás USD 20)',u:'criar-liviano/#pagar'},
+    esencial:{n:'Consulta 1:1 Esencial',b:'Masterclass + Criar Liviano + evalúo a tu bebé y te digo qué le pasa + practicamos en vivo balanceos y masajitos.',p:'USD 290 · $440.000',u:'calma/#opciones'},
     pro:{n:'Consulta 1:1 Pro',b:'Evalúo a tu bebé, te cuento todo en una videollamada, practicamos juntas y armamos su rutina flexible. Con seguimiento por Zoom.',p:'USD 440 · $670.000',u:'calma/#opciones'},
     plancalma:{n:'Plan Calma presencial',b:'3 días seguidos trabajando con mis manos, en San Rafael o en tu ciudad cuando viajo, para que tu bebé salga del llanto y vuelva a dormir.',p:'',u:'plan-calma/'},
     neuro:{n:'Neurodesarrollo 1:1',b:'Qué tiene que ir haciendo tu bebé según su edad, y juegos y movimientos simples para acompañarlo.',p:'Desde USD 240 · $362.400',u:'neurodesarrollo/'},
     plagio:{n:'Plan Plagiocefalia / Tortícolis',b:'Una semana trabajando con mis manos su cabecita, su cuello y su boca, en San Rafael o en tu ciudad cuando viajo.',p:'',u:'plan-plagiocefalia/'},
-    criar:{n:'Criar Liviano',b:'Encuentros en vivo con otras familias para aprender a calmar a tu bebé y bajar un cambio vos también.',p:'USD 38 · $58.000 por mes',u:'criar-liviano/'}
+    criar:{n:'Criar Liviano',b:'Balanceos y masajitos para calmar a tu bebé, y un momento para que bajes un cambio vos también. Todo grabado, a tu ritmo.',p:'USD 60 · $90.000',u:'criar-liviano/'}
   };
   var A={}, step=0, box=document.getElementById('qbox'); if(!box) return;
   var BASE=box.getAttribute('data-base')||''; var FROM=box.getAttribute('data-from')||'tu web';
@@ -31,11 +30,10 @@
   function pick(){
     if(A.que==='neuro') return 'neuro';
     if(A.que==='cabeza') return 'plagio';
-    if(A.que==='grupo') return 'criar';
     if(A.como==='manos') return 'plancalma';
     if(A.como==='mirar') return A.cuanto==='todo'?'pro':'esencial';
-    if(A.como==='sola') return 'presencia';
-    return A.cuanto==='todo'?'presencia':'masterclass';
+    if(A.como==='sola') return A.cuanto==='todo'?'combo':'criar';
+    return A.cuanto==='todo'?'combo':'masterclass';
   }
   function label(k,v){for(var i=0;i<Q.length;i++){if(Q[i].k===k){for(var j=0;j<Q[i].o.length;j++){if(Q[i].o[j][0]===v)return Q[i].o[j][1]}}}return ''}
   function render(){

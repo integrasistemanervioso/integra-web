@@ -1,3 +1,7 @@
 {
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/presencia", "destination": "/criar-liviano/", "permanent": false },
+    { "source": "/presencia/", "destination": "/criar-liviano/", "permanent": false }
+  ]
 }
